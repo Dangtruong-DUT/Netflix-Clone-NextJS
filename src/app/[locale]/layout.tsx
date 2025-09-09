@@ -6,7 +6,6 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
-import { localesType } from "@/i18n/i18n-config";
 import { NetflixIcons, NetflixSans } from "@/config/font";
 import { NextIntlClientProvider } from "next-intl";
 
@@ -34,7 +33,7 @@ export default async function RootLayout({
     params,
 }: Readonly<{
     children: React.ReactNode;
-    params: Promise<{ locale: localesType }>;
+    params: Promise<{ locale: string }>;
 }>) {
     const { locale } = await params;
     if (!hasLocale(routing.locales, locale)) {
