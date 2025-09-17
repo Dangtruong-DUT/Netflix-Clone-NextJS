@@ -6,5 +6,9 @@
         "label": "Switch language",
         "en": "English",
         "vi": "Vietnamese"
+    },
+    "errorMessages": {
+        "emailInvalid": "Invalid email address",
+        "emailRequired": "Email is required"
     }
 }

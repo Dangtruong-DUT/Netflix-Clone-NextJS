@@ -14,8 +14,13 @@ import {
 import { useLocale, useTranslations } from "next-intl";
 import useLanguage from "@/hooks/shared/useLanguage";
 import { LANGUAGES } from "@/i18n/i18n-config";
+import { cn } from "@/lib/utils";
 
-export default function SelectLanguage() {
+interface SelectLanguageProps {
+    className?: string;
+}
+
+export default function SelectLanguage({ className }: SelectLanguageProps) {
     const t = useTranslations("SwitchLanguage");
     const locale = useLocale();
 
@@ -23,7 +28,7 @@ export default function SelectLanguage() {
 
     return (
         <Select value={locale} onValueChange={onChange} disabled={isPending}>
-            <SelectTrigger className="w-[150px]">
+            <SelectTrigger className={cn("w-[150px] cursor-pointer", className)}>
                 <SelectValue placeholder={t("label")} />
             </SelectTrigger>
             <SelectContent>

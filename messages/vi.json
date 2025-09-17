@@ -6,5 +6,9 @@
         "label": "Chuyển ngôn ngữ",
         "en": "Tiếng Anh",
         "vi": "Tiếng Việt"
+    },
+    "errorMessages": {
+        "emailInvalid": "Địa chỉ email không hợp lệ",
+        "emailRequired": "Email là bắt buộc"
     }
 }
