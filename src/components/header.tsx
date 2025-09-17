@@ -13,7 +13,7 @@ interface HeaderProps {
 export default function Header({ className, buttonClassName }: HeaderProps) {
     return (
         <header
-            className={cn("px-6 md:px-8 lg:px-28 bg-transparent  flex items-center justify-between py-4", className)}
+            className={cn("px-6 md:px-8 lg:px-37 bg-transparent  flex items-center justify-between py-4", className)}
         >
             <Link href="/">
                 <Logo className="lg:h-[40px] lg:w-[148px] w-[89px] h-[24px]" />

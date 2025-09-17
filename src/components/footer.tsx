@@ -33,7 +33,7 @@ interface FooterProps {
 }
 export default function Footer({ className }: FooterProps) {
     return (
-        <footer className={cn("w-full text-muted-foreground p-4 md:py-18 px-6 md:px-8 lg:px-28 text-sm", className)}>
+        <footer className={cn("w-full text-muted-foreground p-4 md:py-18 px-6 md:px-8 lg:px-37 text-sm", className)}>
             <Link href="#" className="block mb-6 text-base underline ">
                 Questions? Contact us.
             </Link>

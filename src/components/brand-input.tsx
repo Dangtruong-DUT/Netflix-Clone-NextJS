@@ -17,7 +17,7 @@ export default function BrandInput(props: BrandInputProps) {
                 id={fieldID}
                 placeholder=" "
                 className={cn(
-                    "peer w-full rounded-md border border-white/40 bg-black/90 px-4 pt-[22px] pb-[14px] text-white focus:border-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-0 caret-white selection:bg-blue-600 selection:text-white transition-all duration-200 ",
+                    "peer w-full rounded-md border border-white/40  px-4 pt-[22px] pb-[14px] text-white focus:border-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-0 caret-white selection:bg-blue-600 selection:text-white transition-all duration-200 ",
                     className
                 )}
                 {...rest}

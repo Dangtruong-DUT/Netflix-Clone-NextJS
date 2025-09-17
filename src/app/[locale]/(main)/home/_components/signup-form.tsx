@@ -32,7 +32,7 @@ export default function SignupForm() {
         <Form {...form}>
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="flex flex-col md:flex-row gap-2 justify-center  items-center mx-auto w-full h-fit  "
+                className="flex flex-col md:flex-row gap-2 justify-center  items-start mx-auto w-full h-fit  "
             >
                 <FormField
                     control={form.control}
@@ -40,7 +40,11 @@ export default function SignupForm() {
                     render={({ field, formState }) => (
                         <FormItem className="flex-1 w-full text-left ">
                             <FormControl className="h-fit">
-                                <BrandInput label="Email address" className="h-[48px] md:h-[56px] " {...field} />
+                                <BrandInput
+                                    label="Email address"
+                                    className="h-[48px] md:h-[56px] bg-black/50!"
+                                    {...field}
+                                />
                             </FormControl>
                             <FormMessage>
                                 {formState.errors.email?.message &&

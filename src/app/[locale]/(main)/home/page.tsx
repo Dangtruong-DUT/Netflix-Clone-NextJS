@@ -1,6 +1,8 @@
 import FAQSection from "@/app/[locale]/(main)/home/_components/FAQ-section";
 import { FeaturesSection } from "@/app/[locale]/(main)/home/_components/features-section";
 import SignupForm from "@/app/[locale]/(main)/home/_components/signup-form";
+import TrendingSection from "@/app/[locale]/(main)/home/_components/trending-section";
+import { mockTrendingItems } from "@/app/[locale]/(main)/home/_mock";
 import Header from "@/components/header";
 
 export const metadata = {
@@ -9,6 +11,8 @@ export const metadata = {
 };
 
 export default function HomePage() {
+    const trendingItems = mockTrendingItems;
+
     return (
         <div>
             <div
@@ -27,13 +31,13 @@ export default function HomePage() {
                 </div>
                 <div className="relative z-2 flex-1 flex flex-col ">
                     <div className="m-auto text-center text-white  max-w-xl px-8">
-                        <h1 className="text-3xl lg:text-6xl  md:text-4xl font-bold mb-4">
+                        <h1 className="text-3xl lg:text-6xl  md:text-4xl font-bold mb-5">
                             Unlimited films, series and more
                         </h1>
-                        <p className="text-base md:text-2xl font-normal mb-4">
+                        <p className="text-base md:text-2xl font-normal mb-8">
                             Starts at 74,000 ₫. Cancel at any time.
                         </p>
-                        <p className="text-base mb-2">
+                        <p className="text-base mb-4">
                             Ready to watch? Enter your email to create or restart your membership.
                         </p>
                         <SignupForm />
@@ -47,7 +51,11 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
-            <div className="px-6 py-4 md:px-8 lg:px-28">
+            <div className="px-6 py-4 md:px-8 lg:px-37">
+                <section className="mb-16">
+                    <h2 className="text-2xl font-bold mb-4">Trending Now</h2>
+                    <TrendingSection trendingItems={trendingItems} />
+                </section>
                 <section className="mb-16">
                     <h2 className="text-2xl font-bold mb-4">More reasons to join</h2>
                     <FeaturesSection />

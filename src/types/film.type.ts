@@ -1,12 +1,11 @@
-export type MovieDetail = {
+export type TrendingItem = {
     id: string;
     title: string;
-    releaseYear: number;
-    maturityRating: string;
+    release_year: number;
+    maturity_rating: string;
     genres: string[];
     description: string;
-    thumbnailUrl: string;
-    backdropUrl?: string;
-    trailerUrl?: string;
-    link: string;
+    vertical_poster: string;
+    horizontal_poster: string;
+    rank: number;
 };
