@@ -1,6 +1,68 @@
 {
     "HomePage": {
-        "title": "Xin chào thế giới!"
+        "title": "Xin chào thế giới!",
+        "heroTitle": "Phim, chương trình truyền hình không giới hạn và nhiều nội dung khác",
+        "heroSubtitle": "Bắt đầu từ 74.000 ₫. Hủy bất cứ lúc nào.",
+        "heroDescription": "Sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại thành viên của bạn.",
+        "trendingTitle": "Xu hướng hiện tại",
+        "moreReasonsTitle": "Thêm lý do để tham gia",
+        "faqTitle": "Câu hỏi thường gặp"
+    },
+    "Header": {
+        "signIn": "Đăng nhập"
+    },
+    "Footer": {
+        "contactUs": "Có câu hỏi? Liên hệ với chúng tôi.",
+        "companyName": "Netflix Việt Nam",
+        "links": {
+            "faq": "Câu hỏi thường gặp",
+            "investorRelations": "Quan hệ nhà đầu tư",
+            "privacy": "Quyền riêng tư",
+            "speedTest": "Kiểm tra tốc độ",
+            "helpCentre": "Trung tâm trợ giúp",
+            "jobs": "Việc làm",
+            "cookiePreferences": "Tùy chọn cookie",
+            "legalNotices": "Thông báo pháp lý",
+            "account": "Tài khoản",
+            "waysToWatch": "Cách xem",
+            "corporateInformation": "Thông tin doanh nghiệp",
+            "onlyOnNetflix": "Chỉ có trên Netflix",
+            "mediaCentre": "Trung tâm truyền thông",
+            "termsOfUse": "Điều khoản sử dụng",
+            "contactUs": "Liên hệ chúng tôi"
+        }
+    },
+    "MovieModal": {
+        "getStarted": "Bắt đầu",
+        "featureComingSoon": "Tính năng sắp ra mắt!"
+    },
+    "SignupForm": {
+        "emailLabel": "Địa chỉ email",
+        "getStartedButton": "Bắt đầu"
+    },
+    "Features": {
+        "enjoyTvTitle": "Thưởng thức trên TV của bạn",
+        "enjoyTvDesc": "Xem trên TV thông minh, PlayStation, Xbox, Chromecast, Apple TV, máy phát Blu-ray và nhiều thiết bị khác",
+        "downloadTitle": "Tải xuống chương trình để xem ngoại tuyến",
+        "downloadDesc": "Lưu những nội dung yêu thích của bạn một cách dễ dàng và luôn có thứ để xem.",
+        "watchEverywhereTitle": "Xem ở mọi nơi",
+        "watchEverywhereDesc": "Phát trực tuyến phim và chương trình TV không giới hạn trên điện thoại, máy tính bảng, laptop và TV mà không phải trả thêm phí.",
+        "kidsProfilesTitle": "Tạo hồ sơ cho trẻ em",
+        "kidsProfilesDesc": "Đưa trẻ em vào những cuộc phiêu lưu cùng các nhân vật yêu thích trong không gian được tạo riêng cho chúng—miễn phí với thành viên của bạn."
+    },
+    "FAQ": {
+        "q1": "Netflix là gì?",
+        "a1": "Netflix là dịch vụ phát trực tuyến cung cấp nhiều chương trình TV, phim, anime, phim tài liệu đoạt giải và nhiều nội dung khác trên hàng nghìn thiết bị kết nối internet. Bạn có thể xem bao nhiều tùy thích, bất cứ khi nào bạn muốn, không có quảng cáo—tất cả chỉ với một mức giá hàng tháng thấp. Luôn có điều gì đó mới để khám phá, và các chương trình TV và phim mới được thêm vào mỗi tuần!",
+        "q2": "Netflix có giá bao nhiêu?",
+        "a2": "Xem Netflix trên điện thoại thông minh, máy tính bảng, Smart TV, laptop hoặc thiết bị phát trực tuyến của bạn, tất cả chỉ với một mức phí hàng tháng cố định. Các gói từ 74.000 ₫ đến 186.000 ₫ một tháng. Không có chi phí phụ, không có hợp đồng.",
+        "q3": "Tôi có thể xem ở đâu?",
+        "a3": "Xem ở bất cứ đâu, bất cứ khi nào. Đăng nhập bằng tài khoản Netflix của bạn để xem ngay lập tức trên web tại netflix.com từ máy tính cá nhân hoặc trên bất kỳ thiết bị kết nối internet nào có ứng dụng Netflix, bao gồm TV thông minh, điện thoại thông minh, máy tính bảng, máy phát media và máy chơi game. Bạn cũng có thể tải xuống các chương trình yêu thích với ứng dụng iOS, Android hoặc Windows 10. Sử dụng tính năng tải xuống để xem khi đang di chuyển và không có kết nối internet. Mang Netflix đi cùng bạn ở mọi nơi.",
+        "q4": "Làm thế nào để hủy?",
+        "a4": "Netflix linh hoạt. Không có hợp đồng phiền phức và không có cam kết. Bạn có thể dễ dàng hủy tài khoản trực tuyến chỉ với hai cú nhấp chuột. Không có phí hủy—bắt đầu hoặc dừng tài khoản của bạn bất cứ lúc nào.",
+        "q5": "Tôi có thể xem gì trên Netflix?",
+        "a5": "Netflix có thư viện mở rộng gồm các bộ phim điện ảnh, phim tài liệu, chương trình TV, anime, các tác phẩm gốc đoạt giải của Netflix và nhiều nội dung khác. Xem bao nhiều tùy thích, bất cứ khi nào bạn muốn.",
+        "q6": "Netflix có tốt cho trẻ em không?",
+        "a6": "Trải nghiệm Netflix Kids được bao gồm trong thành viên của bạn để cung cấp cho phụ huynh quyền kiểm soát trong khi trẻ em thưởng thức các chương trình TV và phim phù hợp với gia đình trong không gian riêng của chúng. Hồ sơ trẻ em đi kèm với các điều khiển của phụ huynh được bảo vệ bằng PIN cho phép bạn hạn chế mức độ trưởng thành của nội dung trẻ em có thể xem và chặn các tiêu đề cụ thể mà bạn không muốn trẻ em xem."
     },
     "SwitchLanguage": {
         "label": "Chuyển ngôn ngữ",

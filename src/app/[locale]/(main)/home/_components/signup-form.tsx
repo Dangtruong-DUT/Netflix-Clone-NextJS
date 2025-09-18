@@ -13,6 +13,7 @@ import { useTranslations } from 'next-intl'
 
 export default function SignupForm() {
     const errorMessageT = useTranslations('errorMessages')
+    const formT = useTranslations('SignupForm')
 
     const form = useForm<RegisterBodyType>({
         resolver: zodResolver(RegisterBody),
@@ -20,8 +21,6 @@ export default function SignupForm() {
             email: ''
         }
     })
-
-    console.log(form.formState.errors)
 
     function onSubmit(data: RegisterBodyType) {
         toast('You submitted the following values')
@@ -40,7 +39,7 @@ export default function SignupForm() {
                         <FormItem className='flex-1 w-full text-left '>
                             <FormControl className='h-fit'>
                                 <BrandInput
-                                    label='Email address'
+                                    label={formT('emailLabel')}
                                     className='h-[48px] md:h-[56px] bg-black/50!'
                                     {...field}
                                 />
@@ -54,9 +53,9 @@ export default function SignupForm() {
                 />
                 <Button
                     type='submit'
-                    className='py-7 px-2 h-[48px] md:h-[56px] max-w-[160px] bg-brand  hover:bg-brand/80 text-lg  md:text-xl text-white font-medium cursor-pointer'
+                    className='py-2 px-2 h-[48px]!  md:h-[56px]! md:w-[160px] bg-brand  hover:bg-brand/80 text-lg  md:text-xl text-white font-medium cursor-pointer items-center'
                 >
-                    Get started <ChevronRight />
+                    {formT('getStartedButton')} <ChevronRight className='size-6' />
                 </Button>
             </form>
         </Form>

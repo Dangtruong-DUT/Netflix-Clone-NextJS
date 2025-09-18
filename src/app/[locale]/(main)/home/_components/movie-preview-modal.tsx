@@ -6,6 +6,7 @@ import { X, ChevronRight } from 'lucide-react'
 import { toast } from 'sonner'
 import { Badge } from '@/components/ui/badge'
 import { DialogTitle } from '@radix-ui/react-dialog'
+import { useTranslations } from 'next-intl'
 
 interface MoviePreviewModalProps {
     movie: TrendingItem | null
@@ -13,10 +14,14 @@ interface MoviePreviewModalProps {
 }
 
 export default function MoviePreviewModal({ movie, onClose }: MoviePreviewModalProps) {
+    const t = useTranslations('MovieModal')
+
     if (!movie) return null
+
     const handleGetStartedClick = () => {
-        toast.info('Feature Coming Soon!')
+        toast.info(t('featureComingSoon'))
     }
+
     return (
         <Dialog open={!!movie} onOpenChange={onClose}>
             <DialogContent
@@ -69,7 +74,7 @@ export default function MoviePreviewModal({ movie, onClose }: MoviePreviewModalP
                             className='bg-brand hover:bg-brand/80  text-white px-8 py-6 text-lg font-semibold rounded-1  flex items-center gap-2 cursor-pointer w-full lg:w-auto '
                             onClick={handleGetStartedClick}
                         >
-                            Get started <ChevronRight className='size-7' />
+                            {t('getStarted')} <ChevronRight className='size-7' />
                         </Button>
                     </div>
                 </div>

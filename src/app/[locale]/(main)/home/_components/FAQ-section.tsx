@@ -1,4 +1,4 @@
-import { FQA_LIST } from '@/app/[locale]/(main)/home/_constants'
+import { useFaqList } from '@/app/[locale]/(main)/home/_constants/index'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { cn } from '@/lib/utils'
 
@@ -7,9 +7,11 @@ interface FAQSectionProps {
 }
 
 export default function FAQSection({ className }: FAQSectionProps) {
+    const faqList = useFaqList()
+
     return (
         <Accordion type='single' collapsible className={cn('w-full flex flex-col gap-2', className)}>
-            {FQA_LIST.map((faq, index) => (
+            {faqList.map((faq, index) => (
                 <AccordionItem value={`item-${index + 1}`} className='border-none bg-background ' key={`faq-${index}`}>
                     <AccordionTrigger className='text-lg md:text-2xl  text-left no-underline hover:no-underline p-6 rounded-none! [&_svg]:size-9 bg-muted font-normal hover:bg-muted/90'>
                         {faq.question}
