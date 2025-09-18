@@ -40,7 +40,7 @@ export default function Header({ className, buttonClassName }: HeaderProps) {
                 <ModeToggle className={buttonClassName} />
                 <SelectLanguage className={buttonClassName} isSmall={isMobile} />
                 <Link href='/auth/login'>
-                    <Button className={cn('text-sm bg-brand  hover:bg-brand/80 text-white  rounded-sm  ')}>
+                    <Button className={cn('text-sm bg-brand  hover:bg-brand/80 text-white  rounded-sm cursor-pointer')}>
                         Sign in
                     </Button>
                 </Link>

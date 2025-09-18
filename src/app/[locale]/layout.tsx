@@ -7,6 +7,8 @@ import { routing } from '@/i18n/routing'
 import { setRequestLocale } from 'next-intl/server'
 import { NetflixIcons, NetflixSans } from '@/config/font'
 import { NextIntlClientProvider } from 'next-intl'
+import { Toaster } from 'sonner'
+import NextTopLoader from 'nextjs-toploader'
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -38,6 +40,8 @@ export default async function RootLayout({
                 <NextIntlClientProvider>
                     <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
                         {children}
+                        <Toaster />
+                        <NextTopLoader showSpinner={false} color='var(--color-brand)' />
                     </ThemeProvider>
                 </NextIntlClientProvider>
             </body>

@@ -3,7 +3,6 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
-import { z } from 'zod'
 
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
@@ -55,7 +54,7 @@ export default function SignupForm() {
                 />
                 <Button
                     type='submit'
-                    className='py-7 px-2 h-[48px] md:h-[56px] max-w-[160px] bg-brand  hover:bg-brand/80 text-lg  md:text-xl text-white font-medium'
+                    className='py-7 px-2 h-[48px] md:h-[56px] max-w-[160px] bg-brand  hover:bg-brand/80 text-lg  md:text-xl text-white font-medium cursor-pointer'
                 >
                     Get started <ChevronRight />
                 </Button>
