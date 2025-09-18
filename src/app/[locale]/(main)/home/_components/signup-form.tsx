@@ -6,7 +6,7 @@ import { toast } from 'sonner'
 
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
-import { RegisterBody, RegisterBodyType } from '@/utils/validation/auth.validation'
+import { RegisterEmailBody, RegisterEmailBodyType } from '@/utils/validation/auth.validation'
 import BrandInput from '@/components/brand-input'
 import { ChevronRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
@@ -15,14 +15,14 @@ export default function SignupForm() {
     const errorMessageT = useTranslations('errorMessages')
     const formT = useTranslations('SignupForm')
 
-    const form = useForm<RegisterBodyType>({
-        resolver: zodResolver(RegisterBody),
+    const form = useForm<RegisterEmailBodyType>({
+        resolver: zodResolver(RegisterEmailBody),
         defaultValues: {
             email: ''
         }
     })
 
-    function onSubmit(data: RegisterBodyType) {
+    function onSubmit(data: RegisterEmailBodyType) {
         toast('You submitted the following values')
     }
 

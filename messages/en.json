@@ -64,6 +64,34 @@
         "q6": "Is Netflix good for kids?",
         "a6": "The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space. Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don't want kids to see."
     },
+    "RegformPage": {
+        "stepIndicator": "STEP {current}/{total}",
+        "title": "Create a password to start your membership",
+        "subtitle": "Just a few more steps and you're finished! We hate paperwork, too.",
+        "emailLabel": "Email",
+        "passwordLabel": "Add a password",
+        "agreeToTerms": "Please do not send me Netflix special offers by email.",
+        "continueButton": "Continue",
+        "signOut": "Sign Out",
+        "termsNotice": "This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.",
+        "registrationSuccess": "Registration successful!"
+    },
+    "RegistrationPage": {
+        "stepIndicator": "STEP {step}/{total}",
+        "title": "Finish setting up your account",
+        "description": "Netflix is personalized for you. Create a password to watch on any device at any time.",
+        "nextButton": "Next"
+    },
+    "SignupPage": {
+        "stepIndicator": "STEP {step}/{total}",
+        "title": "Choose your service plan.",
+        "features": {
+            "noCommitments": "No commitments, cancel anytime.",
+            "lowPriceOnly": "Everything on Netflix for one low price.",
+            "noAds": "No ads, no extra fees. Always like this."
+        },
+        "nextButton": "Next"
+    },
     "SwitchLanguage": {
         "label": "Switch language",
         "en": "English",
@@ -71,6 +99,8 @@
     },
     "errorMessages": {
         "emailInvalid": "Invalid email address",
-        "emailRequired": "Email is required"
+        "emailRequired": "Email is required",
+        "passwordMinLength": "Password must be at least 8 characters long",
+        "mustAgreeToTerms": "You must agree to the terms to continue"
     }
 }

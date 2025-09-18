@@ -64,6 +64,34 @@
         "q6": "Netflix có tốt cho trẻ em không?",
         "a6": "Trải nghiệm Netflix Kids được bao gồm trong thành viên của bạn để cung cấp cho phụ huynh quyền kiểm soát trong khi trẻ em thưởng thức các chương trình TV và phim phù hợp với gia đình trong không gian riêng của chúng. Hồ sơ trẻ em đi kèm với các điều khiển của phụ huynh được bảo vệ bằng PIN cho phép bạn hạn chế mức độ trưởng thành của nội dung trẻ em có thể xem và chặn các tiêu đề cụ thể mà bạn không muốn trẻ em xem."
     },
+    "RegformPage": {
+        "stepIndicator": "BƯỚC {current}/{total}",
+        "title": "Tạo mật khẩu để bắt đầu thành viên của bạn",
+        "subtitle": "Chỉ còn vài bước nữa và bạn đã hoàn thành! Chúng tôi cũng ghét giấy tờ.",
+        "emailLabel": "Email",
+        "passwordLabel": "Thêm mật khẩu",
+        "agreeToTerms": "Vui lòng không gửi cho tôi ưu đãi đặc biệt của Netflix qua email.",
+        "continueButton": "Tiếp tục",
+        "signOut": "Đăng xuất",
+        "termsNotice": "Trang này được bảo vệ bởi Google reCAPTCHA để đảm bảo bạn không phải là bot. Tìm hiểu thêm.",
+        "registrationSuccess": "Đăng ký thành công!"
+    },
+    "RegistrationPage": {
+        "stepIndicator": "BƯỚC {step}/{total}",
+        "title": "Hoàn thành việc cài đặt tài khoản của bạn",
+        "description": "Netflix được cá nhân hóa cho riêng bạn. Tạo mật khẩu để xem Netflix trên bất kỳ thiết bị nào, vào bất cứ lúc nào.",
+        "nextButton": "Tiếp theo"
+    },
+    "SignupPage": {
+        "stepIndicator": "BƯỚC {step}/{total}",
+        "title": "Chọn gói dịch vụ của bạn.",
+        "features": {
+            "noCommitments": "Không yêu cầu cam kết, hủy bất kỳ lúc nào.",
+            "lowPriceOnly": "Mọi thứ trên Netflix chỉ với mức giá thấp.",
+            "noAds": "Không quảng cáo, không phụ phí. Luôn luôn như vậy."
+        },
+        "nextButton": "Tiếp theo"
+    },
     "SwitchLanguage": {
         "label": "Chuyển ngôn ngữ",
         "en": "Tiếng Anh",
@@ -71,6 +99,8 @@
     },
     "errorMessages": {
         "emailInvalid": "Địa chỉ email không hợp lệ",
-        "emailRequired": "Email là bắt buộc"
+        "emailRequired": "Email là bắt buộc",
+        "passwordMinLength": "Mật khẩu phải có ít nhất 8 ký tự",
+        "mustAgreeToTerms": "Bạn phải đồng ý với các điều khoản để tiếp tục"
     }
 }
