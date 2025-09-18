@@ -92,6 +92,64 @@
         },
         "nextButton": "Next"
     },
+    "PlanformPage": {
+        "stepIndicator": "STEP {current} OF {total}",
+        "title": "Choose a service plan that suits you",
+        "mostPopular": "Most Popular",
+        "signOut": "Sign Out",
+        "plans": {
+            "mobile": {
+                "name": "Mobile",
+                "quality": "480p",
+                "price": "74,000 ₫",
+                "videoQuality": "Fair",
+                "resolution": "480p",
+                "supportedDevices": "Phone, tablet",
+                "householdDevices": "1",
+                "downloads": "1"
+            },
+            "basic": {
+                "name": "Basic",
+                "quality": "720p",
+                "price": "114,000 ₫",
+                "videoQuality": "Good",
+                "resolution": "720p (HD)",
+                "supportedDevices": "TV, computer, phone, tablet",
+                "householdDevices": "1",
+                "downloads": "1"
+            },
+            "standard": {
+                "name": "Standard",
+                "quality": "1080p",
+                "price": "231,000 ₫",
+                "videoQuality": "Great",
+                "resolution": "1080p (Full HD)",
+                "supportedDevices": "TV, computer, phone, tablet",
+                "householdDevices": "2",
+                "downloads": "2"
+            },
+            "premium": {
+                "name": "Premium",
+                "quality": "4K + HDR",
+                "price": "273,000 ₫",
+                "videoQuality": "Best",
+                "resolution": "4K (Ultra HD) + HDR",
+                "supportedDevices": "TV, computer, phone, tablet",
+                "householdDevices": "4",
+                "downloads": "6",
+                "spatialAudio": "Spatial audio (immersive experience)"
+            }
+        },
+        "features": {
+            "monthlyPrice": "Monthly price",
+            "videoAudioQuality": "Video and audio quality",
+            "resolution": "Resolution",
+            "supportedDevices": "Supported devices",
+            "householdDevices": "Number of devices in your household that can watch at the same time",
+            "downloads": "Number of devices you can download to"
+        },
+        "continueButton": "Continue"
+    },
     "SwitchLanguage": {
         "label": "Switch language",
         "en": "English",

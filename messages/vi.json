@@ -92,6 +92,64 @@
         },
         "nextButton": "Tiếp theo"
     },
+    "PlanformPage": {
+        "stepIndicator": "BƯỚC {current} TRÊN {total}",
+        "title": "Chọn gói dịch vụ phù hợp với bạn",
+        "mostPopular": "Phổ biến nhất",
+        "signOut": "Đăng xuất",
+        "plans": {
+            "mobile": {
+                "name": "Mobile",
+                "quality": "480p",
+                "price": "74,000 ₫",
+                "videoQuality": "Khá",
+                "resolution": "480p",
+                "supportedDevices": "Điện thoại di động, máy tính bảng",
+                "householdDevices": "1",
+                "downloads": "1"
+            },
+            "basic": {
+                "name": "Basic",
+                "quality": "720p",
+                "price": "114,000 ₫",
+                "videoQuality": "Tốt",
+                "resolution": "720p (HD)",
+                "supportedDevices": "TV, máy tính, điện thoại di động, máy tính bảng",
+                "householdDevices": "1",
+                "downloads": "1"
+            },
+            "standard": {
+                "name": "Standard",
+                "quality": "1080p",
+                "price": "231,000 ₫",
+                "videoQuality": "Tuyệt vời",
+                "resolution": "1080p (Full HD)",
+                "supportedDevices": "TV, máy tính, điện thoại di động, máy tính bảng",
+                "householdDevices": "2",
+                "downloads": "2"
+            },
+            "premium": {
+                "name": "Premium",
+                "quality": "4K + HDR",
+                "price": "273,000 ₫",
+                "videoQuality": "Tốt nhất",
+                "resolution": "4K (Ultra HD) + HDR",
+                "supportedDevices": "TV, máy tính, điện thoại di động, máy tính bảng",
+                "householdDevices": "4",
+                "downloads": "6",
+                "spatialAudio": "Âm thanh không gian (âm thanh đa chiều)"
+            }
+        },
+        "features": {
+            "monthlyPrice": "Giá hàng tháng",
+            "videoAudioQuality": "Chất lượng hình và âm",
+            "resolution": "Độ phân giải",
+            "supportedDevices": "Thiết bị được hỗ trợ",
+            "householdDevices": "Số thiết bị gia đình bạn có thể xem cùng lúc",
+            "downloads": "Số thiết bị được tải xuống"
+        },
+        "continueButton": "Tiếp tục"
+    },
     "SwitchLanguage": {
         "label": "Chuyển ngôn ngữ",
         "en": "Tiếng Anh",
