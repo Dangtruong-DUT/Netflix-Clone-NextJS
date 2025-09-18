@@ -1,8 +1,8 @@
-import z from "zod";
+import z from 'zod'
 
 export const RegisterBody = z
     .object({
-        email: z.string().min(1, { message: "emailRequired" }).email({ message: "emailInvalid" }),
+        email: z.string().min(1, { message: 'emailRequired' }).email({ message: 'emailInvalid' })
     })
-    .strict();
-export type RegisterBodyType = z.infer<typeof RegisterBody>;
+    .strict()
+export type RegisterBodyType = z.infer<typeof RegisterBody>

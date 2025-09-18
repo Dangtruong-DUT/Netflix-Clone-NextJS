@@ -1,17 +1,17 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+import Footer from '@/components/footer'
+import Header from '@/components/header'
 
 interface MainLayoutProps {
-    children: React.ReactNode;
+    children: React.ReactNode
 }
 
 export const metadata = {
     title: {
-        template: "%s | Netflix",
-        default: "Netflix",
+        template: '%s | Netflix',
+        default: 'Netflix'
     },
-    description: "Welcome to Netflix, the world's leading streaming entertainment service.",
-};
+    description: "Welcome to Netflix, the world's leading streaming entertainment service."
+}
 
 export default function MainLayout({ children }: MainLayoutProps) {
     return (
@@ -19,5 +19,5 @@ export default function MainLayout({ children }: MainLayoutProps) {
             <main>{children}</main>
             <Footer />
         </div>
-    );
+    )
 }

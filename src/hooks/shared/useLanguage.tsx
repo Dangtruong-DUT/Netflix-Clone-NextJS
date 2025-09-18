@@ -1,18 +1,18 @@
-"use client";
+'use client'
 
-import { localesType } from "@/i18n/i18n-config";
-import { useRouter, usePathname } from "@/i18n/navigation";
-import { useParams } from "next/navigation";
-import { useTransition } from "react";
+import { localesType } from '@/i18n/i18n-config'
+import { useRouter, usePathname } from '@/i18n/navigation'
+import { useParams } from 'next/navigation'
+import { useTransition } from 'react'
 
 export default function useLanguage() {
-    const pathname = usePathname();
-    const params = useParams();
-    const router = useRouter();
-    const [isPending, startTransition] = useTransition();
+    const pathname = usePathname()
+    const params = useParams()
+    const router = useRouter()
+    const [isPending, startTransition] = useTransition()
 
     const onChange = (value: string) => {
-        const nextLocale = value as localesType;
+        const nextLocale = value as localesType
 
         startTransition(() => {
             router.replace(
@@ -21,8 +21,8 @@ export default function useLanguage() {
                 // always match for the current route, we can skip runtime checks.
                 { pathname, params },
                 { locale: nextLocale }
-            );
-        });
-    };
-    return { onChange, isPending };
+            )
+        })
+    }
+    return { onChange, isPending }
 }
