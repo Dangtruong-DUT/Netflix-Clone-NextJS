@@ -45,7 +45,7 @@ export default function RegisterForm() {
                             <FormControl>
                                 <BrandInput label={t('emailLabel')} type='email' className='h-[56px] ' {...field} />
                             </FormControl>
-                            <FormMessage className='text-red-600'>
+                            <FormMessage className='text-brand'>
                                 {formState.errors.email?.message &&
                                     errorMessageT(formState.errors.email.message as 'emailInvalid' | 'emailRequired')}
                             </FormMessage>
@@ -66,7 +66,7 @@ export default function RegisterForm() {
                                     {...field}
                                 />
                             </FormControl>
-                            <FormMessage className='text-red-600'>
+                            <FormMessage className='text-brand'>
                                 {formState.errors.password?.message &&
                                     errorMessageT(formState.errors.password.message as 'passwordMinLength')}
                             </FormMessage>
@@ -94,7 +94,7 @@ export default function RegisterForm() {
                 <div className='pt-6'>
                     <Button
                         type='submit'
-                        className='w-full h-[48px] bg-red-600 hover:bg-red-700 text-white text-base font-semibold rounded-sm'
+                        className='w-full h-[48px] bg-brand hover:bg-brand/90 text-white text-base font-semibold rounded-sm cursor-pointer'
                     >
                         {t('continueButton')}
                     </Button>

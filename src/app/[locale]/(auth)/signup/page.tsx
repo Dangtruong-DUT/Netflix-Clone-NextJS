@@ -11,8 +11,8 @@ export default function SignupPage() {
         <div className='min-h-screen  flex flex-col items-center px-4 py-8'>
             <div className='w-full max-w-md'>
                 <div className='flex justify-center mb-8'>
-                    <div className='w-16 h-16rounded-full flex items-center justify-center'>
-                        <Image src='/images/signup/Checkmark.png' alt='checkmark' width={64} height={64} />
+                    <div className='w-16 h-16 bg-brand rounded-full flex items-center justify-center'>
+                        <Image src='/images/signup/netflix-icon.png' alt='Netflix Icon' width={64} height={64} />
                     </div>
                 </div>
 
@@ -25,28 +25,28 @@ export default function SignupPage() {
                 <div className='space-y-4 mb-12'>
                     <div className='flex items-start gap-3'>
                         <div className='flex-shrink-0 w-6 h-6 mt-0.5'>
-                            <Check className='w-6 h-6 text-red-600' strokeWidth={2.5} />
+                            <Check className='w-6 h-6 text-brand' strokeWidth={2.5} />
                         </div>
                         <p className=' text-lg leading-relaxed'>{t('features.noCommitments')}</p>
                     </div>
 
                     <div className='flex items-start gap-3'>
                         <div className='flex-shrink-0 w-6 h-6 mt-0.5'>
-                            <Check className='w-6 h-6 text-red-600' strokeWidth={2.5} />
+                            <Check className='w-6 h-6 text-brand' strokeWidth={2.5} />
                         </div>
                         <p className=' text-lg leading-relaxed'>{t('features.lowPriceOnly')}</p>
                     </div>
 
                     <div className='flex items-start gap-3'>
                         <div className='flex-shrink-0 w-6 h-6 mt-0.5'>
-                            <Check className='w-6 h-6 text-red-600' strokeWidth={2.5} />
+                            <Check className='w-6 h-6 text-brand' strokeWidth={2.5} />
                         </div>
                         <p className=' text-lg leading-relaxed'>{t('features.noAds')}</p>
                     </div>
                 </div>
 
                 <Link href='/pricing' className='block w-full'>
-                    <Button className='w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 rounded text-lg h-auto'>
+                    <Button className='w-full bg-brand hover:bg-brand/90 text-white font-semibold py-4 px-6 rounded text-lg h-auto'>
                         {t('nextButton')}
                     </Button>
                 </Link>

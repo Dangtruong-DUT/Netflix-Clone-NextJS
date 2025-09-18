@@ -93,7 +93,7 @@
         "nextButton": "Tiếp theo"
     },
     "PlanformPage": {
-        "stepIndicator": "BƯỚC {current} TRÊN {total}",
+        "stepIndicator": "BƯỚC {current}/{total}",
         "title": "Chọn gói dịch vụ phù hợp với bạn",
         "mostPopular": "Phổ biến nhất",
         "signOut": "Đăng xuất",
@@ -148,7 +148,12 @@
             "householdDevices": "Số thiết bị gia đình bạn có thể xem cùng lúc",
             "downloads": "Số thiết bị được tải xuống"
         },
-        "continueButton": "Tiếp tục"
+        "continueButton": "Tiếp tục",
+        "disclaimer": {
+            "hdAvailability": "Tính khả dụng HD (720p), Full HD (1080p), Ultra HD (4K) và HDR tùy thuộc vào dịch vụ internet và khả năng của thiết bị. Không phải tất cả nội dung đều có sẵn ở mọi độ phân giải. Xem Điều khoản sử dụng của chúng tôi để biết thêm chi tiết.",
+            "deviceLimits": "Chỉ những người sống cùng với bạn mới có thể sử dụng tài khoản của bạn. Xem trên 4 thiết bị khác nhau cùng lúc với Premium, 2 với Standard, và 1 với Basic và Mobile.",
+            "liveEvents": "Sự kiện trực tiếp được bao gồm trong bất kỳ gói Netflix nào và chứa quảng cáo."
+        }
     },
     "SwitchLanguage": {
         "label": "Chuyển ngôn ngữ",
