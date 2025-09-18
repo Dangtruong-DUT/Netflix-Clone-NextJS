@@ -10,5 +10,25 @@
     "errorMessages": {
         "emailInvalid": "Địa chỉ email không hợp lệ",
         "emailRequired": "Email là bắt buộc"
+    },
+    "LoginPage": {
+        "title": "Đăng nhập",
+        "description": "Chào mừng bạn trở lại!",
+        "emailPlaceholder": "Nhập email",
+        "passwordPlaceholder": "Nhập mật khẩu",
+        "rememberMe": "Ghi nhớ đăng nhập",
+        "signIn": "Đăng nhập",
+        "newToNetflix": "Mới dùng Netflix?",
+        "signUpNow": "Đăng ký ngay",
+        "forgotPassword": "Quên mật khẩu?"
+    },
+
+    "errorMessageslogin": {
+        "emailInvalid": "Email không hợp lệ",
+        "emailRequired": "Email là bắt buộc",
+        "passwordInvalid": "Mật khẩu phải có ít nhất 8 ký tự, bao gồm ít nhất 1 chữ cái và 1 số",
+        "passwordRequired": "Mật khẩu là bắt buộc"
     }
+
+
 }

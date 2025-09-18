@@ -10,5 +10,23 @@
     "errorMessages": {
         "emailInvalid": "Invalid email address",
         "emailRequired": "Email is required"
+    },
+    "LoginPage": {
+        "title": "Sign In",
+        "description": "Welcome back!",
+        "emailPlaceholder": "Enter email",
+        "passwordPlaceholder": "Enter password",
+        "rememberMe": "Remember me",
+        "signIn": "Sign In",
+        "newToNetflix": "New to Netflix?",
+        "signUpNow": "Sign up now",
+        "forgotPassword": "Forgot your password?"
+    },
+    "errorMessageslogin": {
+        "emailInvalid": "Invalid email",
+        "emailRequired": "Email is required",
+        "passwordInvalid": "Password must be at least 8 characters long, including at least 1 letter and 1 number",
+        "passwordRequired": "Password is required"
     }
+
 }
