@@ -11,9 +11,7 @@ export default function SignupPage() {
         <div className='min-h-screen  flex flex-col items-center px-4 py-8'>
             <div className='w-full max-w-md'>
                 <div className='flex justify-center mb-8'>
-                    <div className='w-16 h-16 bg-brand rounded-full flex items-center justify-center'>
-                        <Image src='/images/signup/Checkmark.png' alt='Netflix Icon' width={64} height={64} />
-                    </div>
+                    <Image src='/images/signup/Checkmark.png' alt='Netflix Icon' width={64} height={64} />
                 </div>
 
                 <div className='text-center mb-2'>
