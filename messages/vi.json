@@ -174,5 +174,20 @@
         "notificationSettings": "Cài đặt thông báo",
         "managePrivacy": "Quản lý quyền riêng tư",
         "startMembership": "Bắt đầu thành viên"
+    },
+    "NotificationSettings": {
+        "title": "Cài đặt thông báo",
+        "subtitle": "Tùy chỉnh và chọn các thông báo và cảnh báo bạn muốn nhận từ Netflix",
+        "email": "Email",
+        "emailAddress": "ndrg2814@gmail.com",
+        "pushNotifications": "Thông báo đẩy",
+        "textMessages": "Tin nhắn văn bản",
+        "statusActive": "{name} đang hoạt động",
+        "statusInactive": "{name} không hoạt động",
+        "toggleOn": "Bật thông báo",
+        "toggleOff": "Tắt thông báo",
+        "emailDescription": "Nhận cập nhật về các bộ phim mới, gợi ý phim và thông tin tài khoản trực tiếp trong hộp thư của bạn.",
+        "pushDescription": "Nhận cảnh báo tức thì trên thiết bị về các chương trình, tập phim mới và gợi ý được cá nhân hóa.",
+        "textDescription": "Nhận thông báo SMS cho các cập nhật tài khoản quan trọng và cảnh báo bảo mật trên điện thoại di động của bạn."
     }
 }

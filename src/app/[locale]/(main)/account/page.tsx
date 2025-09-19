@@ -40,7 +40,7 @@ export default async function AccountPage() {
     ]
 
     return (
-        <div className='min-h-screen px-6 py-8'>
+        <div className='min-h-screen  px-6 py-8'>
             <div className='max-w-2xl mx-auto'>
                 <h1 className='text-4xl font-bold mb-8'>{t('title')}</h1>
                 <div className='rounded-lg overflow-hidden mb-6 border-2 border-border'>

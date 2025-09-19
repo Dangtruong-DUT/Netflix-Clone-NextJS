@@ -174,5 +174,20 @@
         "notificationSettings": "Notification settings",
         "managePrivacy": "Manage privacy",
         "startMembership": "Start Membership"
+    },
+    "NotificationSettings": {
+        "title": "Notification settings",
+        "subtitle": "Customise and choose the notifications and alerts you want to receive from Netflix",
+        "email": "Email",
+        "emailAddress": "ndrg2814@gmail.com",
+        "pushNotifications": "Push notifications",
+        "textMessages": "Text messages",
+        "statusActive": "{name} active",
+        "statusInactive": "{name} inactive",
+        "toggleOn": "Turn on notifications",
+        "toggleOff": "Turn off notifications",
+        "emailDescription": "Receive updates about new releases, recommendations, and account information directly in your inbox.",
+        "pushDescription": "Get instant alerts on your device about new shows, episodes, and personalized recommendations.",
+        "textDescription": "Receive SMS notifications for important account updates and security alerts on your mobile phone."
     }
 }
