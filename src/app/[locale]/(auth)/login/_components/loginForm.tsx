@@ -32,22 +32,27 @@ export default function LoginForm() {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-4 p-6 rounded-lg  opacity-100'>
-                <h1 className='text-3xl text-white mb-2 netflix-sans-bold'>{loginT('title')}</h1>
+            <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className='flex flex-col gap-4 p-4 sm:p-6 md:p-8 rounded-lg bg-black/65'
+            >
+                <h1 className='text-2xl sm:text-3xl text-white font-semibold mb-4 text-center netflix-sans-bold'>
+                    {loginT('title')}
+                </h1>
 
                 <FormField
                     control={form.control}
                     name='email'
                     render={({ field, formState }) => (
-                        <FormItem className='flex-1 w-full text-left h-24'>
+                        <FormItem className='w-full'>
                             <FormControl className='h-fit'>
                                 <BrandInput
                                     label={loginT('emailPlaceholder')}
-                                    className='h-[48px] md:h-[56px] bg-black/50!'
+                                    className='w-full h-10 sm:h-12 md:h-14 bg-black/50 text-white placeholder-gray-400'
                                     {...field}
                                 />
                             </FormControl>
-                            <FormMessage>
+                            <FormMessage className='text-red-500 text-xs sm:text-sm mt-1'>
                                 {formState.errors.email?.message &&
                                     errorMessageT(formState.errors.email.message as 'emailInvalid' | 'emailRequired')}
                             </FormMessage>
@@ -59,16 +64,16 @@ export default function LoginForm() {
                     control={form.control}
                     name='password'
                     render={({ field, formState }) => (
-                        <FormItem className='flex-1 w-full text-left h-24'>
+                        <FormItem className='w-full'>
                             <FormControl className='h-fit'>
                                 <BrandInput
                                     type='password'
                                     label={loginT('passwordPlaceholder')}
-                                    className='h-[48px] md:h-[56px] bg-black/50!'
+                                    className='w-full h-10 sm:h-12 md:h-14 bg-black/50 text-white placeholder-gray-400'
                                     {...field}
                                 />
                             </FormControl>
-                            <FormMessage>
+                            <FormMessage className='text-red-500 text-xs sm:text-sm mt-1'>
                                 {formState.errors.password?.message &&
                                     errorMessageT(
                                         formState.errors.password.message as 'passwordMinLength' | 'passwordRequired'
@@ -77,22 +82,28 @@ export default function LoginForm() {
                         </FormItem>
                     )}
                 />
-                <Button type='submit' className='bg-brand hover:bg-brand/80 text-white netflix-sans-bold h-48px'>
+
+                <Button
+                    type='submit'
+                    className='bg-red-600 hover:bg-red-700 text-white font-semibold netflix-sans-bold h-[40px] w-full px-4 sm:px-6 md:px-8 py-2 transition-colors duration-200'
+                >
                     {loginT('signIn')}
                 </Button>
 
-                <div className='flex items-center my-6'>
+                <div className='flex items-center my-4 sm:my-6'>
                     <span className='flex-1 border-t border-gray-600'></span>
-                    <span className='mx-4 text-gray-400 text-xs md:text-sm netflix-sans-regular'> {loginT('or')} </span>
+                    <span className='mx-2 sm:mx-4 text-gray-400 text-xs sm:text-sm netflix-sans-regular'>
+                        {loginT('or')}
+                    </span>
                     <span className='flex-1 border-t border-gray-600'></span>
                 </div>
 
                 <LoginWithGGButton />
 
-                <p>
+                <p className='text-center'>
                     <Link
                         href='/forgotPassword'
-                        className=' text-gray-400 netflix-sans-bold no-underline focus: underline-offset-2'
+                        className='text-white netflix-sans-bold hover:underline focus:underline-offset-2'
                     >
                         {loginT('forgotPassword')}
                     </Link>
@@ -103,18 +114,26 @@ export default function LoginForm() {
                     name='remember'
                     render={({ field }) => (
                         <FormItem>
-                            <label className='flex items-center gap-2 netflix-sans-regular'>
-                                <input type='checkbox' checked={field.value} onChange={field.onChange} />
+                            <label className='flex items-center gap-2 netflix-sans-regular text-white'>
+                                <input
+                                    className='dark:bg-black bg-white checked:bg-gray-400 dark:checked:bg-gray-600'
+                                    type='checkbox'
+                                    checked={field.value}
+                                    onChange={field.onChange}
+                                />
                                 {loginT('rememberMe')}
                             </label>
                         </FormItem>
                     )}
                 />
 
-                <div className='mt-4 netflix-sans-regular'>
-                    <p className='text-amber-50'>
+                <div className='mt-4 text-center netflix-sans-regular'>
+                    <p className='text-white'>
                         {loginT('newToNetflix')}{' '}
-                        <Link href='/register' className='text-gray-400 netflix-sans-bold font-bold underline'>
+                        <Link
+                            href='/register'
+                            className='text-white font-semibold netflix-sans-bold underline hover:text-red-400'
+                        >
                             {loginT('signUpNow')}
                         </Link>
                     </p>
