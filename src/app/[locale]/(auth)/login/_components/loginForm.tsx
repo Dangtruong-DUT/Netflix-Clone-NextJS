@@ -132,7 +132,7 @@ export default function LoginForm() {
                         {loginT('newToNetflix')}{' '}
                         <Link
                             href='/register'
-                            className='text-white font-semibold netflix-sans-bold underline hover:text-red-400'
+                            className='text-white font-semibold netflix-sans-bold underline hover:text-brand'
                         >
                             {loginT('signUpNow')}
                         </Link>
