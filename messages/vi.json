@@ -189,5 +189,20 @@
         "emailDescription": "Nhận cập nhật về các bộ phim mới, gợi ý phim và thông tin tài khoản trực tiếp trong hộp thư của bạn.",
         "pushDescription": "Nhận cảnh báo tức thì trên thiết bị về các chương trình, tập phim mới và gợi ý được cá nhân hóa.",
         "textDescription": "Nhận thông báo SMS cho các cập nhật tài khoản quan trọng và cảnh báo bảo mật trên điện thoại di động của bạn."
+    },
+    "PasswordPage": {
+        "title": "Đổi mật khẩu",
+        "subtitle": "Bảo vệ tài khoản của bạn bằng mật khẩu duy nhất dài ít nhất 6 ký tự.",
+        "currentPassword": "Mật khẩu hiện tại",
+        "newPassword": "Mật khẩu mới (6-60 ký tự)",
+        "confirmPassword": "Nhập lại mật khẩu mới",
+        "signOutDevices": "Đăng xuất tất cả thiết bị",
+        "forgotPassword": "Quên mật khẩu?",
+        "saveButton": "Lưu",
+        "cancelButton": "Hủy",
+        "passwordMismatch": "Mật khẩu không khớp",
+        "passwordTooShort": "Mật khẩu phải có ít nhất 6 ký tự",
+        "passwordTooLong": "Mật khẩu không được quá 60 ký tự",
+        "currentPasswordRequired": "Mật khẩu hiện tại là bắt buộc"
     }
 }

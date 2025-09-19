@@ -13,3 +13,18 @@ export const RegisterBody = z
         password: z.string().min(8, { message: 'passwordMinLength' })
     })
     .strict()
+
+export const PasswordChangeBody = z
+    .object({
+        current_password: z.string().min(1, { message: 'currentPasswordRequired' }),
+        new_password: z.string().min(6, { message: 'passwordTooShort' }).max(60, { message: 'passwordTooLong' }),
+        confirm_password: z.string(),
+        sign_out_devices: z.boolean()
+    })
+    .refine((data) => data.new_password === data.confirm_password, {
+        message: 'passwordMismatch',
+        path: ['confirm_password']
+    })
+    .strict()
+
+export type PasswordChangeBodyType = z.infer<typeof PasswordChangeBody>

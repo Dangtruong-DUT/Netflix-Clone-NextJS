@@ -189,5 +189,20 @@
         "emailDescription": "Receive updates about new releases, recommendations, and account information directly in your inbox.",
         "pushDescription": "Get instant alerts on your device about new shows, episodes, and personalized recommendations.",
         "textDescription": "Receive SMS notifications for important account updates and security alerts on your mobile phone."
+    },
+    "PasswordPage": {
+        "title": "Change password",
+        "subtitle": "Protect your account with a unique password at least 6 characters long.",
+        "currentPassword": "Current Password",
+        "newPassword": "New password (6-60 characters)",
+        "confirmPassword": "Re-enter new password",
+        "signOutDevices": "Sign out all devices",
+        "forgotPassword": "Forgot Password?",
+        "saveButton": "Save",
+        "cancelButton": "Cancel",
+        "passwordMismatch": "Passwords do not match",
+        "passwordTooShort": "Password must be at least 6 characters",
+        "passwordTooLong": "Password must be no more than 60 characters",
+        "currentPasswordRequired": "Current password is required"
     }
 }
