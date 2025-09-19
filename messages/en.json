@@ -165,5 +165,14 @@
         "emailRequired": "Email is required",
         "passwordMinLength": "Password must be at least 8 characters long",
         "mustAgreeToTerms": "You must agree to the terms to continue"
+    },
+    "AccountPage": {
+        "title": "Account",
+        "updatePassword": "Update password",
+        "manageEmail": "Manage email",
+        "requestPersonalInfo": "Request personal info",
+        "notificationSettings": "Notification settings",
+        "managePrivacy": "Manage privacy",
+        "startMembership": "Start Membership"
     }
 }

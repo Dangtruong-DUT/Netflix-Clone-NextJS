@@ -6,18 +6,15 @@ interface MainLayoutProps {
 }
 
 export const metadata = {
-    title: {
-        template: '%s | Netflix',
-        default: 'Netflix'
-    },
-    description: "Welcome to Netflix, the world's leading streaming entertainment service."
+    title: 'Account'
 }
 
 export default function MainLayout({ children }: MainLayoutProps) {
     return (
-        <div>
+        <>
+            <Header className='sticky top-0 z-40 left-0 border-b bg-background' />
             <main>{children}</main>
-            <Footer />
-        </div>
+            <Footer className='border-t bg-muted' />
+        </>
     )
 }
