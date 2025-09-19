@@ -163,19 +163,20 @@
     "errorMessages": {
         "emailInvalid": "Invalid email address",
         "emailRequired": "Email is required",
+        "passwordRequired": "Password is required",
         "passwordMinLength": "Password must be at least 8 characters long",
         "mustAgreeToTerms": "You must agree to the terms to continue"
     },
     "LoginPage": {
         "title": "Sign In",
-        "description": "Welcome back!",
         "emailPlaceholder": "Enter email",
         "passwordPlaceholder": "Enter password",
         "rememberMe": "Remember me",
         "signIn": "Sign In",
         "newToNetflix": "New to Netflix?",
         "signUpNow": "Sign up now",
-        "forgotPassword": "Forgot your password?"
+        "forgotPassword": "Forgot your password?",
+        "googleSignIn": "Sign In with Google",
+        "or": "or"
     }
-
 }

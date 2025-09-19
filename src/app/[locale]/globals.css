@@ -134,35 +134,34 @@ html body {
     font-family: var(--font-sans);
 }
 
-
 @font-face {
-  font-family: 'NetflixSans';
-  src: url('/assets/fonts/NetflixSans_W_Rg.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'NetflixSans';
+    src: url('/assets/fonts/NetflixSans_W_Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'NetflixSans';
-  src: url('/assets/fonts/NetflixSans_W_Bd.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
+    font-family: 'NetflixSans';
+    src: url('/assets/fonts/NetflixSans_W_Bd.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'NetflixSans';
-  src: url('/assets/fonts/NetflixSans_W_Blk.woff2') format('woff2');
-  font-weight: 900;
-  font-style: normal;
+    font-family: 'NetflixSans';
+    src: url('/assets/fonts/NetflixSans_W_Blk.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'NetflixSans';
-  src: url('/assets/fonts/NetflixSans_W_Md.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
+    font-family: 'NetflixSans';
+    src: url('/assets/fonts/NetflixSans_W_Md.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
 }
 
 body {
-  font-family: 'NetflixSans', sans-serif;
+    font-family: 'NetflixSans', sans-serif;
 }

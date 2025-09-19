@@ -24,7 +24,7 @@ export default async function Header({ className, buttonClassName }: HeaderProps
             <div className='flex items-center gap-4 '>
                 <ModeToggle className={cn('hidden md:flex', buttonClassName)} />
                 <SelectLanguage className={cn('hidden md:flex', buttonClassName)} />
-                <Link href='/auth/login'>
+                <Link href='/login'>
                     <Button className={cn('text-sm bg-brand  hover:bg-brand/80 text-white  rounded-sm cursor-pointer')}>
                         {t('signIn')}
                     </Button>
