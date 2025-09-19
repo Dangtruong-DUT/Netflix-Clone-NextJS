@@ -22,7 +22,7 @@ export default function TrendingSection({ trendingItems }: TrendingSectionProps)
 
     return (
         <div>
-            <Carousel className='w-[90%]'>
+            <Carousel className='w-[90%] mx-auto'>
                 <CarouselContent className='gap-1!'>
                     {trendingItems.map((item) => (
                         <CarouselItem key={item.id} className='max-w-fit!'>

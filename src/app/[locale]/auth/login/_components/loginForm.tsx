@@ -12,7 +12,7 @@ import { useTranslations } from 'next-intl';
 import { LoginBody, LoginBodyType } from '@/utils/validation/auth.validation';
 
 export default function LoginForm() {
-  const errorMessageT = useTranslations('errorMessageslogin');
+  const errorMessageT = useTranslations('errorMessages');
   const loginT = useTranslations('LoginPage');
 
   const form = useForm<LoginBodyType>({
@@ -71,7 +71,7 @@ export default function LoginForm() {
               </FormControl>
               <FormMessage>
                 {formState.errors.password?.message &&
-                  errorMessageT(formState.errors.password.message as 'passwordInvalid' | 'passwordRequired')}
+                  errorMessageT(formState.errors.password.message as 'passwordMinLength')}
               </FormMessage>
             </FormItem>
           )}

@@ -4,6 +4,7 @@ import SignupForm from '@/app/[locale]/(main)/home/_components/signup-form'
 import TrendingSection from '@/app/[locale]/(main)/home/_components/trending-section'
 import { mockTrendingItems } from '@/app/[locale]/(main)/home/_mock'
 import Header from '@/components/header'
+import { useTranslations } from 'next-intl'
 
 export const metadata = {
     title: 'Home',
@@ -12,6 +13,7 @@ export const metadata = {
 
 export default function HomePage() {
     const trendingItems = mockTrendingItems
+    const t = useTranslations('HomePage')
 
     return (
         <div>
@@ -31,15 +33,9 @@ export default function HomePage() {
                 </div>
                 <div className='relative z-2 flex-1 flex flex-col '>
                     <div className='m-auto text-center text-white  max-w-xl px-8'>
-                        <h1 className='text-3xl lg:text-6xl  md:text-4xl font-bold mb-5'>
-                            Unlimited films, series and more
-                        </h1>
-                        <p className='text-base md:text-2xl font-normal mb-8'>
-                            Starts at 74,000 ₫. Cancel at any time.
-                        </p>
-                        <p className='text-base mb-4'>
-                            Ready to watch? Enter your email to create or restart your membership.
-                        </p>
+                        <h1 className='text-3xl lg:text-6xl  md:text-4xl font-bold mb-5'>{t('heroTitle')}</h1>
+                        <p className='text-base md:text-2xl font-normal mb-8'>{t('heroSubtitle')}</p>
+                        <p className='text-base mb-4'>{t('heroDescription')}</p>
                         <SignupForm />
                     </div>
 
@@ -53,15 +49,15 @@ export default function HomePage() {
             </div>
             <div className='px-6 py-4 md:px-8 lg:px-37'>
                 <section className='mb-16'>
-                    <h2 className='text-2xl font-bold mb-4'>Trending Now</h2>
+                    <h2 className='text-2xl font-bold mb-4'>{t('trendingTitle')}</h2>
                     <TrendingSection trendingItems={trendingItems} />
                 </section>
                 <section className='mb-16'>
-                    <h2 className='text-2xl font-bold mb-4'>More reasons to join</h2>
+                    <h2 className='text-2xl font-bold mb-4'>{t('moreReasonsTitle')}</h2>
                     <FeaturesSection />
                 </section>
                 <section className='mb-16'>
-                    <h2 className='text-2xl font-bold mb-4'>Frequently Asked Questions</h2>
+                    <h2 className='text-2xl font-bold mb-4'>{t('faqTitle')}</h2>
                     <FAQSection />
                 </section>
             </div>

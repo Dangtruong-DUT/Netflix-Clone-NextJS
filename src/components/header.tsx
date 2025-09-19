@@ -1,33 +1,18 @@
-'use client'
-
 import Logo from '@/components/icons/logo'
 import SelectLanguage from '@/components/locale-switcher-select'
 import { ModeToggle } from '@/components/mode-toggle'
 import { Button } from '@/components/ui/button'
 import { Link } from '@/i18n/navigation'
 import { cn } from '@/lib/utils'
-import { useEffect, useState } from 'react'
+import { getTranslations } from 'next-intl/server'
 
 interface HeaderProps {
     className?: string
     buttonClassName?: string
 }
 
-export default function Header({ className, buttonClassName }: HeaderProps) {
-    const [isMobile, setIsMobile] = useState(true)
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768)
-        }
-
-        window.addEventListener('resize', handleResize)
-        handleResize()
-
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-    }, [])
+export default async function Header({ className, buttonClassName }: HeaderProps) {
+    const t = await getTranslations('Header')
 
     return (
         <header
@@ -37,11 +22,11 @@ export default function Header({ className, buttonClassName }: HeaderProps) {
                 <Logo className='lg:h-[40px] lg:w-[148px] w-[89px] h-[24px]' />
             </Link>
             <div className='flex items-center gap-4 '>
-                <ModeToggle className={buttonClassName} />
-                <SelectLanguage className={buttonClassName} isSmall={isMobile} />
+                <ModeToggle className={cn('hidden md:flex', buttonClassName)} />
+                <SelectLanguage className={cn('hidden md:flex', buttonClassName)} />
                 <Link href='/auth/login'>
-                    <Button className={cn('text-sm bg-brand  hover:bg-brand/80 text-white  rounded-sm  ')}>
-                        Sign in
+                    <Button className={cn('text-sm bg-brand  hover:bg-brand/80 text-white  rounded-sm cursor-pointer')}>
+                        {t('signIn')}
                     </Button>
                 </Link>
             </div>

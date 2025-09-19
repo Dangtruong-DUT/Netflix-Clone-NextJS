@@ -1,13 +1,15 @@
-import { APP_FEATURES, FeatureType } from '@/app/[locale]/(main)/home/_constants'
+import { useAppFeatures, FeatureType } from '@/app/[locale]/(main)/home/_constants/index'
 import { cn } from '@/lib/utils'
 
 interface FeaturesSectionProps {
     className?: string
 }
 export function FeaturesSection({ className }: FeaturesSectionProps) {
+    const features = useAppFeatures()
+
     return (
         <div className={cn('grid grid-cols-1   md:grid-cols-2 xl:grid-cols-4 gap-2  md:gap-4', className)}>
-            {APP_FEATURES.map((feature, index) => (
+            {features.map((feature, index) => (
                 <FeatureCard key={index} feature={feature} />
             ))}
         </div>

@@ -17,7 +17,13 @@ export default function BrandInput(props: BrandInputProps) {
                 id={fieldID}
                 placeholder=' '
                 className={cn(
-                    'peer w-full rounded-md border border-white/40  px-4 pt-[22px] pb-[14px] text-white focus:border-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-0 caret-white selection:bg-blue-600 selection:text-white transition-all duration-200 ',
+                    'peer w-full rounded-md border px-4 pt-[22px] pb-[14px] text-gray-900 dark:text-white',
+                    'border-gray-400 dark:border-white/40',
+                    'focus:border-black dark:focus:border-white',
+                    'focus:ring-2 focus:ring-blue-500 focus:ring-offset-0',
+                    'caret-black dark:caret-white',
+                    'selection:bg-blue-600 selection:text-white',
+                    'transition-all duration-200',
                     className
                 )}
                 {...rest}
@@ -25,11 +31,11 @@ export default function BrandInput(props: BrandInputProps) {
             <label
                 htmlFor={fieldID}
                 className={cn(
-                    'absolute left-4 top-1/2 -translate-y-1/2 text-base text-white/70 pointer-events-none',
+                    'absolute left-4 top-1/2 -translate-y-1/2 text-base text-gray-500 dark:text-white/70 pointer-events-none',
                     'transition-all duration-200 ease-in-out',
-                    ' peer-placeholder-shown:text-base ',
-                    ' peer-focus:text-xs  peer-focus:top-1 peer-focus:translate-y-0',
-                    'peer-[:not(:placeholder-shown)]:top-1  peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:text-xs '
+                    'peer-placeholder-shown:text-base',
+                    'peer-focus:text-xs peer-focus:top-1 peer-focus:translate-y-0',
+                    'peer-[:not(:placeholder-shown)]:top-1 peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:text-xs'
                 )}
             >
                 {label}

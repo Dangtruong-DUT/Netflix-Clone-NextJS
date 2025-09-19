@@ -1,6 +1,159 @@
 {
     "HomePage": {
-        "title": "Xin chào thế giới!"
+        "title": "Xin chào thế giới!",
+        "heroTitle": "Phim, chương trình truyền hình không giới hạn và nhiều nội dung khác",
+        "heroSubtitle": "Bắt đầu từ 74.000 ₫. Hủy bất cứ lúc nào.",
+        "heroDescription": "Sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại thành viên của bạn.",
+        "trendingTitle": "Xu hướng hiện tại",
+        "moreReasonsTitle": "Thêm lý do để tham gia",
+        "faqTitle": "Câu hỏi thường gặp"
+    },
+    "Header": {
+        "signIn": "Đăng nhập"
+    },
+    "Footer": {
+        "contactUs": "Có câu hỏi? Liên hệ với chúng tôi.",
+        "companyName": "Netflix Việt Nam",
+        "links": {
+            "faq": "Câu hỏi thường gặp",
+            "investorRelations": "Quan hệ nhà đầu tư",
+            "privacy": "Quyền riêng tư",
+            "speedTest": "Kiểm tra tốc độ",
+            "helpCentre": "Trung tâm trợ giúp",
+            "jobs": "Việc làm",
+            "cookiePreferences": "Tùy chọn cookie",
+            "legalNotices": "Thông báo pháp lý",
+            "account": "Tài khoản",
+            "waysToWatch": "Cách xem",
+            "corporateInformation": "Thông tin doanh nghiệp",
+            "onlyOnNetflix": "Chỉ có trên Netflix",
+            "mediaCentre": "Trung tâm truyền thông",
+            "termsOfUse": "Điều khoản sử dụng",
+            "contactUs": "Liên hệ chúng tôi"
+        }
+    },
+    "MovieModal": {
+        "getStarted": "Bắt đầu",
+        "featureComingSoon": "Tính năng sắp ra mắt!"
+    },
+    "SignupForm": {
+        "emailLabel": "Địa chỉ email",
+        "getStartedButton": "Bắt đầu"
+    },
+    "Features": {
+        "enjoyTvTitle": "Thưởng thức trên TV của bạn",
+        "enjoyTvDesc": "Xem trên TV thông minh, PlayStation, Xbox, Chromecast, Apple TV, máy phát Blu-ray và nhiều thiết bị khác",
+        "downloadTitle": "Tải xuống chương trình để xem ngoại tuyến",
+        "downloadDesc": "Lưu những nội dung yêu thích của bạn một cách dễ dàng và luôn có thứ để xem.",
+        "watchEverywhereTitle": "Xem ở mọi nơi",
+        "watchEverywhereDesc": "Phát trực tuyến phim và chương trình TV không giới hạn trên điện thoại, máy tính bảng, laptop và TV mà không phải trả thêm phí.",
+        "kidsProfilesTitle": "Tạo hồ sơ cho trẻ em",
+        "kidsProfilesDesc": "Đưa trẻ em vào những cuộc phiêu lưu cùng các nhân vật yêu thích trong không gian được tạo riêng cho chúng—miễn phí với thành viên của bạn."
+    },
+    "FAQ": {
+        "q1": "Netflix là gì?",
+        "a1": "Netflix là dịch vụ phát trực tuyến cung cấp nhiều chương trình TV, phim, anime, phim tài liệu đoạt giải và nhiều nội dung khác trên hàng nghìn thiết bị kết nối internet. Bạn có thể xem bao nhiều tùy thích, bất cứ khi nào bạn muốn, không có quảng cáo—tất cả chỉ với một mức giá hàng tháng thấp. Luôn có điều gì đó mới để khám phá, và các chương trình TV và phim mới được thêm vào mỗi tuần!",
+        "q2": "Netflix có giá bao nhiêu?",
+        "a2": "Xem Netflix trên điện thoại thông minh, máy tính bảng, Smart TV, laptop hoặc thiết bị phát trực tuyến của bạn, tất cả chỉ với một mức phí hàng tháng cố định. Các gói từ 74.000 ₫ đến 186.000 ₫ một tháng. Không có chi phí phụ, không có hợp đồng.",
+        "q3": "Tôi có thể xem ở đâu?",
+        "a3": "Xem ở bất cứ đâu, bất cứ khi nào. Đăng nhập bằng tài khoản Netflix của bạn để xem ngay lập tức trên web tại netflix.com từ máy tính cá nhân hoặc trên bất kỳ thiết bị kết nối internet nào có ứng dụng Netflix, bao gồm TV thông minh, điện thoại thông minh, máy tính bảng, máy phát media và máy chơi game. Bạn cũng có thể tải xuống các chương trình yêu thích với ứng dụng iOS, Android hoặc Windows 10. Sử dụng tính năng tải xuống để xem khi đang di chuyển và không có kết nối internet. Mang Netflix đi cùng bạn ở mọi nơi.",
+        "q4": "Làm thế nào để hủy?",
+        "a4": "Netflix linh hoạt. Không có hợp đồng phiền phức và không có cam kết. Bạn có thể dễ dàng hủy tài khoản trực tuyến chỉ với hai cú nhấp chuột. Không có phí hủy—bắt đầu hoặc dừng tài khoản của bạn bất cứ lúc nào.",
+        "q5": "Tôi có thể xem gì trên Netflix?",
+        "a5": "Netflix có thư viện mở rộng gồm các bộ phim điện ảnh, phim tài liệu, chương trình TV, anime, các tác phẩm gốc đoạt giải của Netflix và nhiều nội dung khác. Xem bao nhiều tùy thích, bất cứ khi nào bạn muốn.",
+        "q6": "Netflix có tốt cho trẻ em không?",
+        "a6": "Trải nghiệm Netflix Kids được bao gồm trong thành viên của bạn để cung cấp cho phụ huynh quyền kiểm soát trong khi trẻ em thưởng thức các chương trình TV và phim phù hợp với gia đình trong không gian riêng của chúng. Hồ sơ trẻ em đi kèm với các điều khiển của phụ huynh được bảo vệ bằng PIN cho phép bạn hạn chế mức độ trưởng thành của nội dung trẻ em có thể xem và chặn các tiêu đề cụ thể mà bạn không muốn trẻ em xem."
+    },
+    "RegformPage": {
+        "stepIndicator": "BƯỚC {current}/{total}",
+        "title": "Tạo mật khẩu để bắt đầu thành viên của bạn",
+        "subtitle": "Chỉ còn vài bước nữa và bạn đã hoàn thành! Chúng tôi cũng ghét giấy tờ.",
+        "emailLabel": "Email",
+        "passwordLabel": "Thêm mật khẩu",
+        "agreeToTerms": "Vui lòng không gửi cho tôi ưu đãi đặc biệt của Netflix qua email.",
+        "continueButton": "Tiếp tục",
+        "signOut": "Đăng xuất",
+        "termsNotice": "Trang này được bảo vệ bởi Google reCAPTCHA để đảm bảo bạn không phải là bot. Tìm hiểu thêm.",
+        "registrationSuccess": "Đăng ký thành công!"
+    },
+    "RegistrationPage": {
+        "stepIndicator": "BƯỚC {step}/{total}",
+        "title": "Hoàn thành việc cài đặt tài khoản của bạn",
+        "description": "Netflix được cá nhân hóa cho riêng bạn. Tạo mật khẩu để xem Netflix trên bất kỳ thiết bị nào, vào bất cứ lúc nào.",
+        "nextButton": "Tiếp theo"
+    },
+    "SignupPage": {
+        "stepIndicator": "BƯỚC {step}/{total}",
+        "title": "Chọn gói dịch vụ của bạn.",
+        "features": {
+            "noCommitments": "Không yêu cầu cam kết, hủy bất kỳ lúc nào.",
+            "lowPriceOnly": "Mọi thứ trên Netflix chỉ với mức giá thấp.",
+            "noAds": "Không quảng cáo, không phụ phí. Luôn luôn như vậy."
+        },
+        "nextButton": "Tiếp theo"
+    },
+    "PlanformPage": {
+        "stepIndicator": "BƯỚC {current}/{total}",
+        "title": "Chọn gói dịch vụ phù hợp với bạn",
+        "mostPopular": "Phổ biến nhất",
+        "signOut": "Đăng xuất",
+        "plans": {
+            "mobile": {
+                "name": "Mobile",
+                "quality": "480p",
+                "price": "74,000 ₫",
+                "videoQuality": "Khá",
+                "resolution": "480p",
+                "supportedDevices": "Điện thoại di động, máy tính bảng",
+                "householdDevices": "1",
+                "downloads": "1"
+            },
+            "basic": {
+                "name": "Basic",
+                "quality": "720p",
+                "price": "114,000 ₫",
+                "videoQuality": "Tốt",
+                "resolution": "720p (HD)",
+                "supportedDevices": "TV, máy tính, điện thoại di động, máy tính bảng",
+                "householdDevices": "1",
+                "downloads": "1"
+            },
+            "standard": {
+                "name": "Standard",
+                "quality": "1080p",
+                "price": "231,000 ₫",
+                "videoQuality": "Tuyệt vời",
+                "resolution": "1080p (Full HD)",
+                "supportedDevices": "TV, máy tính, điện thoại di động, máy tính bảng",
+                "householdDevices": "2",
+                "downloads": "2"
+            },
+            "premium": {
+                "name": "Premium",
+                "quality": "4K + HDR",
+                "price": "273,000 ₫",
+                "videoQuality": "Tốt nhất",
+                "resolution": "4K (Ultra HD) + HDR",
+                "supportedDevices": "TV, máy tính, điện thoại di động, máy tính bảng",
+                "householdDevices": "4",
+                "downloads": "6",
+                "spatialAudio": "Âm thanh không gian (âm thanh đa chiều)"
+            }
+        },
+        "features": {
+            "monthlyPrice": "Giá hàng tháng",
+            "videoAudioQuality": "Chất lượng hình và âm",
+            "resolution": "Độ phân giải",
+            "supportedDevices": "Thiết bị được hỗ trợ",
+            "householdDevices": "Số thiết bị gia đình bạn có thể xem cùng lúc",
+            "downloads": "Số thiết bị được tải xuống"
+        },
+        "continueButton": "Tiếp tục",
+        "disclaimer": {
+            "hdAvailability": "Tính khả dụng HD (720p), Full HD (1080p), Ultra HD (4K) và HDR tùy thuộc vào dịch vụ internet và khả năng của thiết bị. Không phải tất cả nội dung đều có sẵn ở mọi độ phân giải. Xem Điều khoản sử dụng của chúng tôi để biết thêm chi tiết.",
+            "deviceLimits": "Chỉ những người sống cùng với bạn mới có thể sử dụng tài khoản của bạn. Xem trên 4 thiết bị khác nhau cùng lúc với Premium, 2 với Standard, và 1 với Basic và Mobile.",
+            "liveEvents": "Sự kiện trực tiếp được bao gồm trong bất kỳ gói Netflix nào và chứa quảng cáo."
+        }
     },
     "SwitchLanguage": {
         "label": "Chuyển ngôn ngữ",
@@ -9,7 +162,9 @@
     },
     "errorMessages": {
         "emailInvalid": "Địa chỉ email không hợp lệ",
-        "emailRequired": "Email là bắt buộc"
+        "emailRequired": "Email là bắt buộc",
+        "passwordMinLength": "Mật khẩu phải có ít nhất 8 ký tự",
+        "mustAgreeToTerms": "Bạn phải đồng ý với các điều khoản để tiếp tục"
     },
     "LoginPage": {
         "title": "Đăng nhập",
@@ -21,13 +176,6 @@
         "newToNetflix": "Mới dùng Netflix?",
         "signUpNow": "Đăng ký ngay",
         "forgotPassword": "Quên mật khẩu?"
-    },
-
-    "errorMessageslogin": {
-        "emailInvalid": "Email không hợp lệ",
-        "emailRequired": "Email là bắt buộc",
-        "passwordInvalid": "Mật khẩu phải có ít nhất 8 ký tự, bao gồm ít nhất 1 chữ cái và 1 số",
-        "passwordRequired": "Mật khẩu là bắt buộc"
     }
 
 
