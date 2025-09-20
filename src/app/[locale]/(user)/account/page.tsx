@@ -1,6 +1,6 @@
 import { Link } from '@/i18n/navigation'
 import { Button } from '@/components/ui/button'
-import { Bell, ChevronRight, Download, Mail, Shield, Lock } from 'lucide-react'
+import { Bell, ChevronRight, Lock } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 
 type AccountItem = {
@@ -18,24 +18,9 @@ export default async function AccountPage() {
             href: '/password'
         },
         {
-            icon: Mail,
-            label: t('manageEmail'),
-            href: '/email'
-        },
-        {
-            icon: Download,
-            label: t('requestPersonalInfo'),
-            href: '/personal-info'
-        },
-        {
             icon: Bell,
             label: t('notificationSettings'),
             href: '/notificationsettings'
-        },
-        {
-            icon: Shield,
-            label: t('managePrivacy'),
-            href: '/privacy'
         }
     ]
 
@@ -65,7 +50,7 @@ export default async function AccountPage() {
                 </div>
 
                 <Link href='/signup'>
-                    <Button className='w-full dark:bg-brand hover:dark:bg-brand/90 bg-black hover:bg-black/90  text-white py-6 text-lg font-semibold rounded-xs'>
+                    <Button className='w-full dark:bg-brand hover:dark:bg-brand/90 bg-black hover:bg-black/90  text-white py-6 text-lg font-semibold rounded-xs cursor-pointer'>
                         {t('startMembership')}
                     </Button>
                 </Link>
