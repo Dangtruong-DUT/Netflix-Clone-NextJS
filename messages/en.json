@@ -164,7 +164,8 @@
         "emailInvalid": "Invalid email address",
         "emailRequired": "Email is required",
         "passwordMinLength": "Password must be at least 8 characters long",
-        "mustAgreeToTerms": "You must agree to the terms to continue"
+        "mustAgreeToTerms": "You must agree to the terms to continue",
+        "passwordMismatch": "Passwords do not match with"
     },
     "AccountPage": {
         "title": "Account",

@@ -164,7 +164,8 @@
         "emailInvalid": "Địa chỉ email không hợp lệ",
         "emailRequired": "Email là bắt buộc",
         "passwordMinLength": "Mật khẩu phải có ít nhất 8 ký tự",
-        "mustAgreeToTerms": "Bạn phải đồng ý với các điều khoản để tiếp tục"
+        "mustAgreeToTerms": "Bạn phải đồng ý với các điều khoản để tiếp tục",
+        "passwordMismatch": "Mật khẩu không khớp"
     },
     "AccountPage": {
         "title": "Tài khoản",

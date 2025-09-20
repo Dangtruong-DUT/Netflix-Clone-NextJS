@@ -16,9 +16,9 @@ export const RegisterBody = z
 
 export const PasswordChangeBody = z
     .object({
-        current_password: z.string().min(1, { message: 'currentPasswordRequired' }),
-        new_password: z.string().min(6, { message: 'passwordTooShort' }).max(60, { message: 'passwordTooLong' }),
-        confirm_password: z.string(),
+        current_password: z.string().min(8, { message: 'passwordMinLength' }),
+        new_password: z.string().min(8, { message: 'passwordMinLength' }),
+        confirm_password: z.string().min(8, { message: 'passwordMinLength' }),
         sign_out_devices: z.boolean()
     })
     .refine((data) => data.new_password === data.confirm_password, {
