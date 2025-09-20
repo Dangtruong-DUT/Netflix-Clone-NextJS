@@ -1,7 +1,12 @@
 import Footer from '@/components/footer'
 import LoginForm from './_components/loginForm'
 import Header from '@/components/header'
-import Head from 'next/head'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Login',
+    description: 'Login to your Netflix account to access a world of entertainment.'
+}
 
 export default function LoginPage() {
     return (
@@ -17,12 +22,6 @@ export default function LoginPage() {
             <div className='absolute inset-0 bg-black opacity-75'></div>
 
             <div className='relative z-10 flex flex-col min-h-screen'>
-                <Head>
-                    <title>Sign In | Netflix</title>
-                    <meta name='description' content='Login to your Netflix account' />
-                    <meta name='viewport' content='width=device-width, initial-scale=1' />
-                    <link rel='icon' href='/favicon.ico' />
-                </Head>
                 <div className='bg-[linear-gradient(180deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0.7889)_8.333%,rgba(0,0,0,0.7556)_16.67%,rgba(0,0,0,0.7)_25%,rgba(0,0,0,0.6222)_33.33%,rgba(0,0,0,0.5222)_41.67%,rgba(0,0,0,0.4)_50%,rgba(0,0,0,0.2778)_58.33%,rgba(0,0,0,0.1778)_66.67%,rgba(0,0,0,0.1)_75%,rgba(0,0,0,0.04444)_83.33%,rgba(0,0,0,0.01111)_91.67%,rgba(0,0,0,0)_100%)] relative  z-2'>
                     <Header buttonClassName='text-white bg-transparent hover:bg-transparent hover:text-white ' />
                 </div>

@@ -7,6 +7,11 @@
         "passwordInvalid": "Mật khẩu phải bao gồm 1 chữ, 1 số",
         "mustAgreeToTerms": "Bạn phải đồng ý với các điều khoản để tiếp tục"
     },
+    "SwitchLanguage": {
+        "label": "Chuyển ngôn ngữ",
+        "en": "Tiếng Anh",
+        "vi": "Tiếng Việt"
+    },
     "HomePage": {
         "title": "Xin chào thế giới!",
         "heroTitle": "Phim, chương trình truyền hình không giới hạn và nhiều nội dung khác",
@@ -163,12 +168,6 @@
             "liveEvents": "Sự kiện trực tiếp được bao gồm trong bất kỳ gói Netflix nào và chứa quảng cáo."
         }
     },
-    "SwitchLanguage": {
-        "label": "Chuyển ngôn ngữ",
-        "en": "Tiếng Anh",
-        "vi": "Tiếng Việt"
-    },
-
     "LoginPage": {
         "title": "Đăng nhập",
         "emailPlaceholder": "Nhập email",
@@ -180,8 +179,7 @@
         "forgotPassword": "Quên mật khẩu?",
         "googleSignIn": "Đăng nhập với Google",
         "or": "hoặc",
-        "mustAgreeToTerms": "Bạn phải đồng ý với các điều khoản để tiếp tục",
-        "passwordMismatch": "Mật khẩu không khớp"
+        "mustAgreeToTerms": "Bạn phải đồng ý với các điều khoản để tiếp tục"
     },
     "AccountPage": {
         "title": "Tài khoản",
