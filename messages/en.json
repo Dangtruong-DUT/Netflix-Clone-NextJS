@@ -177,6 +177,42 @@
         "signUpNow": "Sign up now",
         "forgotPassword": "Forgot your password?",
         "googleSignIn": "Sign In with Google",
-        "or": "or"
+        "or": "or",
+        "mustAgreeToTerms": "You must agree to the terms to continue"
+    },
+    "AccountPage": {
+        "title": "Account",
+        "updatePassword": "Update password",
+        "manageEmail": "Manage email",
+        "requestPersonalInfo": "Request personal info",
+        "notificationSettings": "Notification settings",
+        "managePrivacy": "Manage privacy",
+        "startMembership": "Start Membership"
+    },
+    "NotificationSettings": {
+        "title": "Notification settings",
+        "subtitle": "Customise and choose the notifications and alerts you want to receive from Netflix",
+        "email": "Email",
+        "emailAddress": "ndrg2814@gmail.com",
+        "pushNotifications": "Push notifications",
+        "textMessages": "Text messages",
+        "statusActive": "{name} active",
+        "statusInactive": "{name} inactive",
+        "toggleOn": "Turn on notifications",
+        "toggleOff": "Turn off notifications",
+        "emailDescription": "Receive updates about new releases, recommendations, and account information directly in your inbox.",
+        "pushDescription": "Get instant alerts on your device about new shows, episodes, and personalized recommendations.",
+        "textDescription": "Receive SMS notifications for important account updates and security alerts on your mobile phone."
+    },
+    "PasswordPage": {
+        "title": "Change password",
+        "subtitle": "Protect your account with a unique password at least 6 characters long.",
+        "currentPassword": "Current Password",
+        "newPassword": "New password (6-60 characters)",
+        "confirmPassword": "Re-enter new password",
+        "signOutDevices": "Sign out all devices",
+        "forgotPassword": "Forgot Password?",
+        "saveButton": "Save",
+        "cancelButton": "Cancel"
     }
 }

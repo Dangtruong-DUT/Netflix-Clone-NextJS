@@ -1,4 +1,12 @@
 {
+    "errorMessages": {
+        "emailInvalid": "Địa chỉ email không hợp lệ",
+        "emailRequired": "Email là bắt buộc",
+        "passwordRequired": "Mật khẩu là bắt buộc",
+        "passwordMinLength": "Mật khẩu phải có ít nhất 8 ký tự",
+        "passwordInvalid": "Mật khẩu phải bao gồm 1 chữ, 1 số",
+        "mustAgreeToTerms": "Bạn phải đồng ý với các điều khoản để tiếp tục"
+    },
     "HomePage": {
         "title": "Xin chào thế giới!",
         "heroTitle": "Phim, chương trình truyền hình không giới hạn và nhiều nội dung khác",
@@ -160,14 +168,7 @@
         "en": "Tiếng Anh",
         "vi": "Tiếng Việt"
     },
-    "errorMessages": {
-        "emailInvalid": "Địa chỉ email không hợp lệ",
-        "emailRequired": "Email là bắt buộc",
-        "passwordRequired": "Mật khẩu là bắt buộc",
-        "passwordMinLength": "Mật khẩu phải có ít nhất 8 ký tự",
-        "passwordInvalid": "Mật khẩu phải bao gồm 1 chữ, 1 số",
-        "mustAgreeToTerms": "Bạn phải đồng ý với các điều khoản để tiếp tục"
-    },
+
     "LoginPage": {
         "title": "Đăng nhập",
         "emailPlaceholder": "Nhập email",
@@ -178,6 +179,43 @@
         "signUpNow": "Đăng ký ngay",
         "forgotPassword": "Quên mật khẩu?",
         "googleSignIn": "Đăng nhập với Google",
-        "or": "hoặc"
+        "or": "hoặc",
+        "mustAgreeToTerms": "Bạn phải đồng ý với các điều khoản để tiếp tục",
+        "passwordMismatch": "Mật khẩu không khớp"
+    },
+    "AccountPage": {
+        "title": "Tài khoản",
+        "updatePassword": "Cập nhật mật khẩu",
+        "manageEmail": "Quản lý email",
+        "requestPersonalInfo": "Yêu cầu thông tin cá nhân",
+        "notificationSettings": "Cài đặt thông báo",
+        "managePrivacy": "Quản lý quyền riêng tư",
+        "startMembership": "Bắt đầu thành viên"
+    },
+    "NotificationSettings": {
+        "title": "Cài đặt thông báo",
+        "subtitle": "Tùy chỉnh và chọn các thông báo và cảnh báo bạn muốn nhận từ Netflix",
+        "email": "Email",
+        "emailAddress": "ndrg2814@gmail.com",
+        "pushNotifications": "Thông báo đẩy",
+        "textMessages": "Tin nhắn văn bản",
+        "statusActive": "{name} đang hoạt động",
+        "statusInactive": "{name} không hoạt động",
+        "toggleOn": "Bật thông báo",
+        "toggleOff": "Tắt thông báo",
+        "emailDescription": "Nhận cập nhật về các bộ phim mới, gợi ý phim và thông tin tài khoản trực tiếp trong hộp thư của bạn.",
+        "pushDescription": "Nhận cảnh báo tức thì trên thiết bị về các chương trình, tập phim mới và gợi ý được cá nhân hóa.",
+        "textDescription": "Nhận thông báo SMS cho các cập nhật tài khoản quan trọng và cảnh báo bảo mật trên điện thoại di động của bạn."
+    },
+    "PasswordPage": {
+        "title": "Đổi mật khẩu",
+        "subtitle": "Bảo vệ tài khoản của bạn bằng mật khẩu duy nhất dài ít nhất 6 ký tự.",
+        "currentPassword": "Mật khẩu hiện tại",
+        "newPassword": "Mật khẩu mới (6-60 ký tự)",
+        "confirmPassword": "Nhập lại mật khẩu mới",
+        "signOutDevices": "Đăng xuất tất cả thiết bị",
+        "forgotPassword": "Quên mật khẩu?",
+        "saveButton": "Lưu",
+        "cancelButton": "Hủy"
     }
 }

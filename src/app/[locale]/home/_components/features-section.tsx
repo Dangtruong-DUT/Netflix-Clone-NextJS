@@ -1,4 +1,4 @@
-import { useAppFeatures, FeatureType } from '@/app/[locale]/(main)/home/_constants/index'
+import { useAppFeatures, FeatureType } from '@/app/[locale]/home/_constants/index'
 import { cn } from '@/lib/utils'
 
 interface FeaturesSectionProps {

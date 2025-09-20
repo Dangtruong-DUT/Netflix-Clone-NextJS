@@ -1,4 +1,4 @@
-import { useFaqList } from '@/app/[locale]/(main)/home/_constants/index'
+import { useFaqList } from '@/app/[locale]/home/_constants/index'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { cn } from '@/lib/utils'
 
