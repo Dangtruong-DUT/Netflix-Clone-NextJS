@@ -1,4 +1,17 @@
 {
+    "SwitchLanguage": {
+        "label": "Switch language",
+        "en": "English",
+        "vi": "Vietnamese"
+    },
+    "errorMessages": {
+        "emailInvalid": "Invalid email address",
+        "emailRequired": "Email is required",
+        "passwordRequired": "Password is required",
+        "passwordMinLength": "Password must be at least 8 characters long",
+        "mustAgreeToTerms": "You must agree to the terms to continue",
+        "passwordMismatch": "Passwords do not match"
+    },
     "HomePage": {
         "title": "Hello world!",
         "heroTitle": "Unlimited films, series and more",
@@ -154,18 +167,6 @@
             "deviceLimits": "Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard, and 1 with Basic and Mobile.",
             "liveEvents": "Live events are included with any Netflix plan and contain adverts."
         }
-    },
-    "SwitchLanguage": {
-        "label": "Switch language",
-        "en": "English",
-        "vi": "Vietnamese"
-    },
-    "errorMessages": {
-        "emailInvalid": "Invalid email address",
-        "emailRequired": "Email is required",
-        "passwordRequired": "Password is required",
-        "passwordMinLength": "Password must be at least 8 characters long",
-        "mustAgreeToTerms": "You must agree to the terms to continue"
     },
     "LoginPage": {
         "title": "Sign In",
