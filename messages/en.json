@@ -181,5 +181,22 @@
         "forgotPassword": "Forgot your password?",
         "googleSignIn": "Sign In with Google",
         "or": "or"
+    },
+    "ForgotPasswordPage": {
+        "title": "Reset Password",
+        "description": "Enter the email associated with your account and we'll send an email with instructions to reset your password.",
+        "emailLabel": "Email",
+        "sendEmail": "Send email to me",
+        "successTitle": "Email Sent!",
+        "successDescription": "We've sent an email with instructions to reset your password to {email}. If you don't see the email, please check your spam folder or try again"
+    },
+    "ResetPasswordPage": {
+        "emailLabel": "{email}",
+        "title": "Reset Password",
+        "description": "Create a new password for your account",
+        "passwordLabel": "New password",
+        "confirmPasswordLabel": "Confirm new password",
+        "save": "Save",
+        "cancel": "Cancel"
     }
 }

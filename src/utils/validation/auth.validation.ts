@@ -29,3 +29,16 @@ export const LoginBody = z
     .strict()
 
 export type LoginBodyType = z.infer<typeof LoginBody>
+
+export const ChangePasswordBody = z
+    .object({
+        email: z.string(),
+        password: z.string().min(8, { message: 'passwordMinLength' }),
+        confirmPassword: z.string().min(1, { message: 'passwordRequired' })
+    })
+    .refine((data) => data.password === data.confirmPassword, {
+        message: 'passwordMismatch',
+        path: ['confirmPassword']
+    })
+    .strict()
+export type ChangePasswordBodyType = z.infer<typeof ChangePasswordBody>

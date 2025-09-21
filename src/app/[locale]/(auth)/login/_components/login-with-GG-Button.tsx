@@ -1,3 +1,4 @@
+import Google from '@/components/icons/google'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
 import { toast } from 'sonner'
@@ -13,26 +14,9 @@ export default function LoginWithGGButton() {
         <Button
             type='button'
             onClick={handleGoogleSignIn}
-            className='bg-white/20 text-white font-semibold netflix-sans-bold h-[40px] flex items-center justify-center gap-2'
+            className='bg-white/20 text-white dark:hover:bg-neutral-700 font-semibold netflix-sans-bold h-[40px] flex items-center justify-center gap-2 cursor-pointer'
         >
-            <svg className='w-5 h-5' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                <path
-                    d='M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z'
-                    fill='#4285F4'
-                />
-                <path
-                    d='M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-1.02.68-2.33 1.09-3.71 1.09-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C4.01 20.76 7.74 23 12 23z'
-                    fill='#34A853'
-                />
-                <path
-                    d='M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z'
-                    fill='#FBBC05'
-                />
-                <path
-                    d='M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.74 1 4.01 3.24 2.18 6.07L5.84 8.91c.87-2.6 3.3-4.53 6.16-4.53z'
-                    fill='#EA4335'
-                />
-            </svg>
+            <Google />
             {loginT('googleSignIn')}
         </Button>
     )
