@@ -18,7 +18,9 @@ export default function ResetPasswordForm() {
     const form = useForm<ChangePasswordBodyType>({
         resolver: zodResolver(ChangePasswordBody) as Resolver<ChangePasswordBodyType>,
         defaultValues: {
-            email: 'ray8120@gmail.com'
+            email: 'ray8120@gmail.com',
+            password: '',
+            confirmPassword: ''
         }
     })
 
