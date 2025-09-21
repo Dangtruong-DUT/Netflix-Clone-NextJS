@@ -64,7 +64,9 @@ export default function ForgotPasswordForm() {
                                     className={cn(
                                         'w-full h-10 sm:h-12 md:h-14 rounded-md border px-3 py-2',
                                         'bg-neutral-800/90 text-white placeholder-gray-500',
-                                        'dark:bg-white dark:text-black dark:placeholder-gray-400'
+                                        'dark:bg-white dark:text-black dark:placeholder-gray-400',
+                                        'text-sm sm:text-base md:text-lg',
+                                        'pt-5 sm:pt-2'
                                     )}
                                     wrapperClassName='[&_label]:dark:text-black!'
                                     {...field}
