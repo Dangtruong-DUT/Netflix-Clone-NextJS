@@ -7,9 +7,9 @@ import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
 import BrandInput from '@/components/brand-input'
+import { cn } from '@/lib/utils'
 import { useTranslations } from 'next-intl'
 import { ChangePasswordBody, ChangePasswordBodyType } from '@/utils/validation/auth.validation'
-import Lock from '@/components/icons/lock'
 
 export default function ResetPasswordForm() {
     const errorMessageT = useTranslations('errorMessages')
@@ -31,13 +31,13 @@ export default function ResetPasswordForm() {
         <Form {...form}>
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className='flex flex-col gap-4 p-4 sm:p-6 md:p-8 rounded-lg bg-white/20'
+                className='flex flex-col gap-4 p-4 sm:p-6 md:p-8 rounded-none dark:bg-gray-200 bg-neutral-700/50'
             >
-                <h1 className='text-2xl sm:text-3xl text-white font-semibold mb-4 text-center netflix-sans-bold'>
+                <h1 className='text-2xl sm:text-3xl dark:text-black text-white font-semibold mb-4 text-center netflix-sans-bold'>
                     {resetPasswordT('title')}
                 </h1>
 
-                <p className='text-gray-400 text-sm sm:text-base text-left mb-6 netflix-sans-regular'>
+                <p className='dark:text-black text-white text-sm sm:text-base mb-6 text-left'>
                     {resetPasswordT('description')}
                 </p>
 
@@ -45,12 +45,17 @@ export default function ResetPasswordForm() {
                     control={form.control}
                     name='email'
                     render={({ field, formState }) => (
-                        <FormItem className='w-full'>
+                        <FormItem className='w-full cursor-not-allowed'>
                             <FormControl className='h-fit'>
                                 <BrandInput
                                     label={'Email'}
                                     value={resetPasswordT('emailLabel', { email: form.getValues('email') })}
-                                    className='w-full h-10 sm:h-12 md:h-14 bg-black/50 text-white placeholder-gray-400'
+                                    className={cn(
+                                        'w-full h-10 sm:h-12 md:h-14 rounded-md border px-3 py-2',
+                                        'bg-neutral-800/90 text-white placeholder-gray-500',
+                                        'dark:bg-white dark:text-black dark:placeholder-gray-400'
+                                    )}
+                                    wrapperClassName='[&_label]:dark:text-black!'
                                     disabled
                                 />
                             </FormControl>
@@ -67,7 +72,12 @@ export default function ResetPasswordForm() {
                                 <BrandInput
                                     type='password'
                                     label={resetPasswordT('passwordLabel')}
-                                    className='w-full h-10 sm:h-12 md:h-14 bg-black/50 text-white placeholder-gray-400'
+                                    className={cn(
+                                        'w-full h-10 sm:h-12 md:h-14 rounded-md border px-3 py-2',
+                                        'bg-neutral-800/90 text-white placeholder-gray-500',
+                                        'dark:bg-white dark:text-black dark:placeholder-gray-400'
+                                    )}
+                                    wrapperClassName='[&_label]:dark:text-black!'
                                     {...field}
                                 />
                             </FormControl>
@@ -93,7 +103,12 @@ export default function ResetPasswordForm() {
                                 <BrandInput
                                     type='password'
                                     label={resetPasswordT('confirmPasswordLabel')}
-                                    className='w-full h-10 sm:h-12 md:h-14 bg-black/50 text-white placeholder-gray-400'
+                                    className={cn(
+                                        'w-full h-10 sm:h-12 md:h-14 rounded-md border px-3 py-2',
+                                        'bg-neutral-800/90 text-white placeholder-gray-500',
+                                        'dark:bg-white dark:text-black dark:placeholder-gray-400'
+                                    )}
+                                    wrapperClassName='[&_label]:dark:text-black!'
                                     {...field}
                                 />
                             </FormControl>
@@ -105,13 +120,13 @@ export default function ResetPasswordForm() {
                 />
                 <Button
                     type='submit'
-                    className='bg-white hover:bg-neutral-100 text-black font-semibold netflix-sans-bold h-[40px] w-full px-4 sm:px-6 md:px-8 py-2 transition-colors duration-200 cursor-pointer'
+                    className='bg-red-600 hover:bg-red-700 text-white font-semibold netflix-sans-bold h-[40px] w-full px-4 sm:px-6 md:px-8 py-2 transition-colors duration-200 cursor-pointer'
                 >
                     {resetPasswordT('save')}
                 </Button>
                 <Button
                     type='button'
-                    className='bg-black hover:bg-black hover:text-white text-white font-semibold netflix-sans-bold h-[40px] w-full px-4 sm:px-6 md:px-8 py-2 duration-200 cursor-pointer'
+                    className='bg-white/20 text-white dark:bg-neutral-700 dark:hover:bg-neutral-600 font-semibold netflix-sans-bold h-[40px] flex items-center justify-center gap-2 cursor-pointer'
                 >
                     {resetPasswordT('cancel')}
                 </Button>
