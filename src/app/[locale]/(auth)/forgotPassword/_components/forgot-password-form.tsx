@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl'
 import { RegisterEmailBody, RegisterEmailBodyType } from '@/utils/validation/auth.validation'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
-import SuccessMessageForm from '@/app/[locale]/(auth)/forgotPassword/_components/messageForm'
+import SuccessMessageForm from '@/app/[locale]/(auth)/forgotPassword/_components/message-form'
 
 export default function ForgotPasswordForm() {
     const errorMessageT = useTranslations('errorMessages')

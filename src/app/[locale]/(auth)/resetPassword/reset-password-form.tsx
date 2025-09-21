@@ -128,7 +128,7 @@ export default function ResetPasswordForm() {
                 </Button>
                 <Button
                     type='button'
-                    className='bg-[#777777] hover:bg-[#7777] text-black dark:text-white dark:bg-white/20 dark:hover:bg-white/15 rounded-[4px] font-semibold netflix-sans-bold h-[40px] flex items-center justify-center gap-2 cursor-pointer'
+                    className='bg-white hover:bg-[#e6e6e6] text-black dark:text-white dark:bg-white/20 dark:hover:bg-white/15 rounded-[4px] font-semibold netflix-sans-bold h-[40px] flex items-center justify-center gap-2 cursor-pointer'
                 >
                     {resetPasswordT('cancel')}
                 </Button>
