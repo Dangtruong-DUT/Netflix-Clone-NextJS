@@ -221,7 +221,6 @@
     "ResetPasswordPage": {
         "emailLabel": "{email}",
         "title": "Đặt lại mật khẩu",
-        "description": "Vui lòng nhập mật khẩu mới cho tài khoản của bạn.",
         "passwordLabel": "Mật khẩu mới",
         "confirmPasswordLabel": "Xác nhận mật khẩu mới",
         "resetPasswordButton": "Đặt lại mật khẩu",
