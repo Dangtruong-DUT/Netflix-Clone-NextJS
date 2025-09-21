@@ -5,10 +5,11 @@ import { useId } from 'react'
 interface BrandInputProps extends Omit<React.ComponentProps<'input'>, 'placeholder'> {
     wrapperClassName?: string
     label: string
+    labelClassName?: string
 }
 
 export default function BrandInput(props: BrandInputProps) {
-    const { className, wrapperClassName, label, ...rest } = props
+    const { className, wrapperClassName, label, labelClassName, ...rest } = props
     const fieldID = useId()
 
     return (
@@ -35,7 +36,8 @@ export default function BrandInput(props: BrandInputProps) {
                     'transition-all duration-200 ease-in-out',
                     'peer-placeholder-shown:text-base',
                     'peer-focus:text-xs peer-focus:top-1 peer-focus:translate-y-0',
-                    'peer-[:not(:placeholder-shown)]:top-1 peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:text-xs'
+                    'peer-[:not(:placeholder-shown)]:top-1 peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:text-xs',
+                    labelClassName
                 )}
             >
                 {label}
