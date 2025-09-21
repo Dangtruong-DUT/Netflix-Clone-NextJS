@@ -165,7 +165,10 @@
         "emailRequired": "Email is required",
         "passwordRequired": "Password is required",
         "passwordMinLength": "Password must be at least 8 characters long",
-        "mustAgreeToTerms": "You must agree to the terms to continue"
+        "passwordInvalid": "Password must include 1 letter, 1 number",
+        "passwordMismatch": "Passwords do not match",
+        "mustAgreeToTerms": "You must agree to the terms to continue",
+        "genericError": "An error occurred. Please try again"
     },
     "LoginPage": {
         "title": "Sign In",
