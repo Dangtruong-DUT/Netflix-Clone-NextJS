@@ -1,10 +1,11 @@
 import Footer from '@/components/footer'
 import LoginForm from './_components/loginForm'
 import Header from '@/components/header'
+import { Metadata } from 'next'
 
-export const metadata = {
-    title: 'Sign In',
-    description: 'Login to your Netflix account'
+export const metadata: Metadata = {
+    title: 'Login',
+    description: 'Login to your Netflix account to access a world of entertainment.'
 }
 
 export default function LoginPage() {

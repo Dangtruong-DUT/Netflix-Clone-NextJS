@@ -1,8 +1,8 @@
-import FAQSection from '@/app/[locale]/(main)/home/_components/FAQ-section'
-import { FeaturesSection } from '@/app/[locale]/(main)/home/_components/features-section'
-import SignupForm from '@/app/[locale]/(main)/home/_components/signup-form'
-import TrendingSection from '@/app/[locale]/(main)/home/_components/trending-section'
-import { mockTrendingItems } from '@/app/[locale]/(main)/home/_mock'
+import FAQSection from '@/app/[locale]/home/_components/FAQ-section'
+import { FeaturesSection } from '@/app/[locale]/home/_components/features-section'
+import SignupForm from '@/app/[locale]/home/_components/signup-form'
+import TrendingSection from '@/app/[locale]/home/_components/trending-section'
+import { mockTrendingItems } from '@/app/[locale]/home/_mock'
 import Header from '@/components/header'
 import { useTranslations } from 'next-intl'
 
