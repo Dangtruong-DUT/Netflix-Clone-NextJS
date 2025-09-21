@@ -59,30 +59,21 @@ export default function ForgotPasswordForm() {
                     render={({ field, formState }) => (
                         <FormItem className='w-full'>
                             <FormControl className='h-fit email-form-item dark'>
-                                <div className='flex flex-col'>
-                                    <label className={cn('text-sm mb-2', 'text-white', 'dark:text-black')}>
-                                        {forgotT('emailLabel')}
-                                    </label>
-                                    <BrandInput
-                                        label=''
-                                        className={cn(
-                                            'w-full h-10 sm:h-12 md:h-14 rounded-md border px-3 py-2',
-                                            'bg-neutral-800/90 text-white placeholder-gray-500',
-                                            'dark:bg-white dark:text-black dark:placeholder-gray-400'
-                                        )}
-                                        {...field}
-                                    />
-                                </div>
+                                <BrandInput
+                                    label='Email'
+                                    className={cn(
+                                        'w-full h-10 sm:h-12 md:h-14 rounded-md border px-3 py-2',
+                                        'bg-neutral-800/90 text-white placeholder-gray-500',
+                                        'dark:bg-white dark:text-black dark:placeholder-gray-400'
+                                    )}
+                                    wrapperClassName='[&_label]:dark:text-black!'
+                                    {...field}
+                                />
                             </FormControl>
                             <FormMessage className='text-brand text-xs sm:text-sm mt-1'>
                                 {formState.errors.email?.message &&
                                     errorMessageT(formState.errors.email.message as 'emailInvalid' | 'emailRequired')}
                             </FormMessage>
-                            <style jsx>{`
-                                .dark .email-form-item label {
-                                    color: black !important;
-                                }
-                            `}</style>
                         </FormItem>
                     )}
                 />

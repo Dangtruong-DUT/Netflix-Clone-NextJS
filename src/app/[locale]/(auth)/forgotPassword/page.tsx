@@ -1,4 +1,4 @@
-import ForgotPasswordForm from '@/app/[locale]/(auth)/forgotPassword/_components/forgotPasswordForm'
+import ForgotPasswordForm from '@/app/[locale]/(auth)/forgotPassword/_components/forgot-password-form'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 
@@ -7,7 +7,7 @@ export const metadata = {
     description: 'Reset your Netflix password'
 }
 
-export default function LoginPage() {
+export default function ForgorPasswordPage() {
     return (
         <div
             className='relative min-h-screen flex flex-col justify-between bg-center'
