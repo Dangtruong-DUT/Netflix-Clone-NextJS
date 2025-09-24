@@ -193,7 +193,6 @@
     "ResetPasswordPage": {
         "emailLabel": "{email}",
         "title": "Reset Password",
-        "description": "Create a new password for your account",
         "passwordLabel": "New password",
         "confirmPasswordLabel": "Confirm new password",
         "save": "Save",
@@ -234,5 +233,4 @@
         "saveButton": "Save",
         "cancelButton": "Cancel"
     }
-
 }
