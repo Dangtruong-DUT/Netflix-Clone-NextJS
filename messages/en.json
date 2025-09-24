@@ -232,5 +232,16 @@
         "forgotPassword": "Forgot Password?",
         "saveButton": "Save",
         "cancelButton": "Cancel"
+    },
+    "InformationForm": {
+        "views": "views",
+        "description": "Description",
+        "still_has": "Has",
+        "favorite": "Favorite",
+        "comment": "Comment",
+        "share": "Share",
+        "actors": "Actors",
+        "director": "Director",
+        "genre": "Genre"
     }
 }

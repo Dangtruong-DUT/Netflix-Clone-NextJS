@@ -9,3 +9,23 @@ export type TrendingItem = {
     horizontal_poster: string
     rank: number
 }
+
+export type InformationFilm = {
+    id: string
+    title: string
+    title_other: string
+    views: number
+    rating: number
+    year: number
+    age_rating: string
+    country: string
+    quality: string
+    duration: string
+    actors: string[]
+    director: string
+    genre: string
+    description: string
+    favoriteCount: number
+    commentsCount: number
+    sharesCount: number
+}
