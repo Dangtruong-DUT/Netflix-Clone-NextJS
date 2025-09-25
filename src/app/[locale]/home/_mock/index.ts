@@ -1,5 +1,4 @@
 import { TrendingItem } from '@/types/film.type'
-import { id } from 'zod/v4/locales'
 
 const mockTrendingItem: TrendingItem = {
     id: '1',
