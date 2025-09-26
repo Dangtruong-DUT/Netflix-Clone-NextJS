@@ -9,7 +9,7 @@ export const filmDetail: FilmDetailType = {
     vertical_poster: '/images/home/inception-vertical.jpg',
     horizontal_poster: '/images/hero_video_poster.png',
     genres: ['Phim cổ trang', 'Hành động'],
-    trailer_url: '/trailers/tieu-minh-minh.mp4',
+    trailer_url: '/videos/teaser_Camuchammat.mp4',
     age: 13,
 
     views_count: 2704011,
