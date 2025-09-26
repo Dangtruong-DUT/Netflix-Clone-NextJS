@@ -33,17 +33,6 @@ function FiveStar({ size, fillType, starId }: StarIconProps) {
                 fill={fillType === 'full' ? '#fbbf24' : fillType === 'half' ? `url(#half-gradient-${starId})` : 'none'}
                 className='transition-all duration-200'
             />
-
-            {/* {fillType !== 'empty' && (
-                <path
-                    d={starPath}
-                    fill='transparent'
-                    stroke={fillType === 'full' ? '#f59e0b' : 'transparent'}
-                    strokeWidth={2}
-                    strokeLinejoin='round'
-                    className='blur-[1px] opacity-60'
-                />
-            )} */}
         </svg>
     )
 }

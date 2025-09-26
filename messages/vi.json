@@ -246,6 +246,7 @@
         "share": "Chia sẻ",
         "actors": "Diễn viên",
         "director": "Đạo diễn",
-        "genre": "Thể loại"
+        "genre": "Thể loại",
+        "noCommentsMessage": "Chưa có bình luận nào, hãy là người đầu tiên!"
     }
 }

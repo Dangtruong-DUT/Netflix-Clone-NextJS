@@ -242,6 +242,7 @@
         "share": "Share",
         "actors": "Actors",
         "director": "Director",
-        "genre": "Genre"
+        "genre": "Genre",
+        "noCommentsMessage": ""
     }
 }

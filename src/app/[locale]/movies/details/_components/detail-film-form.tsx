@@ -42,6 +42,7 @@ export default function DetailFilmForm({ informationFilm }: Props) {
                             {movie.views.toLocaleString('vi-VN', { useGrouping: true })} {t('views')}
                         </div>
                         <div className='flex items-center gap-1 xs:gap-2 dark:text-white text-black cursor-pointer'>
+                            {movie.rating}
                             <StarRating value={movie.rating} />
                         </div>
                     </div>

@@ -7,11 +7,10 @@ type StarRatingProps = {
     value: number
     size?: number
     gap?: number
-    showValue?: boolean
     className?: string
 }
 
-export default function StarRating({ value, size = 16, gap = 0.5, showValue = true, className = '' }: StarRatingProps) {
+export default function StarRating({ value, size = 16, gap = 0.5, className = '' }: StarRatingProps) {
     const stars = [1, 2, 3, 4, 5]
 
     return (
@@ -28,7 +27,6 @@ export default function StarRating({ value, size = 16, gap = 0.5, showValue = tr
                     starId={star}
                 />
             ))}
-            {showValue && <span className='ml-2 text-sm dark:text-white text-black'>{value.toFixed(1)}</span>}
         </div>
     )
 }

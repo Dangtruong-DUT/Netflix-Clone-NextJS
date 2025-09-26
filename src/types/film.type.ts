@@ -10,6 +10,13 @@ export type TrendingItem = {
     rank: number
 }
 
+export type Comment = {
+    user: string
+    content: string
+    date: string
+    rating: number
+}
+
 export type InformationFilm = {
     id: string
     title: string
@@ -28,4 +35,5 @@ export type InformationFilm = {
     favoriteCount: number
     commentsCount: number
     sharesCount: number
+    comments?: Comment[]
 }
