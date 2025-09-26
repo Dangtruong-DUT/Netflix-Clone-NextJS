@@ -13,10 +13,9 @@ export const filmDetail: FilmDetailType = {
     age: 13,
 
     views_count: 2704011,
-    rating: 5.0,
+    rating: 4.8,
     year: 2025,
     country: 'Trung Quốc',
-    seasons_count: 1,
     quality: 'Full HD',
     actors: [
         'Thành Nghị',
@@ -29,7 +28,8 @@ export const filmDetail: FilmDetailType = {
     ],
     directors: ['Nhậm Hải Đào', 'Lâm Phong'],
     category: 'Phim cổ trang',
-    comments_count: 464
+    comments_count: 464,
+    duration_minutes: 120
 }
 
 export const getMockFilms = (number: number): FilmDetailType[] => {

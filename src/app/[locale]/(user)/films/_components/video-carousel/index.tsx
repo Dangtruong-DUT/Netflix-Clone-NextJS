@@ -25,7 +25,7 @@ export default function VideoCarousel({ className, videos }: VideoCarouselProps)
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <div className='absolute bottom-[10%] right-6  md:right-8 lg:right-14 hidden @lg:flex flex-col items-end gap-4'>
+            <div className='absolute bottom-[1%] right-6  md:right-8 lg:right-14 hidden @lg:flex flex-col items-end gap-4'>
                 <ButtonMuted />
                 <Indicator
                     CarouselArrowsClassName='bg-black/30 hover:bg-black/50 size-10 [&_svg]:size-6 hover:text-brand hover:border-brand'

@@ -25,8 +25,8 @@ export type FilmDetailType = {
     rating: number
     year: number
     country: string
-    seasons_count: number
     quality: string
+    duration_minutes: number
     actors: string[]
     directors: string[]
     category: string

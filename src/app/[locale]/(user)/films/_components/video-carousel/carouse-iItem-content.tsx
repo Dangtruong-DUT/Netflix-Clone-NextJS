@@ -9,6 +9,7 @@ import * as React from 'react'
 import { cn } from '@/lib/utils'
 import useInView from '@/hooks/ui/useInView'
 import { useAppSelector } from '@/store/hooks'
+import FilmDetailDialog from '@/components/film-detail-dialog'
 
 interface CarouselItemContentProps {
     video: FilmDetailType
@@ -19,8 +20,13 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
     const [isPlayVideo, setIsPlayVideo] = React.useState(false)
     const timeoutRef = React.useRef<NodeJS.Timeout | null>(null)
     const videoRef = React.useRef<HTMLVideoElement | null>(null)
+    const [isOpenFilmDetail, setIsOpenFilmDetail] = React.useState(false)
 
     const isMuted = useAppSelector((state) => state.video.isMuted)
+
+    const onOpenVideoDetail = () => {
+        setIsOpenFilmDetail(true)
+    }
 
     React.useEffect(() => {
         if (isInView) {
@@ -57,7 +63,6 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
                     isPlayVideo ? 'opacity-0 ' : 'opacity-100'
                 )}
             />
-
             <video
                 className={cn(
                     'absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out',
@@ -73,7 +78,6 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
                 <source src='https://trailer.vieon.vn/Teaser_HayDeToiToaSang.mp4' type='video/mp4' />
                 Your browser does not support the video tag.
             </video>
-
             <div className='absolute top-0 left-0 w-full h-full max-h-screen z-3'>
                 <div className='absolute bottom-0 left-0 p-6 md:p-8 lg:p-12 w-full md:max-w-[50%] max-w-[85%]'>
                     <h2 className='text-white font-black text-xl md:text-3xl lg:text-4xl xl:text-5xl mb-1 sm:mb-3 lg:mb-4 leading-tight'>
@@ -87,7 +91,7 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
                     <div className='flex items-center gap-3'>
                         <Button
                             className={cn(
-                                'bg-white text-black hover:bg-gray-200 font-semibold rounded-xs flex items-center gap-2 cursor-pointer',
+                                'bg-white text-black hover:text-black hover:bg-gray-200 font-semibold rounded-xs flex items-center gap-2 cursor-pointer',
                                 'px-6 md:px-10! py-2 md:py-4! md:h-[48px] text-sm md:text-base!'
                             )}
                         >
@@ -98,8 +102,9 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
                         <Button
                             size='lg'
                             variant='ghost'
+                            onClick={onOpenVideoDetail}
                             className={cn(
-                                'bg-gray-600/70 hover:bg-gray-600 text-white font-semibold rounded-xs flex items-center gap-2 cursor-pointer',
+                                'bg-gray-600/70 hover:bg-gray-600 text-white hover:text-white font-semibold rounded-xs flex items-center gap-2 cursor-pointer',
                                 'px-6 md:px-10! py-2 md:py-4! md:h-[48px] text-sm md:text-base'
                             )}
                         >
@@ -109,8 +114,7 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
                     </div>
                 </div>
             </div>
-
-            <div className='absolute bottom-[50%] right-0 z-3 '>
+            <div className='absolute bottom-[30%] right-0 z-3 '>
                 <div
                     className={cn(
                         'right-0 border-l-3 border-brand bg-black/50!',
@@ -120,7 +124,6 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
                     <span className='text-white text-md md:text-base font-semibold '>T{video.age}</span>
                 </div>
             </div>
-
             <div
                 className='absolute bottom-0 left-0 right-0 h-40
              bg-gradient-to-t from-black/90 via-black/60 via-40% to-transparent
@@ -131,6 +134,7 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
              bg-gradient-to-b from-black/70 via-black/40 to-transparent 
              z-1'
             />
+            <FilmDetailDialog film={video} open={isOpenFilmDetail} onOpenChange={setIsOpenFilmDetail} />
         </div>
     )
 }
