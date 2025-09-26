@@ -82,7 +82,6 @@ function Carousel({
 
     const scrollToIndex = React.useCallback(
         (index: number) => {
-            if (!Number.isInteger(index) || index < 0 || index >= slidesCount) return
             api?.scrollTo(index)
         },
         [api]
