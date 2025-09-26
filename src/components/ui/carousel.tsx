@@ -26,6 +26,9 @@ type CarouselContextProps = {
     scrollNext: () => void
     canScrollPrev: boolean
     canScrollNext: boolean
+    currentIndex: number
+    slidesCount: number
+    scrollToIndex: (index: number) => void
 } & CarouselProps
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
@@ -58,11 +61,15 @@ function Carousel({
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
+    const [currentIndex, setCurrentIndex] = React.useState(0)
+    const [slidesCount, setSlidesCount] = React.useState(0)
 
     const onSelect = React.useCallback((api: CarouselApi) => {
         if (!api) return
         setCanScrollPrev(api.canScrollPrev())
         setCanScrollNext(api.canScrollNext())
+        setCurrentIndex(api.selectedScrollSnap())
+        setSlidesCount(api.slideNodes().length)
     }, [])
 
     const scrollPrev = React.useCallback(() => {
@@ -72,6 +79,14 @@ function Carousel({
     const scrollNext = React.useCallback(() => {
         api?.scrollNext()
     }, [api])
+
+    const scrollToIndex = React.useCallback(
+        (index: number) => {
+            if (!Number.isInteger(index) || index < 0 || index >= slidesCount) return
+            api?.scrollTo(index)
+        },
+        [api]
+    )
 
     const handleKeyDown = React.useCallback(
         (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -112,7 +127,11 @@ function Carousel({
                 scrollPrev,
                 scrollNext,
                 canScrollPrev,
-                canScrollNext
+                canScrollNext,
+                currentIndex,
+                slidesCount,
+                plugins,
+                scrollToIndex
             }}
         >
             <div
