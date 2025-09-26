@@ -8,6 +8,7 @@ import Image from 'next/image'
 import * as React from 'react'
 import { cn } from '@/lib/utils'
 import useInView from '@/hooks/ui/useInView'
+import { useAppSelector } from '@/store/hooks'
 
 interface CarouselItemContentProps {
     video: FilmDetailType
@@ -16,16 +17,23 @@ interface CarouselItemContentProps {
 export default function CarouselItemContent({ video }: CarouselItemContentProps) {
     const { ref, isInView } = useInView()
     const [isPlayVideo, setIsPlayVideo] = React.useState(false)
-    const [videoLoaded, setVideoLoaded] = React.useState(false)
     const timeoutRef = React.useRef<NodeJS.Timeout | null>(null)
+    const videoRef = React.useRef<HTMLVideoElement | null>(null)
+
+    const isMuted = useAppSelector((state) => state.video.isMuted)
 
     React.useEffect(() => {
         if (isInView) {
             timeoutRef.current = setTimeout(() => {
                 setIsPlayVideo(true)
+                videoRef.current?.play().catch(() => {})
             }, 1000)
         } else {
             setIsPlayVideo(false)
+            if (videoRef.current) {
+                videoRef.current.pause()
+                videoRef.current.currentTime = 0
+            }
         }
 
         return () => {
@@ -53,19 +61,21 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
             <video
                 className={cn(
                     'absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out',
-                    isPlayVideo && videoLoaded ? 'opacity-100' : 'opacity-0'
+                    isPlayVideo ? 'opacity-100' : 'opacity-0'
                 )}
-                muted
+                muted={isMuted}
                 playsInline
                 preload='metadata'
                 autoPlay
-                onCanPlay={() => setVideoLoaded(true)}
+                ref={videoRef}
                 loop
-                src={video.trailer_url}
-            />
+            >
+                <source src='https://trailer.vieon.vn/Teaser_HayDeToiToaSang.mp4' type='video/mp4' />
+                Your browser does not support the video tag.
+            </video>
 
             <div className='absolute top-0 left-0 w-full h-full max-h-screen z-3'>
-                <div className='absolute bottom-0 left-0 p-6 md:p-8 lg:p-12 w-full md:max-w-[50%] max-w-[90%]'>
+                <div className='absolute bottom-0 left-0 p-6 md:p-8 lg:p-12 w-full md:max-w-[50%] max-w-[85%]'>
                     <h2 className='text-white font-black text-xl md:text-3xl lg:text-4xl xl:text-5xl mb-1 sm:mb-3 lg:mb-4 leading-tight'>
                         {video.title.toUpperCase()}
                     </h2>
@@ -100,17 +110,27 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
                 </div>
             </div>
 
-            <div
-                className={cn(
-                    'absolute bottom-[30%] right-0 border-l-3 border-brand bg-black/50!',
-                    'pr-5 md:pr-20 pl-2 h-5 md:h-8 bg-gradient-to-r to-transparent  flex items-center z-3'
-                )}
-            >
-                <span className='text-white text-md md:text-base font-semibold '>T{video.age}</span>
+            <div className='absolute bottom-[50%] right-0 z-3 '>
+                <div
+                    className={cn(
+                        'right-0 border-l-3 border-brand bg-black/50!',
+                        'pr-5 md:pr-20 pl-2 h-5 md:h-8 bg-gradient-to-r to-transparent  flex items-center '
+                    )}
+                >
+                    <span className='text-white text-md md:text-base font-semibold '>T{video.age}</span>
+                </div>
             </div>
 
-            <div className='absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-black/70 via-black/50 to-transparent z-1' />
-            <div className='absolute top-0 left-0 right-0 h-20 md:h-20 bg-gradient-to-t from-transparent via-black/50 to-black z-1' />
+            <div
+                className='absolute bottom-0 left-0 right-0 h-40
+             bg-gradient-to-t from-black/90 via-black/60 via-40% to-transparent
+             pointer-events-none z-1'
+            />
+            <div
+                className='absolute top-0 left-0 right-0 h-24 md:h-28 
+             bg-gradient-to-b from-black/70 via-black/40 to-transparent 
+             z-1'
+            />
         </div>
     )
 }

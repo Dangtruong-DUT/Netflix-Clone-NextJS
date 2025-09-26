@@ -1,5 +1,5 @@
 import { getMockFilms } from '@/_mock'
-import VideoCarousel from '@/app/[locale]/(user)/accounthome/_components/video-carousel'
+import VideoCarousel from '@/app/[locale]/(user)/films/_components/video-carousel'
 import Header from '@/components/header'
 
 const mockVideos = getMockFilms(5)
