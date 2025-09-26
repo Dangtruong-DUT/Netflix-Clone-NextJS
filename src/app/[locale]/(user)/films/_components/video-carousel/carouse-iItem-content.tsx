@@ -5,31 +5,40 @@ import { Info } from 'lucide-react'
 import { IoPlaySharp } from 'react-icons/io5'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
-import * as React from 'react'
 import { cn } from '@/lib/utils'
 import useInView from '@/hooks/ui/useInView'
 import { useAppSelector } from '@/store/hooks'
 import FilmDetailDialog from '@/components/film-detail-dialog'
+import ButtonMuted from '@/app/[locale]/(user)/films/_components/video-carousel/button-muted'
+import { useEffect, useRef, useState } from 'react'
+import { HERO_VIEW_MODE, useFilmsPageContext } from '@/app/[locale]/(user)/films/context'
 
 interface CarouselItemContentProps {
     video: FilmDetailType
 }
 
 export default function CarouselItemContent({ video }: CarouselItemContentProps) {
+    const { heroViewMode, setHeroViewMode } = useFilmsPageContext()
     const { ref, isInView } = useInView()
-    const [isPlayVideo, setIsPlayVideo] = React.useState(false)
-    const timeoutRef = React.useRef<NodeJS.Timeout | null>(null)
-    const videoRef = React.useRef<HTMLVideoElement | null>(null)
-    const [isOpenFilmDetail, setIsOpenFilmDetail] = React.useState(false)
+    const [isPlayVideo, setIsPlayVideo] = useState<boolean>(false)
+    const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+    const videoRef = useRef<HTMLVideoElement | null>(null)
+    const [isOpenFilmDetail, setIsOpenFilmDetail] = useState<boolean>(false)
 
     const isMuted = useAppSelector((state) => state.video.isMuted)
 
     const onOpenVideoDetail = () => {
         setIsOpenFilmDetail(true)
+        setHeroViewMode(HERO_VIEW_MODE.slides)
     }
 
-    React.useEffect(() => {
-        if (isInView) {
+    const onCloseVideoDetail = () => {
+        setIsOpenFilmDetail(false)
+        setHeroViewMode(HERO_VIEW_MODE.videos)
+    }
+
+    useEffect(() => {
+        if (isInView && heroViewMode === HERO_VIEW_MODE.videos) {
             timeoutRef.current = setTimeout(() => {
                 setIsPlayVideo(true)
                 videoRef.current?.play().catch(() => {})
@@ -47,7 +56,7 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
                 clearTimeout(timeoutRef.current)
             }
         }
-    }, [isInView])
+    }, [isInView, heroViewMode])
 
     return (
         <div
@@ -114,7 +123,9 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
                     </div>
                 </div>
             </div>
-            <div className='absolute bottom-[30%] right-0 z-3 '>
+            <div className='absolute bottom-[30%] right-0 z-3 flex items-center gap-3'>
+                <ButtonMuted className='hidden md:flex ' />
+
                 <div
                     className={cn(
                         'right-0 border-l-3 border-brand bg-black/50!',
@@ -131,10 +142,15 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
             />
             <div
                 className='absolute top-0 left-0 right-0 h-24 md:h-28 
-             bg-gradient-to-b from-black/70 via-black/40 to-transparent 
+             bg-gradient-to-b from-black/100 via-black/40 to-transparent 
              z-1'
             />
-            <FilmDetailDialog film={video} open={isOpenFilmDetail} onOpenChange={setIsOpenFilmDetail} />
+            <FilmDetailDialog
+                film={video}
+                open={isOpenFilmDetail}
+                onOpenChange={setIsOpenFilmDetail}
+                onClose={onCloseVideoDetail}
+            />
         </div>
     )
 }

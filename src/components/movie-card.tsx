@@ -11,10 +11,9 @@ import Image from 'next/image'
 interface MovieCardProps {
     movie: FilmDetailType
     className?: string
-    isInWatchlist?: boolean
 }
 
-export default function MovieCard({ movie, className, isInWatchlist = false }: MovieCardProps) {
+export default function MovieCard({ movie, className }: MovieCardProps) {
     return (
         <div
             className={cn(
@@ -65,9 +64,9 @@ export default function MovieCard({ movie, className, isInWatchlist = false }: M
                         <Button
                             size='sm'
                             variant='ghost'
-                            className='text-white hover:bg-gray-700 rounded-full border border-white hover:text-white w-8 h-8 p-0'
+                            className='text-white cursor-pointer hover:bg-gray-700 rounded-full border border-white hover:text-white w-8 h-8 p-0'
                         >
-                            {isInWatchlist ? <Check className='w-4 h-4' /> : <Plus className='w-4 h-4' />}
+                            <Plus className='w-4 h-4' />
                         </Button>
                     </div>
                 </div>

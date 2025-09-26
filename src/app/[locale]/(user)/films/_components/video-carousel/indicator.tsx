@@ -4,13 +4,14 @@ import { useCarousel } from '@/components/ui/carousel'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useEffect } from 'react'
+import { HERO_VIEW_MODE, useFilmsPageContext } from '@/app/[locale]/(user)/films/context'
 
 interface IndicatorProps {
     wrapperClassName?: string
     CarouselArrowsClassName?: string
     dotClassName?: string
     activeDotClassName?: string
-    autoPlayInterval?: number
+    autoPlayInterval: number
 }
 
 export default function Indicator({
@@ -23,9 +24,11 @@ export default function Indicator({
     const { currentIndex, slidesCount, scrollToIndex, scrollPrev, scrollNext, canScrollPrev, canScrollNext } =
         useCarousel()
 
+    const { heroViewMode } = useFilmsPageContext()
+
     useEffect(() => {
         if (!autoPlayInterval || slidesCount <= 1) return
-
+        if (heroViewMode != HERO_VIEW_MODE.slides) return
         const interval = setInterval(() => {
             if (canScrollNext) {
                 scrollNext()
@@ -33,7 +36,7 @@ export default function Indicator({
         }, autoPlayInterval)
 
         return () => clearInterval(interval)
-    }, [autoPlayInterval, slidesCount, scrollNext])
+    }, [heroViewMode, autoPlayInterval, slidesCount, scrollNext, canScrollNext, scrollToIndex])
 
     return (
         <div className={cn('flex items-center justify-center gap-3 mt-4', wrapperClassName)}>

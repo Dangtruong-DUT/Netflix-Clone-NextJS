@@ -1,18 +1,20 @@
+"'use client'"
+
 import Logo from '@/components/icons/logo'
 import SelectLanguage from '@/components/locale-switcher-select'
 import { ModeToggle } from '@/components/mode-toggle'
 import { Button } from '@/components/ui/button'
 import { Link } from '@/i18n/navigation'
 import { cn } from '@/lib/utils'
-import { getTranslations } from 'next-intl/server'
+import { useTranslations } from 'next-intl'
 
 interface HeaderProps {
     className?: string
     buttonClassName?: string
 }
 
-export default async function Header({ className, buttonClassName }: HeaderProps) {
-    const t = await getTranslations('Header')
+export default function Header({ className, buttonClassName }: HeaderProps) {
+    const t = useTranslations('Header')
 
     return (
         <header

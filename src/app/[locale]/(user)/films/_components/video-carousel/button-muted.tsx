@@ -7,7 +7,11 @@ import { useCallback } from 'react'
 import { FaVolumeUp } from 'react-icons/fa'
 import { FaVolumeMute } from 'react-icons/fa'
 
-export default function ButtonMuted() {
+interface ButtonMutedProps {
+    className?: string
+}
+
+export default function ButtonMuted({ className }: ButtonMutedProps) {
     const appDispatch = useAppDispatch()
 
     const isMuted = useAppSelector((state) => state.video.isMuted)
@@ -19,14 +23,9 @@ export default function ButtonMuted() {
         <button
             onClick={onToggle}
             className={cn(
-                'rounded-full flex items-center justify-center bg-black/60 text-white hover:text-brand',
+                'rounded-full flex items-center justify-center bg-transparent border border-white text-white hover:bg-black/70 transition-colors',
                 'size-10 [&_svg]:size-4',
-                'sm:size-11 sm:[&_svg]:size-5',
-                'md:size-12 md:[&_svg]:size-5',
-                'lg:size-13 lg:[&_svg]:size-6',
-                'xl:size-14 xl:[&_svg]:size-7',
-                '2xl:size-16 2xl:[&_svg]:size-8',
-                'hover:bg-black/80 transition-colors'
+                className
             )}
         >
             {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
