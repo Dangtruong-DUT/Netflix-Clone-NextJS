@@ -1,10 +1,15 @@
+import videoReducer from '@/store/features/video.slice'
 import { configureStore } from '@reduxjs/toolkit'
 
-export const store = configureStore({
-    reducer: {}
-})
+export const makeStore = () => {
+    return configureStore({
+        devTools: true,
+        reducer: {
+            video: videoReducer
+        }
+    })
+}
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-export type AppDispatch = typeof store.dispatch
+export type AppStore = ReturnType<typeof makeStore>
+export type RootState = ReturnType<AppStore['getState']>
+export type AppDispatch = AppStore['dispatch']

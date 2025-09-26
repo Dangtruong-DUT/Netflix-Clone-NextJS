@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 import { hasLocale } from 'next-intl'
 import { notFound } from 'next/navigation'
@@ -7,8 +6,7 @@ import { routing } from '@/i18n/routing'
 import { setRequestLocale } from 'next-intl/server'
 import { NetflixIcons, NetflixSans } from '@/config/font'
 import { NextIntlClientProvider } from 'next-intl'
-import { Toaster } from 'sonner'
-import NextTopLoader from 'nextjs-toploader'
+import { AppProvider } from '@/provider/app-provider'
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -31,18 +29,13 @@ export default async function RootLayout({
         notFound()
     }
 
-    // Enable static rendering
     setRequestLocale(locale)
 
     return (
         <html lang={locale} suppressHydrationWarning>
             <body className={`${NetflixSans.variable} ${NetflixIcons.variable} antialiased`}>
                 <NextIntlClientProvider>
-                    <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
-                        {children}
-                        <Toaster />
-                        <NextTopLoader showSpinner={false} color='var(--color-brand)' />
-                    </ThemeProvider>
+                    <AppProvider>{children}</AppProvider>
                 </NextIntlClientProvider>
             </body>
         </html>
