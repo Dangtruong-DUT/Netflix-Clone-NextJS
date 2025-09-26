@@ -17,7 +17,7 @@ export const movies: InformationFilm = {
     description:
         'Su do Tu Ma Tieu (Tran Phi Vu) cua Tien phu Canh Than bi phong an trong nui 500 nam, sau khi gap go Lieu Dinh Nhan (Vuong Anh Lo) - nguoi vo tinh den the gioi tu tien, da bi ban nang "ca muoi" vo duc vo cau cua co ay thu phuc. Tu do, Lieu Dinh Nhan bat dau dan dat Tu Ma Tieu tung buoc huong thien, tro thanh nguoi thay doi anh. Trong qua trinh do, ho nay sinh tinh cam, trai qua mot doan an oan tinh thu keo dai ba kiep o Tien phu, Ma vuc va nhan gian. Cuoi cung, ca hai lua chon bao ve nguoi minh yeu va giu gin hoa binh cua Tam gioi.',
     favoriteCount: 699,
-    commentsCount: 0,
+    commentsCount: 3,
     sharesCount: 12,
     comments: [
         {

@@ -238,11 +238,11 @@
         "description": "Description",
         "still_has": "Has",
         "favorite": "Favorite",
-        "comment": "Comment",
+        "rate": "To rate",
         "share": "Share",
         "actors": "Actors",
         "director": "Director",
         "genre": "Genre",
-        "noCommentsMessage": ""
+        "noCommentsMessage": "No rates yet, be the first!"
     }
 }

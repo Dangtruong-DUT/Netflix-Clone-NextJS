@@ -242,11 +242,11 @@
         "description": "Mô tả",
         "still_has": "Còn",
         "favorite": "Yêu thích",
-        "comment": "Bình luận",
+        "rate": "Đánh giá",
         "share": "Chia sẻ",
         "actors": "Diễn viên",
         "director": "Đạo diễn",
         "genre": "Thể loại",
-        "noCommentsMessage": "Chưa có bình luận nào, hãy là người đầu tiên!"
+        "noCommentsMessage": "Chưa có đánh giá nào, hãy là người đầu tiên!"
     }
 }

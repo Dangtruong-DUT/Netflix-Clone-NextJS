@@ -28,15 +28,15 @@ export default function DetailFilmForm({ informationFilm }: Props) {
     }
 
     return (
-        <div className='mx-auto w-full max-w-[90%] dark:bg-black/50 bg-white/50 text-black dark:text-white'>
+        <div className='mx-auto w-full px-6 md:px-8 lg:px-37 dark:bg-black/50 bg-white/50 text-black dark:text-white'>
             <div className='flex flex-col lg:flex-row gap-4 xs:gap-5 sm:gap-6'>
-                <div className='flex-1 lg:flex-[3_0_75%] min-w-0'>
-                    <h3 className='text-base xs:text-lg sm:text-xl md:text-2xl dark:text-white text-black font-semibold mb-1 xs:mb-2 sm:mb-3 break-words'>
+                <div className='flex-1 lg:flex-[3_0_70%] min-w-0 -px-0.5'>
+                    <h1 className='text-base xs:text-lg sm:text-xl md:text-2xl dark:text-white text-black font-semibold mb-1 xs:mb-2 sm:mb-3 break-words'>
                         {movie.title}
-                    </h3>
-                    <p className='text-sm xs:text-base sm:text-lg dark:text-white text-black mb-2 xs:mb-3 break-words'>
+                    </h1>
+                    <h1 className='text-sm xs:text-base sm:text-lg dark:text-white text-black mb-2 xs:mb-3 break-words'>
                         {movie.title_other}
-                    </p>
+                    </h1>
                     <div className='flex flex-wrap items-center gap-2 xs:gap-3 sm:gap-4 mb-3 xs:mb-4'>
                         <div className='text-sm xs:text-base dark:text-white text-black'>
                             {movie.views.toLocaleString('vi-VN', { useGrouping: true })} {t('views')}
@@ -58,16 +58,16 @@ export default function DetailFilmForm({ informationFilm }: Props) {
                         </span>
                     </div>
                     <div className='mb-3 xs:mb-4'>
-                        <h4 className='font-semibold mb-1 xs:mb-2 text-sm xs:text-base'>{t('description')}</h4>
+                        <h2 className='font-semibold mb-1 xs:mb-2 text-sm xs:text-base'>{t('description')}</h2>
                         <p className='text-sm xs:text-base leading-relaxed text-justify break-words'>
                             {movie.description}
                         </p>
                     </div>
                 </div>
 
-                <div className='lg:flex-[1_0_25%] flex-shrink-0 xl:pl-14'>
+                <div className='lg:w-1/4 flex-shrink-0'>
                     <div className='bg-gradient-to-b text-black mb-3 xs:mb-4 dark:text-white rounded-sm xs:rounded'>
-                        <div className='flex justify-between p-2 xs:p-3'>
+                        <div className='flex justify-between px-1 xs:p-5 md:px-4 lg:px-0'>
                             <div
                                 className='flex flex-col items-center gap-1 xs:gap-2 cursor-pointer group flex-1'
                                 onClick={handleClickFavorite}
@@ -100,7 +100,7 @@ export default function DetailFilmForm({ informationFilm }: Props) {
                                     </div>
                                 ) : (
                                     <div className='px-1 xs:px-2 py-0.5 xs:py-1 text-xs group-hover:text-brand! text-center'>
-                                        {t('comment')}
+                                        {t('rate')}
                                     </div>
                                 )}
                             </div>
@@ -121,10 +121,12 @@ export default function DetailFilmForm({ informationFilm }: Props) {
                             </div>
                         </div>
                     </div>
-                    <div className='p-2 xs:p-3 sm:p-4 text-xs xs:text-sm dark:text-white text-black space-y-2 xs:space-y-3'>
+                    <div className='text-xs xs:text-sm dark:text-white text-black'>
                         <div>
                             <div className='dark:text-[#b3b3b3] text-gray-700'>{t('actors')}:</div>
-                            <div className='mt-1 font-medium break-words cursor-pointer'>{movie.actors.join(', ')}</div>
+                            <div className='mt-1 font-medium break-words cursor-pointer'>
+                                {movie.actors.join(', ')}
+                            </div>
                         </div>
                         <div>
                             <div className='dark:text-[#b3b3b3] text-gray-700'>{t('director')}:</div>

@@ -12,15 +12,15 @@ export default function CommentBlock({ informationFilm }: Props) {
     const t = useTranslations('InformationForm')
 
     return (
-        <div className='max-w-[95%] mx-auto dark:bg-black bg-white p-8 rounded-2xl'>
+        <div className='mx-auto w-full px-6 md:px-8 lg:px-37 dark:bg-black bg-white'>
             <p className='text-lg font-semibold mb-3'>
-                {t('comment')} ({movie.commentsCount})
+                {t('rate')} ({movie.commentsCount})
             </p>
 
             {movie.commentsCount > 0 ? (
                 <div className='flex flex-col gap-3'>
                     {movie.comments?.map((comment, index) => (
-                        <div key={index} className='p-3 bg-white dark:bg-black'>
+                        <div key={index} className='bg-white dark:bg-black'>
                             <div className='flex items-center justify-between mb-2'>
                                 <div className='flex items-center gap-2'>
                                     <p className='font-medium text-base'>{comment.user}</p>
