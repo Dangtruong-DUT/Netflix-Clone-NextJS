@@ -1,11 +1,16 @@
-export type SubscriptionPlanType = {
+export interface SubscriptionPlanType {
     id: string
     name: string
-    resolution: string
-    price: number
-    currency: string
     quality: string
-    supportedDevices: string[]
-    simultaneousScreens: number
-    downloads: number
+    price: string
+    color: string
+    isPopular?: boolean
+    features: {
+        videoQuality: string
+        resolution: string
+        supportedDevices: string
+        householdDevices: string
+        downloads: string
+        spatialAudio?: string
+    }
 }

@@ -1,15 +1,3 @@
-export type TrendingItem = {
-    id: string
-    title: string
-    release_year: number
-    maturity_rating: string
-    genres: string[]
-    description: string
-    vertical_poster: string
-    horizontal_poster: string
-    rank: number
-}
-
 export type FilmDetailType = {
     id: string
     title: string
@@ -20,7 +8,6 @@ export type FilmDetailType = {
     genres: string[]
     trailer_url: string
     age: number
-
     views_count: number
     rating: number
     year: number
@@ -32,4 +19,6 @@ export type FilmDetailType = {
     category: string
     comments_count: number
     film_url?: string
+    watch_duration_minutes: number
+    rank: number
 }

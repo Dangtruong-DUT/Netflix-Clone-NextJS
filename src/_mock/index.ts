@@ -29,7 +29,9 @@ export const filmDetail: FilmDetailType = {
     directors: ['Nhậm Hải Đào', 'Lâm Phong'],
     category: 'Phim cổ trang',
     comments_count: 464,
-    duration_minutes: 120
+    duration_minutes: 120,
+    watch_duration_minutes: 10,
+    rank: 1
 }
 
 export const getMockFilms = (number: number): FilmDetailType[] => {
@@ -38,5 +40,15 @@ export const getMockFilms = (number: number): FilmDetailType[] => {
         .map((item, index) => ({
             ...item,
             id: (index + 1).toString() + 'filmDetail'
+        }))
+}
+
+export const getMockFilmsWithRank = (number: number): FilmDetailType[] => {
+    return Array(number)
+        .fill(filmDetail)
+        .map((item, index) => ({
+            ...item,
+            id: (index + 1).toString() + 'filmDetail',
+            rank: index + 1
         }))
 }

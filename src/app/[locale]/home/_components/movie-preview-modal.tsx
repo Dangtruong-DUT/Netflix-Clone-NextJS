@@ -1,5 +1,4 @@
 import { Dialog, DialogContent } from '@/components/ui/dialog'
-import { TrendingItem } from '@/types/film.type'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { X, ChevronRight } from 'lucide-react'
@@ -7,9 +6,10 @@ import { toast } from 'sonner'
 import { Badge } from '@/components/ui/badge'
 import { DialogTitle } from '@radix-ui/react-dialog'
 import { useTranslations } from 'next-intl'
+import { FilmDetailType } from '@/types/film.type'
 
 interface MoviePreviewModalProps {
-    movie: TrendingItem | null
+    movie: FilmDetailType | null
     onClose: () => void
 }
 
@@ -45,15 +45,8 @@ export default function MoviePreviewModal({ movie, onClose }: MoviePreviewModalP
 
                     <div className='w-full bg-[rgb(22,22,22)] p-8'>
                         <div className='flex items-center gap-3 mb-4'>
-                            <Badge className='bg-[rgb(65,65,65)] text-[rgba(255,255,255,0.7)]'>
-                                {movie.release_year}
-                            </Badge>
-                            <Badge className='bg-[rgb(65,65,65)] text-[rgba(255,255,255,0.7)]'>
-                                {movie.maturity_rating}
-                            </Badge>
-                            <Badge className='bg-[rgb(65,65,65)] text-[rgba(255,255,255,0.7)]'>
-                                {movie.maturity_rating}
-                            </Badge>
+                            <Badge className='bg-[rgb(65,65,65)] text-[rgba(255,255,255,0.7)]'>{movie.year}</Badge>
+                            <Badge className='bg-red-600 text-[rgba(255,255,255,0.7)]'>T{movie.age}</Badge>
                             <>
                                 {movie.genres.map((genre, index) => (
                                     <Badge

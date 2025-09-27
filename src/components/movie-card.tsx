@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { Play, Plus, Check } from 'lucide-react'
+import { Play, Plus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { FilmDetailType } from '@/types/film.type'
@@ -15,7 +15,7 @@ interface MovieCardProps {
 
 export default function MovieCard({ movie, className }: MovieCardProps) {
     return (
-        <div
+        <article
             className={cn(
                 'group relative bg-[#2F2F2F] rounded-xs overflow-hidden cursor-pointer transition-all duration-300',
                 'flex flex-row @2xl:flex-col w-full',
@@ -87,6 +87,6 @@ export default function MovieCard({ movie, className }: MovieCardProps) {
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     )
 }

@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 import { Check } from 'lucide-react'
-import { mockSubscriptionPlans } from '@/_mock/subscription-plans'
 import { cn } from '@/lib/utils'
+import { mockSubscriptionPlans } from '@/app/[locale]/(auth)/signup/planform/_mock'
 
 interface DesktopPlanLayoutProps {
     selectedPlan: string

@@ -1,8 +1,8 @@
+import { getMockFilmsWithRank } from '@/_mock'
 import FAQSection from '@/app/[locale]/home/_components/FAQ-section'
 import { FeaturesSection } from '@/app/[locale]/home/_components/features-section'
 import SignupForm from '@/app/[locale]/home/_components/signup-form'
 import TrendingSection from '@/app/[locale]/home/_components/trending-section'
-import { mockTrendingItems } from '@/app/[locale]/home/_mock'
 import Header from '@/components/header'
 import { useTranslations } from 'next-intl'
 
@@ -12,7 +12,7 @@ export const metadata = {
 }
 
 export default function HomePage() {
-    const trendingItems = mockTrendingItems
+    const trendingItems = getMockFilmsWithRank(10)
     const t = useTranslations('HomePage')
 
     return (

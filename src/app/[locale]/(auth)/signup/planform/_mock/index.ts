@@ -1,28 +1,62 @@
 import { SubscriptionPlanType } from '@/types/subscription.type'
 
-const mobilePlan: SubscriptionPlanType = {
-    id: 'mobile',
-    name: 'Mobile',
-    resolution: '480p',
-    price: 74000,
-    currency: '₫',
-    quality: 'Khá',
-    supportedDevices: ['Điện thoại di động', 'Máy tính bảng'],
-    simultaneousScreens: 1,
-    downloads: 1
-}
-
-export const mockSubscriptionPlans: SubscriptionPlanType[] = Array(4)
-    .fill(mobilePlan)
-    .map((plan, index) => ({
-        ...plan,
-        id: plan.id + index,
-        name: index === 0 ? 'Mobile' : index === 1 ? 'Basic' : index === 2 ? 'Standard' : 'Premium',
-        resolution: index === 0 ? '480p' : index === 1 ? '480p' : index === 2 ? '1080p' : '4K+HDR',
-        price: index === 0 ? 74000 : index === 1 ? 190000 : index === 2 ? 260000 : 320000,
-        currency: '₫',
-        quality: index === 0 ? 'Khá' : index === 1 ? 'Tốt' : index === 2 ? 'Rất Tốt' : 'Xuất Sắc',
-        supportedDevices: index === 0 ? ['Điện thoại di động', 'Máy tính bảng'] : ['Tất cả thiết bị'],
-        simultaneousScreens: index === 0 ? 1 : 2,
-        downloads: index === 0 ? 1 : 2
-    }))
+export const mockSubscriptionPlans: SubscriptionPlanType[] = [
+    {
+        id: 'mobile',
+        name: 'Mobile',
+        quality: '480p',
+        price: '74,000 ₫',
+        color: 'from-blue-600 to-blue-800',
+        features: {
+            videoQuality: 'Khá',
+            resolution: '480p',
+            supportedDevices: 'Điện thoại di động, máy tính bảng',
+            householdDevices: '1',
+            downloads: '1'
+        }
+    },
+    {
+        id: 'basic',
+        name: 'Basic',
+        quality: '720p',
+        price: '114,000 ₫',
+        color: 'from-blue-700 to-purple-700',
+        features: {
+            videoQuality: 'Tốt',
+            resolution: '720p (HD)',
+            supportedDevices: 'TV, máy tính, điện thoại di động, máy tính bảng',
+            householdDevices: '1',
+            downloads: '1'
+        }
+    },
+    {
+        id: 'standard',
+        name: 'Standard',
+        quality: '1080p',
+        price: '231,000 ₫',
+        color: 'from-purple-600 to-purple-800',
+        features: {
+            videoQuality: 'Tuyệt vời',
+            resolution: '1080p (Full HD)',
+            supportedDevices: 'TV, máy tính, điện thoại di động, máy tính bảng',
+            householdDevices: '2',
+            downloads: '2'
+        }
+    },
+    {
+        id: 'premium',
+        name: 'Premium',
+        quality: '4K + HDR',
+        price: '273,000 ₫',
+        color: 'from-purple-700 to-red-600',
+        isPopular: true,
+        features: {
+            videoQuality: 'Tốt nhất',
+            resolution: '4K (Ultra HD) + HDR',
+            supportedDevices: 'TV, máy tính, điện thoại di động, máy tính bảng',
+            householdDevices: '4',
+            downloads: '6',
+            spatialAudio: 'Âm thanh không gian (âm thanh đa chiều)'
+        }
+    }
+]

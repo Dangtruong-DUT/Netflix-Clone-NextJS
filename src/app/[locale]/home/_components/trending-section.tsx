@@ -1,18 +1,18 @@
 'use client'
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-import { TrendingItem } from '@/types/film.type'
 import { useState } from 'react'
 import MoviePreviewModal from './movie-preview-modal'
+import { FilmDetailType } from '@/types/film.type'
 
 interface TrendingSectionProps {
-    trendingItems: TrendingItem[]
+    trendingItems: FilmDetailType[]
 }
 
 export default function TrendingSection({ trendingItems }: TrendingSectionProps) {
-    const [selectedMovie, setSelectedMovie] = useState<TrendingItem | null>(null)
+    const [selectedMovie, setSelectedMovie] = useState<FilmDetailType | null>(null)
 
-    const handleCardClick = (movie: TrendingItem) => {
+    const handleCardClick = (movie: FilmDetailType) => {
         setSelectedMovie(movie)
     }
 
@@ -22,7 +22,10 @@ export default function TrendingSection({ trendingItems }: TrendingSectionProps)
 
     return (
         <div>
-            <Carousel className='w-[90%] mx-auto'>
+            <Carousel
+                className='w-[calc(100%-24px-24px)] mx-auto'
+                opts={{ containScroll: 'keepSnaps', align: 'start', slidesToScroll: 'auto' }}
+            >
                 <CarouselContent className='gap-1!'>
                     {trendingItems.map((item) => (
                         <CarouselItem key={item.id} className='max-w-fit!'>
@@ -38,7 +41,7 @@ export default function TrendingSection({ trendingItems }: TrendingSectionProps)
     )
 }
 
-function TrendingCard({ item, onClick }: { item: TrendingItem; onClick: () => void }) {
+function TrendingCard({ item, onClick }: { item: FilmDetailType; onClick: () => void }) {
     return (
         <article
             className='relative cursor-pointer py-2  px-[10px]  md:px-[22px] w-[132px] h-[166px] md:w-[184px] md:h-[208px] xl:w-[224px] xl:h-[268px] hover:scale-102 transition-transform duration-300'
