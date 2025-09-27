@@ -34,12 +34,18 @@ export const filmDetail: FilmDetailType = {
     rank: 1
 }
 
+const now = new Date()
+const twoMonthAgo = new Date()
+twoMonthAgo.setMonth(now.getMonth() - 2)
+
 export const getMockFilms = (number: number): FilmDetailType[] => {
     return Array(number)
         .fill(filmDetail)
         .map((item, index) => ({
             ...item,
-            id: (index + 1).toString() + 'filmDetail'
+            id: (index + 1).toString() + 'filmDetail',
+            release_date: index % 2 === 0 ? now.toISOString() : twoMonthAgo.toISOString(),
+            rank: Math.max(0, Math.floor(Math.random() * 20))
         }))
 }
 
@@ -49,6 +55,7 @@ export const getMockFilmsWithRank = (number: number): FilmDetailType[] => {
         .map((item, index) => ({
             ...item,
             id: (index + 1).toString() + 'filmDetail',
-            rank: index + 1
+            rank: index + 1,
+            release_date: index % 2 === 0 ? now.toISOString() : twoMonthAgo.toISOString()
         }))
 }

@@ -11,16 +11,16 @@ import { CarouselItem } from '@/components/ui/carousel'
 const MockSliderMovies = getMockFilms(5)
 const mockMovies = getMockFilms(20)
 
-const mockTrendingMovies = getMockFilmsWithRank(10)
+const mockTrendingMovies = getMockFilmsWithRank(9)
 
 export default function AccountHomePage() {
     return (
         <FilmsPageProvider>
             <HeaderFixed />
-            <main>
-                <VideoCarousel videos={MockSliderMovies} />
+            <main className='bg-[#141414] text-white'>
+                <VideoCarousel movies={MockSliderMovies} />
                 <div className='pt-6'>
-                    <h2 className='px-6 md:px-8 lg:px-14 mb-4 text-base md:text-lg  lg:text-xl font-semibold'>
+                    <h2 className='px-6 md:px-8 lg:px-14 mb-4 text-base md:text-lg  lg:text-xl font-semibold t'>
                         Matched to You
                     </h2>
                     <FilmCarousel>
@@ -55,7 +55,7 @@ export default function AccountHomePage() {
                         {mockTrendingMovies.map((item) => (
                             <CarouselItem key={item.id} className='max-w-fit! p-0!'>
                                 <MovieCardHoverInfoProvider movie={item}>
-                                    <RankedMovieCard movie={item} className='w-25 xs:w-3 md:w-45  lg:w-55' />
+                                    <RankedMovieCard movie={item} className='w-fit' />
                                 </MovieCardHoverInfoProvider>
                             </CarouselItem>
                         ))}
@@ -90,7 +90,7 @@ export default function AccountHomePage() {
                     </FilmCarousel>
                 </div>
             </main>
-            <Footer className='px-6 md:px-8 lg:px-14' />
+            <Footer className='px-6 md:px-8 lg:px-14 bg-[#141414]' />
         </FilmsPageProvider>
     )
 }

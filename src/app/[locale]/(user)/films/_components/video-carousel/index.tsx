@@ -6,10 +6,10 @@ import Indicator from '@/app/[locale]/(user)/films/_components/video-carousel/in
 
 interface VideoCarouselProps {
     className?: string
-    videos: Array<FilmDetailType>
+    movies: Array<FilmDetailType>
 }
 
-export default function VideoCarousel({ className, videos }: VideoCarouselProps) {
+export default function VideoCarousel({ className, movies }: VideoCarouselProps) {
     return (
         <Carousel
             className={cn('w-full relative @container', className)}
@@ -18,9 +18,9 @@ export default function VideoCarousel({ className, videos }: VideoCarouselProps)
             draggable={false}
         >
             <CarouselContent className='-ml-2 md:-ml-4  '>
-                {videos.map((video) => (
-                    <CarouselItem key={video.id} className='pl-2 md:pl-4 basis-full'>
-                        <CarouselItemContent video={video} />
+                {movies.map((movie) => (
+                    <CarouselItem key={movie.id} className='pl-2 md:pl-4 basis-full'>
+                        <CarouselItemContent movie={movie} />
                     </CarouselItem>
                 ))}
             </CarouselContent>

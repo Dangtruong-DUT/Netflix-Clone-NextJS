@@ -23,8 +23,8 @@ export default function FilmCarousel({ children }: FilmCarouselProps) {
              h-full! w-6 md:w-8 lg:w-14
              transition-all duration-300 ease-in-out border-none rounded-none
              [&_svg]:size-6! lg:[&_svg]:size-10!
-             [&_svg]:text-muted-foreground hover:[&_svg]:text-foreground
-             bg-background!'
+             [&_svg]:text-muted-foreground hover:[&_svg]:text-white
+             bg-[#141414]!'
                 />
 
                 <CarouselNext
@@ -33,8 +33,8 @@ export default function FilmCarousel({ children }: FilmCarouselProps) {
              h-full! w-6 md:w-8 lg:w-14
              transition-all duration-300 ease-in-out border-none rounded-none
              [&_svg]:size-6! lg:[&_svg]:size-10!
-             [&_svg]:text-muted-foreground hover:[&_svg]:text-foreground
-             bg-background!'
+             [&_svg]:text-muted-foreground hover:[&_svg]:text-white
+             bg-[#141414]!'
                 />
             </Carousel>
         </div>

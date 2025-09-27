@@ -2,7 +2,7 @@
 
 import { Play, Plus, Volume2, VolumeX } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-
+import { TiInfoLarge } from 'react-icons/ti'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { FilmDetailType } from '@/types/film.type'
 import { cn } from '@/lib/utils'
@@ -12,6 +12,7 @@ import { toggleMute } from '@/store/features/video.slice'
 import { createContext, useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { useMouseEnter } from '@/hooks/ui/useMouseEnter'
+import { isNewMovieRelease } from '@/helper/movie'
 
 interface MovieCardContextProps {
     movie: FilmDetailType
@@ -85,23 +86,23 @@ function TooltipFilmInfoContent({ movie }: TooltipContentProps) {
     }, [open])
 
     return (
-        <div className='relative overflow-hidden '>
-            <div className='relative h-44 overflow-hidden'>
+        <div className='relative   bg-neutral-900 shadow-2xl'>
+            <div className='relative h-48 overflow-hidden '>
                 <Image
                     src={movie.horizontal_poster}
                     alt={movie.title}
                     fill
-                    className={cn('w-full h-full object-cover', {
-                        'opacity-0': isPlayVideo,
-                        'opacity-100': !isPlayVideo
-                    })}
+                    className={cn(
+                        'object-cover transition-opacity duration-500 ease-in-out',
+                        isPlayVideo ? 'opacity-0' : 'opacity-100'
+                    )}
                 />
                 <video
                     muted={isMuted}
-                    className={cn('w-full h-full object-cover', {
-                        'opacity-100': isPlayVideo,
-                        'opacity-0': !isPlayVideo
-                    })}
+                    className={cn(
+                        'absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ease-in-out',
+                        isPlayVideo ? 'opacity-100' : 'opacity-0'
+                    )}
                     autoPlay
                     loop
                     playsInline
@@ -110,53 +111,55 @@ function TooltipFilmInfoContent({ movie }: TooltipContentProps) {
                     Your browser does not support the video tag.
                 </video>
 
-                <div className='absolute inset-0 bg-gradient-to-t from-zinc-900/90 to-transparent' />
+                <div className='absolute inset-0 bg-gradient-to-t from-neutral-900/85 via-neutral-900/20 to-transparent' />
 
                 <Button
-                    size='sm'
+                    size='icon'
                     variant='ghost'
-                    className='absolute bottom-3 right-3 bg-zinc-800/50 cursor-pointer hover:text-white hover:bg-zinc-700 text-white rounded-full w-8 h-8 p-0 z-10'
+                    className='absolute bottom-3 right-3 h-8 w-8 rounded-full bg-neutral-900/70 p-0 text-white hover:bg-neutral-800/90 transition-colors cursor-pointer hover:text-white    '
                     onClick={handleToggleMute}
                 >
-                    {isMuted ? <VolumeX className='w-4 h-4' /> : <Volume2 className='w-4 h-4' />}
+                    {isMuted ? <VolumeX className='h-4 w-4' /> : <Volume2 className='h-4 w-4' />}
                 </Button>
-                <div className='absolute bottom-0 left-0 right-0 h-15 bg-gradient-to-t from-neutral-950 via-transparent' />
             </div>
-            <div className='bg-neutral-950 px-2 pb-2'>
-                <div className=' flex items-center gap-3  '>
+
+            <div className='px-4 py-3'>
+                <h3 className='truncate text-lg font-semibold text-white tracking-tight'>{movie.title}</h3>
+
+                <div className='mt-1.5 flex flex-wrap items-center gap-1.5 text-xs text-neutral-300 font-medium'>
+                    <span>{movie.year}</span>
+                    <span className='text-neutral-500'>•</span>
+                    <span className='px-1.5 py-0.5 bg-neutral-800 rounded text-white'>T{movie.age}</span>
+                    <span className='text-neutral-500'>•</span>
+                    <span>{movie.country}</span>
+                    <span className='text-neutral-500'>•</span>
+                    <span className='px-1.5 py-0.5 bg-neutral-800 rounded text-white'>{movie.quality}</span>
+                </div>
+
+                <div className='mt-3 grid grid-cols-3 gap-2'>
                     <Button
                         size='sm'
-                        className='bg-white text-black hover:bg-gray-200 hover:text-black rounded-xs px-4 py-2 flex-1 text-sm font-semibold '
+                        className='rounded-md bg-brand px-3 py-2 text-xs font-medium text-white hover:bg-brand/90  transition-colors cursor-pointer'
                     >
-                        <Play className='w-4 h-4 fill-current mr-2' />
+                        <Play className='mr-1 h-3.5 w-3.5 fill-current' />
                         Xem ngay
                     </Button>
-
                     <Button
                         size='sm'
-                        variant='ghost'
-                        className='bg-gray-600/70 hover:bg-gray-600 text-white hover:text-white rounded-xs border flex-1 border-gray-400  px-4 py-2 text-sm font-semibold cursor-pointer'
+                        variant='outline'
+                        className='rounded-md border-neutral-700 bg-neutral-800/30 px-3 py-2 text-xs font-medium text-neutral-200 hover:bg-neutral-700/50 hover:text-white transition-colors cursor-pointer'
                     >
-                        <Plus className='w-4 h-4 mr-2' />
+                        <Plus className='mr-1 h-3.5 w-3.5' />
                         Danh sách
                     </Button>
-
                     <Button
                         size='sm'
-                        variant='ghost'
-                        className='bg-gray-700/70 hover:bg-gray-700 flex-1 rounded-xs hover:text-white text-white border border-gray-500 px-4 py-2 text-sm font-semibold cursor-pointer'
+                        variant='outline'
+                        className='rounded-md border-neutral-700 bg-neutral-800/30 px-3 py-2 text-xs font-medium text-neutral-200 hover:bg-neutral-700/50 hover:text-white transition-colors cursor-pointer'
                     >
+                        <TiInfoLarge className='mr-1 h-3.5 w-3.5' />
                         Chi tiết
                     </Button>
-                </div>
-                <div className='mt-2 flex items-center justify-center gap-2 text-white text-sm mx-auto  '>
-                    <span>{movie.year}</span>
-                    <span>|</span>
-                    <span>T{movie.age}</span>
-                    <span>|</span>
-                    <span>{movie.country}</span>
-                    <span>|</span>
-                    <span>{movie.quality}</span>
                 </div>
             </div>
         </div>
@@ -180,19 +183,51 @@ export function MovieCard({ movie, className, size = 'md', showProgress = false 
     const movieView = movie || movieFromContext
 
     const progress = Math.min(Math.max(movieView.watch_duration_minutes / movieView.duration_minutes, 0), 1)
-
+    const isRecentlyAdded = isNewMovieRelease(movieView.release_date)
+    const isInTop10 = movieView.rank > 0 && movieView.rank <= 10
     return (
         <article className={cn('relative cursor-pointer  ', sizeClasses[size], className)}>
             <div className='relative w-full aspect-video overflow-hidden '>
+                {isInTop10 && (
+                    <div
+                        className='absolute z-10 right-0 top-0 
+      bg-red-600 text-white font-bold 
+      flex items-center flex-col justify-center 
+      [clip-path:polygon(0_0,100%_0,100%_100%,0_80%)] 
+      overflow-hidden
+      text-[10px] sm:text-[12px] md:text-[13px] lg:text-[15px]
+      p-[2px] sm:p-[3px] md:p-[4px] lg:p-[6px] 
+      pb-[5px] sm:pb-[6px] md:pb-[7px] lg:pb-[8px]'
+                    >
+                        <span>TOP</span>
+                        <span>10</span>
+                    </div>
+                )}
+
                 <Image
                     src={movieView.horizontal_poster}
                     alt={movieView.title}
                     fill
                     className='w-full h-full object-cover transition-transform duration-300 '
                 />
+
+                {isRecentlyAdded && (
+                    <div
+                        className='absolute bottom-0 left-1/2 -translate-x-1/2 
+      whitespace-nowrap w-max 
+      bg-red-600 text-white 
+      text-[8px] sm:text-[9px] md:text-[10px] lg:text-[12px] 
+      px-1 sm:px-2 md:px-3 lg:px-4 
+      py-[1px] sm:py-[2px] md:py-[3px] lg:py-[4px] 
+      rounded-t-xs font-medium backdrop-blur-sm'
+                    >
+                        Recently Added
+                    </div>
+                )}
             </div>
+
             {showProgress && (
-                <div className='relative w-[60.55%] mx-auto h-1 mt-2 bg-white/35'>
+                <div className='relative w-[60.55%] mx-auto h-1 mt-2 bg-white/35 '>
                     <div style={{ width: `${progress * 100}%` }} className='absolute top-0 left-0 h-full bg-red-500' />
                 </div>
             )}

@@ -1,3 +1,4 @@
+import { isNewMovieRelease } from '@/helper/movie'
 import { cn } from '@/lib/utils'
 import { FilmDetailType } from '@/types/film.type'
 
@@ -7,31 +8,36 @@ interface RankedMovieCardProps {
 }
 
 export default function RankedMovieCard({ movie, className }: RankedMovieCardProps) {
+    const isRecentlyAdded = isNewMovieRelease(movie.release_date)
+
     return (
         <article
             className={cn(
-                'relative cursor-pointer py-2 hover:scale-102 transition-transform duration-300 w-full flex items-center',
+                'relative  cursor-pointer  transition-transform duration-300 flex items-center justify-end',
                 className
             )}
+            style={{
+                height: 'clamp(4rem, 15vw, 12rem)',
+                width: 'calc( (clamp(4rem, 15vw, 12rem) * 9) / 13 *2)'
+            }}
         >
             <div
                 className='
-
-          flex-shrink-0 
-          font-black leading-none select-none
-          text-white dark:text-black
-          relative
-          left-1/2 -translate-x-1/2
-          before:content-[attr(data-content)] before:absolute before:inset-0
-          before:[-webkit-text-fill-color:black] before:[-webkit-text-stroke:4px_black] 
-          dark:before:[-webkit-text-fill-color:transparent] dark:before:[-webkit-text-stroke:4px_rgba(255,255,255,0.3)]
-          before:z-[-1] z-0
-          flex items-center justify-center
-        '
+                    
+                    flex items-center justify-center
+                    font-black leading-none select-none
+                    text-transparent
+                    relative
+                    left-1/2 top-1/2 -translate-y-1/2 -translate-x-[calc(100%-8px)]
+                    before:content-[attr(data-content)] before:absolute before:inset-0
+                    before:[-webkit-text-fill-color:transparent] before:[-webkit-text-stroke:4px_rgba(255,255,255,0.3)]
+                    before:z-[-1] z-0
+                    
+                '
                 style={{
                     fontSize: 'clamp(4rem, 15vw, 12rem)',
                     lineHeight: 1,
-                    height: '100%'
+                    scale: '1.4'
                 }}
                 data-content={movie.rank}
             >
@@ -39,9 +45,33 @@ export default function RankedMovieCard({ movie, className }: RankedMovieCardPro
             </div>
 
             <div
-                className='relative z-1 w-1/2 aspect-[9/13] overflow-hidden bg-cover bg-center ml-2'
+                className='
+                    h-full
+                    z-1
+                    flex-shrink-0 
+                    aspect-[9/13] 
+                    bg-cover bg-center 
+                    overflow-hidden
+                    relative
+                    rounded-r-xs
+                '
                 style={{ backgroundImage: `url(${movie.vertical_poster})` }}
-            />
+            >
+                {isRecentlyAdded && (
+                    <div
+                        className='absolute bottom-0 left-1/2 -translate-x-1/2 
+                            whitespace-nowrap w-max 
+                            bg-red-600 text-white 
+                            text-[5px] sm:text-[9px] md:text-[10px] lg:text-[12px] 
+                            px-1 sm:px-2 md:px-3 lg:px-4 
+                            hidden md:block
+                            py-[1px] sm:py-[2px] md:py-[3px] lg:py-[4px] 
+                            rounded-t-xs font-medium backdrop-blur-sm'
+                    >
+                        Recently Added
+                    </div>
+                )}
+            </div>
         </article>
     )
 }

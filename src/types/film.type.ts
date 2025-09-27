@@ -21,4 +21,5 @@ export type FilmDetailType = {
     film_url?: string
     watch_duration_minutes: number
     rank: number
+    tags?: string[]
 }

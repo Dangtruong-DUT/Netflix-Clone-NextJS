@@ -14,10 +14,10 @@ import { useEffect, useRef, useState } from 'react'
 import { HERO_VIEW_MODE, useFilmsPageContext } from '@/app/[locale]/(user)/films/context'
 
 interface CarouselItemContentProps {
-    video: FilmDetailType
+    movie: FilmDetailType
 }
 
-export default function CarouselItemContent({ video }: CarouselItemContentProps) {
+export default function CarouselItemContent({ movie }: CarouselItemContentProps) {
     const { heroViewMode, setHeroViewMode } = useFilmsPageContext()
     const { ref, isInView } = useInView()
     const [isPlayVideo, setIsPlayVideo] = useState<boolean>(false)
@@ -64,8 +64,8 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
             ref={ref}
         >
             <Image
-                src={video.horizontal_poster}
-                alt={video.title}
+                src={movie.horizontal_poster}
+                alt={movie.title}
                 fill
                 className={cn(
                     'w-full h-full object-cover transition-opacity duration-500 ease-in-out',
@@ -89,35 +89,34 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
             </video>
             <div className='absolute top-0 left-0 w-full h-full max-h-screen z-3'>
                 <div className='absolute bottom-0 left-0 p-6 md:p-8 lg:p-12 w-full md:max-w-[50%] max-w-[85%]'>
-                    <h2 className='text-white font-black text-xl md:text-3xl lg:text-4xl xl:text-5xl mb-1 sm:mb-3 lg:mb-4 leading-tight'>
-                        {video.title.toUpperCase()}
+                    <h2 className='text-white hidden md:block font-black text-xl md:text-3xl lg:text-4xl xl:text-5xl mb-1 sm:mb-3 lg:mb-4 leading-tight'>
+                        {movie.title.toUpperCase()}
                     </h2>
 
-                    <p className='text-gray-200 text-sm md:text-base lg:text-lg mb-4 lg:mb-6 line-clamp-1 sm:line-clamp-3 leading-relaxed'>
-                        {video.description}
+                    <p className='text-gray-200 hidden md:block text-sm md:text-base lg:text-lg mb-4 lg:mb-6 line-clamp-1 sm:line-clamp-3 leading-relaxed'>
+                        {movie.description}
                     </p>
 
                     <div className='flex items-center gap-3'>
                         <Button
                             className={cn(
-                                'bg-white text-black hover:text-black hover:bg-gray-200 font-semibold rounded-xs flex items-center gap-2 cursor-pointer',
-                                'px-6 md:px-10! py-2 md:py-4! md:h-[48px] text-sm md:text-base!'
+                                'bg-white text-black hover:text-black hover:bg-gray-200 font-semibold rounded-xs flex items-center gap-1 sm:gap-2 cursor-pointer',
+                                'px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-6 md:py-3 md:text-base lg:px-10 lg:py-4 lg:h-[48px]'
                             )}
                         >
-                            <IoPlaySharp className='size-4 md:size-6 fill-current' />
+                            <IoPlaySharp className='size-3 sm:size-4 md:size-5 lg:size-6 fill-current' />
                             Play
                         </Button>
 
                         <Button
-                            size='lg'
                             variant='ghost'
                             onClick={onOpenVideoDetail}
                             className={cn(
-                                'bg-gray-600/70 hover:bg-gray-600 text-white hover:text-white font-semibold rounded-xs flex items-center gap-2 cursor-pointer',
-                                'px-6 md:px-10! py-2 md:py-4! md:h-[48px] text-sm md:text-base'
+                                'bg-gray-600/70 hover:bg-gray-600 text-white hover:text-white font-semibold rounded-xs flex items-center gap-1 sm:gap-2 cursor-pointer',
+                                'px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-6 md:py-3 md:text-base lg:px-10 lg:py-4 lg:h-[48px]'
                             )}
                         >
-                            <Info className='size-4 md:size-6 md:w-5 md:h-5' />
+                            <Info className='size-3 sm:size-4 md:size-5 lg:size-6' />
                             More Info
                         </Button>
                     </div>
@@ -132,21 +131,21 @@ export default function CarouselItemContent({ video }: CarouselItemContentProps)
                         'pr-5 md:pr-20 pl-2 h-5 md:h-8 bg-gradient-to-r to-transparent  flex items-center '
                     )}
                 >
-                    <span className='text-white text-md md:text-base font-semibold '>T{video.age}</span>
+                    <span className='text-white text-md md:text-base font-semibold '>T{movie.age}</span>
                 </div>
             </div>
             <div
                 className='absolute bottom-0 left-0 right-0 h-40
-             bg-gradient-to-t from-black/90 via-black/60 via-40% to-transparent
+             bg-gradient-to-t from-[#141414] via-[#141414]/60 via-40% to-transparent
              pointer-events-none z-1'
             />
             <div
                 className='absolute top-0 left-0 right-0 h-24 md:h-28 
-             bg-gradient-to-b from-black/100 via-black/40 to-transparent 
+             bg-gradient-to-b from-[#141414]/100 via-black/40 to-transparent 
              z-1'
             />
             <FilmDetailDialog
-                film={video}
+                film={movie}
                 open={isOpenFilmDetail}
                 onOpenChange={setIsOpenFilmDetail}
                 onClose={onCloseVideoDetail}
