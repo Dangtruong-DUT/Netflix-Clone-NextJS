@@ -1,5 +1,5 @@
 import Header from '@/components/header'
-import DetailFilmForm from './_components/detail-film-form'
+import DetailFilmForm from './_components/information-film'
 import { movies } from './_mock/index'
 import CommentBlock from '@/app/[locale]/movies/details/_components/comment-block'
 

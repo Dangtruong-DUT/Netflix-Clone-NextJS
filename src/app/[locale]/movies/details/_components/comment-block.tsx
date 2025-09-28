@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { InformationFilm } from '@/types/film.type'
 import { useTranslations } from 'next-intl'
 import StarRating from '@/app/[locale]/movies/details/_components/star-rating'
+import RatingForm from '@/app/[locale]/movies/details/_components/rating-form'
 
 type Props = {
     informationFilm: InformationFilm
@@ -13,10 +14,10 @@ export default function CommentBlock({ informationFilm }: Props) {
 
     return (
         <div className='mx-auto w-full px-6 md:px-8 lg:px-37 dark:bg-black bg-white'>
-            <p className='text-lg font-semibold mb-3'>
+            <h2 className='text-lg font-semibold mb-3'>
                 {t('rate')} ({movie.commentsCount})
-            </p>
-
+            </h2>
+            <RatingForm />
             {movie.commentsCount > 0 ? (
                 <div className='flex flex-col gap-3'>
                     {movie.comments?.map((comment, index) => (

@@ -248,5 +248,23 @@
         "director": "Đạo diễn",
         "genre": "Thể loại",
         "noCommentsMessage": "Chưa có đánh giá nào, hãy là người đầu tiên!"
+    },
+    "RatingForm": {
+        "addRating": "Thêm đánh giá",
+        "yourRating": "Đánh giá của bạn",
+        "rating": {
+            "terrible": "Tệ",
+            "bad": "Dở",
+            "ok": "Tạm",
+            "good": "Hay",
+            "excellent": "Rất hay"
+        },
+        "writeComment": "Viết nhận xét của bạn (không bắt buộc)",
+        "pleaseSelectRating": "Vui lòng chọn số sao để đánh giá!",
+        "pleaseEnterComment": "Vui lòng nhập nhận xét!",
+        "ratingSuccess": "Đánh giá {rating} sao thành công!",
+        "submitRating": "Gửi đánh giá",
+        "characters": "ký tự",
+        "cancel": "Hủy"
     }
 }
