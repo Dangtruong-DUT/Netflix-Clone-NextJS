@@ -3,6 +3,7 @@ import { FilmDetailType } from '@/types/film.type'
 export const filmDetail: FilmDetailType = {
     id: '1',
     title: 'Tiêu Minh Minh',
+    title_other: 'Xiao Ming Ming',
     release_date: '2025-01-01',
     description:
         'Say mê võ hiệp, Tiêu Minh Minh (Thành Nghị) hóa thân thành Tiêu Thu Thủy, từ kiếm khách trẻ tuổi đến đại hiệp nghĩa khí, bảo vệ đất nước.',
@@ -33,7 +34,23 @@ export const filmDetail: FilmDetailType = {
     watch_duration_minutes: 10,
     rank: 1,
     created_at: '2024-01-01T00:00:00Z',
-    updated_at: '2024-01-01T00:00:00Z'
+    updated_at: '2024-01-01T00:00:00Z',
+    comments: [
+        {
+            user: 'user1',
+            content: 'Phim rất hấp dẫn, Thành Nghị diễn xuất tuyệt vời!',
+            rated_at: '2024-01-02T10:00:00Z',
+            rating: 5
+        },
+        {
+            user: 'user2',
+            content: 'Cốt truyện lôi cuốn, nhưng phần kết hơi vội.',
+            rated_at: '2024-01-03T12:00:00Z',
+            rating: 4
+        }
+    ],
+    like_count: 578,
+    share_count: 13
 }
 
 const now = new Date()

@@ -293,7 +293,7 @@
         "pleaseSelectRating": "Vui lòng chọn số sao để đánh giá!",
         "pleaseEnterComment": "Vui lòng nhập nhận xét!",
         "ratingSuccess": "Đánh giá {rating} sao thành công!",
-        "submitRating": "Gửi đánh giá",
+        "submitRating": "Gửi",
         "characters": "ký tự",
         "cancel": "Hủy"
     }

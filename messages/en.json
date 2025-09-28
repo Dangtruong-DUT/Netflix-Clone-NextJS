@@ -289,9 +289,8 @@
         "pleaseSelectRating": "Please select a star rating!",
         "pleaseEnterComment": "Please enter a comment!",
         "ratingSuccess": "Successfully rated {rating} stars!",
-        "submitRating": "Submit Rating",
+        "submitRating": "Submit",
         "characters": "characters",
         "cancel": "Cancel"
     }
-
 }

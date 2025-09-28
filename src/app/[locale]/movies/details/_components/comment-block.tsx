@@ -1,11 +1,12 @@
 import Image from 'next/image'
-import { InformationFilm } from '@/types/film.type'
+import { FilmDetailType } from '@/types/film.type'
 import { useTranslations } from 'next-intl'
-import StarRating from '@/app/[locale]/movies/details/_components/star-rating'
+
 import RatingForm from '@/app/[locale]/movies/details/_components/rating-form'
+import StarRating from '@/components/star-rating'
 
 type Props = {
-    informationFilm: InformationFilm
+    informationFilm: FilmDetailType
 }
 
 export default function CommentBlock({ informationFilm }: Props) {
@@ -13,20 +14,20 @@ export default function CommentBlock({ informationFilm }: Props) {
     const t = useTranslations('InformationForm')
 
     return (
-        <div className='mx-auto w-full px-6 md:px-8 lg:px-37 dark:bg-black bg-white'>
+        <div className='mx-auto w-full px-6 md:px-8 lg:px-37'>
             <h2 className='text-lg font-semibold mb-3'>
-                {t('rate')} ({movie.commentsCount})
+                {t('rate')} ({movie.comments_count})
             </h2>
             <RatingForm />
-            {movie.commentsCount > 0 ? (
+            {movie.comments_count > 0 ? (
                 <div className='flex flex-col gap-3'>
                     {movie.comments?.map((comment, index) => (
-                        <div key={index} className='bg-white dark:bg-black'>
+                        <div key={index} className='pb-4'>
                             <div className='flex items-center justify-between mb-2'>
                                 <div className='flex items-center gap-2'>
                                     <p className='font-medium text-base'>{comment.user}</p>
-                                    <StarRating value={comment.rating} size={16} className='pointer-events-none' />
-                                    <span className='text-xs text-gray-500'>{comment.date}</span>
+                                    <StarRating rating={comment.rating} className='pointer-events-none' readOnly />
+                                    <span className='text-xs text-gray-500'>{comment.rated_at}</span>
                                 </div>
                             </div>
                             <p className='text-gray-700 dark:text-gray-300'>{comment.content}</p>
