@@ -262,5 +262,17 @@
             "thisShowIs": "This show is:",
             "moreLikeThis": "More Like This"
         }
+    },
+    "InformationForm": {
+        "views": "views",
+        "description": "Description",
+        "still_has": "Has",
+        "favorite": "Favorite",
+        "comment": "Comment",
+        "share": "Share",
+        "actors": "Actors",
+        "director": "Director",
+        "genre": "Genre",
+        "noCommentsMessage": ""
     }
 }
