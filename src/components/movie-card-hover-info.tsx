@@ -13,6 +13,7 @@ import { createContext, useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { useMouseEnter } from '@/hooks/ui/useMouseEnter'
 import { isNewMovieRelease } from '@/helper/movie'
+import { useTranslations } from 'next-intl'
 
 interface MovieCardContextProps {
     movie: FilmDetailType
@@ -179,6 +180,8 @@ export function MovieCard({ movie, className, size = 'md', showProgress = false 
         md: 'w-55',
         lg: 'w-80'
     }
+
+    const t = useTranslations('FilmsPage.tagForMovie')
     const { movie: movieFromContext } = useMovieCardContext()
     const movieView = movie || movieFromContext
 
@@ -221,7 +224,7 @@ export function MovieCard({ movie, className, size = 'md', showProgress = false 
                     py-[1px] sm:py-[2px] 
                     rounded-t-xs font-medium backdrop-blur-sm'
                     >
-                        Recently Added
+                        {t('recentlyAdded')}
                     </div>
                 )}
             </div>

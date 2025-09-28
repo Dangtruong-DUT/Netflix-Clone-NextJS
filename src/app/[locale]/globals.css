@@ -76,6 +76,7 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+    --thumb: rgba(22, 24, 35, 0.06);
 }
 
 .dark {
@@ -110,6 +111,7 @@
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
+    --thumb: rgba(255, 255, 255, 0.08);
 }
 
 @theme {
@@ -132,4 +134,19 @@ html body {
 
     --font-icon: var(--font-netflix-icons), sans-serif;
     font-family: var(--font-sans);
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 4px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--thumb);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: var(--background);
 }

@@ -1,6 +1,7 @@
 import { isNewMovieRelease } from '@/helper/movie'
 import { cn } from '@/lib/utils'
 import { FilmDetailType } from '@/types/film.type'
+import { useTranslations } from 'next-intl'
 
 interface RankedMovieCardProps {
     movie: FilmDetailType
@@ -9,6 +10,7 @@ interface RankedMovieCardProps {
 
 export default function RankedMovieCard({ movie, className }: RankedMovieCardProps) {
     const isRecentlyAdded = isNewMovieRelease(movie.release_date)
+    const t = useTranslations('FilmsPage.tagForMovie')
 
     return (
         <article
@@ -68,7 +70,7 @@ export default function RankedMovieCard({ movie, className }: RankedMovieCardPro
                             py-[1px] sm:py-[2px]
                             rounded-t-xs font-medium backdrop-blur-sm'
                     >
-                        Recently Added
+                        {t('recentlyAdded')}
                     </div>
                 )}
             </div>

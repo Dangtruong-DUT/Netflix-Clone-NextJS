@@ -12,6 +12,7 @@ import FilmDetailDialog from '@/components/film-detail-dialog'
 import ButtonMuted from '@/app/[locale]/(user)/films/_components/video-carousel/button-muted'
 import { useEffect, useRef, useState } from 'react'
 import { HERO_VIEW_MODE, useFilmsPageContext } from '@/app/[locale]/(user)/films/context'
+import { useTranslations } from 'next-intl'
 
 interface CarouselItemContentProps {
     movie: FilmDetailType
@@ -24,6 +25,7 @@ export default function CarouselItemContent({ movie }: CarouselItemContentProps)
     const timeoutRef = useRef<NodeJS.Timeout | null>(null)
     const videoRef = useRef<HTMLVideoElement | null>(null)
     const [isOpenFilmDetail, setIsOpenFilmDetail] = useState<boolean>(false)
+    const t = useTranslations('FilmsPage.heroSection')
 
     const isMuted = useAppSelector((state) => state.video.isMuted)
 
@@ -101,11 +103,11 @@ export default function CarouselItemContent({ movie }: CarouselItemContentProps)
                         <Button
                             className={cn(
                                 'bg-white text-black hover:text-black hover:bg-gray-200 font-semibold rounded-xs flex items-center gap-1 sm:gap-2 cursor-pointer',
-                                'px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-6 md:py-3 md:text-base lg:px-10 lg:py-4 lg:h-[48px]'
+                                'px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-10! md:py-3 md:text-base lg:px-10 lg:py-4 lg:h-[48px]'
                             )}
                         >
                             <IoPlaySharp className='size-3 sm:size-4 md:size-5 lg:size-6 fill-current' />
-                            Play
+                            {t('play')}
                         </Button>
 
                         <Button
@@ -117,7 +119,7 @@ export default function CarouselItemContent({ movie }: CarouselItemContentProps)
                             )}
                         >
                             <Info className='size-3 sm:size-4 md:size-5 lg:size-6' />
-                            More Info
+                            {t('moreInfo')}
                         </Button>
                     </div>
                 </div>
@@ -144,7 +146,12 @@ export default function CarouselItemContent({ movie }: CarouselItemContentProps)
              bg-gradient-to-b from-[#141414]/100 via-black/40 to-transparent 
              z-1'
             />
-            <FilmDetailDialog film={movie} open={isOpenFilmDetail} onOpenChange={setIsOpenFilmDetail} />
+            <FilmDetailDialog
+                film={movie}
+                open={isOpenFilmDetail}
+                onOpenChange={setIsOpenFilmDetail}
+                onClose={onCloseVideoDetail}
+            />
         </div>
     )
 }

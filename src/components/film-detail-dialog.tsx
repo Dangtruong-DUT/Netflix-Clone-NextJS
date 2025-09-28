@@ -14,18 +14,22 @@ import { toggleMute } from '@/store/features/video.slice'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
+import { useTranslations } from 'next-intl'
 
 interface FilmDetailDialogProps {
     film: FilmDetailType | null
     isLoading?: boolean
     open: boolean
     onOpenChange: (open: boolean) => void
+    onClose?: () => void
 }
 
-export default function FilmDetailDialog({ film, open, onOpenChange }: FilmDetailDialogProps) {
+export default function FilmDetailDialog({ film, open, onOpenChange, onClose }: FilmDetailDialogProps) {
     const [isPlayVideo, setIsPlayVideo] = useState<boolean>(false)
     const isMuted = useAppSelector((state) => state.video.isMuted)
     const appDispatch = useAppDispatch()
+    const t = useTranslations('FilmsPage.filmDetail')
+
     const handleToggleMute = () => {
         appDispatch(toggleMute())
     }
@@ -40,12 +44,19 @@ export default function FilmDetailDialog({ film, open, onOpenChange }: FilmDetai
         }
     }, [open])
 
+    const handleOpenChange = (open: boolean) => {
+        onOpenChange(open)
+        if (!open && onClose) {
+            onClose()
+        }
+    }
+
     if (!film) return null
 
     return (
-        <Dialog open={open} onOpenChange={onOpenChange}>
+        <Dialog open={open} onOpenChange={handleOpenChange}>
             <DialogContent
-                className='max-w-4xl! p-0 bg-[#141414] border-0 max-h-[90vh] overflow-y-auto'
+                className='max-w-4xl! p-0 bg-[#141414] border-0 rounded-none overflow-auto! max-h-[90vh]!'
                 showCloseButton={false}
             >
                 <DialogHeader className='hidden'>
@@ -106,7 +117,7 @@ export default function FilmDetailDialog({ film, open, onOpenChange }: FilmDetai
                                 className='bg-white text-black hover:bg-gray-200 font-semibold px-10! py-3! rounded-xs flex items-center gap-2 cursor-pointer'
                             >
                                 <Play className='w-5 h-5 fill-current' />
-                                Play
+                                {t('play')}
                             </Button>
 
                             <Button
@@ -140,7 +151,9 @@ export default function FilmDetailDialog({ film, open, onOpenChange }: FilmDetai
                             </div>
                             <div className='flex items-center gap-3 text-white text-sm'>
                                 <div>
-                                    <span>{formatNumber.format(film.views_count)} views</span>
+                                    <span>
+                                        {formatNumber.format(film.views_count)} {t('views')}
+                                    </span>
                                 </div>
                                 <div className='flex items-center gap-1'>
                                     <span>{film.rating.toFixed(1)}</span>{' '}
@@ -152,7 +165,7 @@ export default function FilmDetailDialog({ film, open, onOpenChange }: FilmDetai
 
                         <div className='md:w-1/3 space-y-4 text-sm'>
                             <div>
-                                <span className='text-gray-400'>Cast: </span>
+                                <span className='text-gray-400'>{t('cast')} </span>
                                 <span className='text-white'>
                                     {film.actors.slice(0, 3).join(', ')}
                                     {film.actors.length > 3 && ', more'}
@@ -160,19 +173,19 @@ export default function FilmDetailDialog({ film, open, onOpenChange }: FilmDetai
                             </div>
 
                             <div>
-                                <span className='text-gray-400'>Genres: </span>
+                                <span className='text-gray-400'>{t('genres')} </span>
                                 <span className='text-white'>{film.genres.join(', ')}</span>
                             </div>
 
                             <div>
-                                <span className='text-gray-400'>This show is: </span>
+                                <span className='text-gray-400'>{t('thisShowIs')} </span>
                                 <span className='text-white'>{film.category}, Suspenseful, Exiting</span>
                             </div>
                         </div>
                     </div>
 
                     <div className='space-y-4'>
-                        <h2 className='text-white text-xl font-semibold'>More Like This</h2>
+                        <h2 className='text-white text-xl font-semibold'>{t('moreLikeThis')}</h2>
                         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 @container'>
                             {Array.from({ length: 6 }, (_, i) => (
                                 <MovieCard key={i} movie={film} />

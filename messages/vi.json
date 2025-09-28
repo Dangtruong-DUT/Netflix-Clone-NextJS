@@ -236,5 +236,35 @@
         "successTitle": "Đã gửi email!",
         "successDescription": "Chúng tôi đã gửi email với hướng dẫn để đặt lại mật khẩu đến {email}. Nếu bạn không thấy email, hãy kiểm tra thư mục spam hoặc thử lại.",
         "resendEmail": "Gửi lại email"
+    },
+    "FilmsPage": {
+        "sections": {
+            "matchedToYou": "Phù hợp với bạn",
+            "newOnNetflix": "Mới trên Netflix",
+            "topMoviesToday": "Top 10 phim hôm nay",
+            "trendingNow": "Đang thịnh hành",
+            "popularOnNetflix": "Phổ biến trên Netflix",
+            "watchAgain": "Tiếp tục xem",
+            "becauseYouWatched": "Vì bạn đã xem {movieTitle}",
+            "recentlyAdded": "Mới thêm gần đây",
+            "criticsChoice": "Lựa chọn của giới phê bình",
+            "awardWinning": "Phim đoạt giải",
+            "onlyOnNetflix": "Chỉ có trên Netflix"
+        },
+        "heroSection": {
+            "play": "Phát",
+            "moreInfo": "Thêm thông tin"
+        },
+        "tagForMovie": {
+            "recentlyAdded": "Mới thêm"
+        },
+        "filmDetail": {
+            "play": "Phát",
+            "views": "lượt xem",
+            "cast": "Diễn viên:",
+            "genres": "Thể loại:",
+            "thisShowIs": "Chương trình này là:",
+            "moreLikeThis": "Tương tự khác"
+        }
     }
 }

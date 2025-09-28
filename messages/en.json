@@ -232,5 +232,35 @@
         "forgotPassword": "Forgot Password?",
         "saveButton": "Save",
         "cancelButton": "Cancel"
+    },
+    "FilmsPage": {
+        "sections": {
+            "matchedToYou": "Matched to You",
+            "newOnNetflix": "New on Netflix",
+            "topMoviesToday": "Top 10 movies Today",
+            "trendingNow": "Trending Now",
+            "popularOnNetflix": "Popular on Netflix",
+            "watchAgain": "Continue Watching",
+            "becauseYouWatched": "Because you watched {movieTitle}",
+            "recentlyAdded": "Recently Added",
+            "criticsChoice": "Critics' Choice",
+            "awardWinning": "Award-Winning Films",
+            "onlyOnNetflix": "Only on Netflix"
+        },
+        "heroSection": {
+            "play": "Play",
+            "moreInfo": "More Info"
+        },
+        "tagForMovie": {
+            "recentlyAdded": "Recently Added"
+        },
+        "filmDetail": {
+            "play": "Play",
+            "views": "views",
+            "cast": "Cast:",
+            "genres": "Genres:",
+            "thisShowIs": "This show is:",
+            "moreLikeThis": "More Like This"
+        }
     }
 }
