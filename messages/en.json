@@ -268,11 +268,30 @@
         "description": "Description",
         "still_has": "Has",
         "favorite": "Favorite",
-        "comment": "Comment",
+        "rate": "Reviews",
         "share": "Share",
         "actors": "Actors",
         "director": "Director",
         "genre": "Genre",
-        "noCommentsMessage": ""
+        "noCommentsMessage": "No rates yet, be the first!"
+    },
+    "RatingForm": {
+        "addRating": "Add Rating",
+        "yourRating": "Your Rating",
+        "rating": {
+            "terrible": "Terrible",
+            "bad": "Bad",
+            "ok": "Okay",
+            "good": "Good",
+            "excellent": "Excellent"
+        },
+        "writeComment": "Write your comment (optional)",
+        "pleaseSelectRating": "Please select a star rating!",
+        "pleaseEnterComment": "Please enter a comment!",
+        "ratingSuccess": "Successfully rated {rating} stars!",
+        "submitRating": "Submit Rating",
+        "characters": "characters",
+        "cancel": "Cancel"
     }
+
 }

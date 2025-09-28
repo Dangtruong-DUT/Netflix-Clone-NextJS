@@ -8,9 +8,18 @@ type StarRatingProps = {
     size?: number
     gap?: number
     className?: string
+    onChange?: (value: number) => void
+    onStarHover?: (value: number) => void
 }
 
-export default function StarRating({ value, size = 16, gap = 0.5, className = '' }: StarRatingProps) {
+export default function StarRating({
+    value,
+    size = 16,
+    gap = 0.5,
+    className = '',
+    onChange,
+    onStarHover
+}: StarRatingProps) {
     const stars = [1, 2, 3, 4, 5]
 
     return (
@@ -20,12 +29,21 @@ export default function StarRating({ value, size = 16, gap = 0.5, className = ''
             style={{ gap: `${gap}px` }}
         >
             {stars.map((star) => (
-                <FiveStar
+                <button
                     key={star}
-                    size={size}
-                    fillType={value >= star ? 'full' : value > star - 1 && value < star ? 'half' : 'empty'}
-                    starId={star}
-                />
+                    type='button'
+                    onClick={() => onChange?.(star)}
+                    onMouseEnter={() => onStarHover?.(star)}
+                    onMouseLeave={() => onStarHover?.(0)}
+                    className='focus:outline-none'
+                >
+                    <FiveStar
+                        key={star}
+                        size={size}
+                        fillType={value >= star ? 'full' : value > star - 1 && value < star ? 'half' : 'empty'}
+                        starId={star}
+                    />
+                </button>
             ))}
         </div>
     )

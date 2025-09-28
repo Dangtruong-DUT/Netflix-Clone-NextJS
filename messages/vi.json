@@ -242,7 +242,7 @@
         "description": "Mô tả",
         "still_has": "Còn",
         "favorite": "Yêu thích",
-        "comment": "Bình luận",
+        "rate": "Đánh giá",
         "share": "Chia sẻ",
         "actors": "Diễn viên",
         "director": "Đạo diễn",
@@ -278,5 +278,23 @@
             "thisShowIs": "Chương trình này là:",
             "moreLikeThis": "Tương tự khác"
         }
+    },
+    "RatingForm": {
+        "addRating": "Thêm đánh giá",
+        "yourRating": "Đánh giá của bạn",
+        "rating": {
+            "terrible": "Tệ",
+            "bad": "Dở",
+            "ok": "Tạm",
+            "good": "Hay",
+            "excellent": "Rất hay"
+        },
+        "writeComment": "Viết nhận xét của bạn (không bắt buộc)",
+        "pleaseSelectRating": "Vui lòng chọn số sao để đánh giá!",
+        "pleaseEnterComment": "Vui lòng nhập nhận xét!",
+        "ratingSuccess": "Đánh giá {rating} sao thành công!",
+        "submitRating": "Gửi đánh giá",
+        "characters": "ký tự",
+        "cancel": "Hủy"
     }
 }
