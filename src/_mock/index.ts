@@ -31,7 +31,9 @@ export const filmDetail: FilmDetailType = {
     comments_count: 464,
     duration_minutes: 120,
     watch_duration_minutes: 10,
-    rank: 1
+    rank: 1,
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z'
 }
 
 const now = new Date()
