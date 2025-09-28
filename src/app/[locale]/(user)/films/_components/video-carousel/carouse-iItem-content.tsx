@@ -144,12 +144,7 @@ export default function CarouselItemContent({ movie }: CarouselItemContentProps)
              bg-gradient-to-b from-[#141414]/100 via-black/40 to-transparent 
              z-1'
             />
-            <FilmDetailDialog
-                film={movie}
-                open={isOpenFilmDetail}
-                onOpenChange={setIsOpenFilmDetail}
-                onClose={onCloseVideoDetail}
-            />
+            <FilmDetailDialog film={movie} open={isOpenFilmDetail} onOpenChange={setIsOpenFilmDetail} />
         </div>
     )
 }

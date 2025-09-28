@@ -20,10 +20,9 @@ interface FilmDetailDialogProps {
     isLoading?: boolean
     open: boolean
     onOpenChange: (open: boolean) => void
-    onClose?: () => void
 }
 
-export default function FilmDetailDialog({ film, open, onOpenChange, onClose }: FilmDetailDialogProps) {
+export default function FilmDetailDialog({ film, open, onOpenChange }: FilmDetailDialogProps) {
     const [isPlayVideo, setIsPlayVideo] = useState<boolean>(false)
     const isMuted = useAppSelector((state) => state.video.isMuted)
     const appDispatch = useAppDispatch()
@@ -43,22 +42,10 @@ export default function FilmDetailDialog({ film, open, onOpenChange, onClose }: 
 
     if (!film) return null
 
-    const handleOnOpenChange = (open: boolean) => {
-        if (!open) {
-            onClose?.()
-        }
-        onOpenChange(open)
-    }
-
-    const handleBtnClose = () => {
-        onClose?.()
-        onOpenChange(false)
-    }
-
     return (
-        <Dialog open={open} onOpenChange={handleOnOpenChange}>
+        <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent
-                className='max-w-4xl! p-0 bg-zinc-900 border-0 max-h-[90vh] overflow-y-auto'
+                className='max-w-4xl! p-0 bg-[#141414] border-0 max-h-[90vh] overflow-y-auto'
                 showCloseButton={false}
             >
                 <DialogHeader className='hidden'>
@@ -88,54 +75,54 @@ export default function FilmDetailDialog({ film, open, onOpenChange, onClose }: 
                         Your browser does not support the video tag.
                     </video>
 
-                    <div className='absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent' />
+                    <div className='absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/20 to-transparent' />
 
                     <Button
                         variant='ghost'
                         size='sm'
-                        className='absolute top-4 right-4 bg-zinc-800/80 hover:bg-zinc-700 text-white hover:text-white rounded-full w-10 h-10 p-0 cursor-pointer '
-                        onClick={handleBtnClose}
+                        className='absolute top-4 right-4 bg-[#141414]/80 hover:bg-[#141414]/60 text-white hover:text-white rounded-full w-10 h-10 p-0'
+                        onClick={() => onOpenChange(false)}
                     >
-                        <X className='w-5 h-5 cursor-pointer' />
+                        <X className='w-5 h-5' />
+                    </Button>
+
+                    <Button
+                        variant='ghost'
+                        size='sm'
+                        className='absolute bottom-4 right-4 bg-[#141414]/80 hover:bg-[#141414]/60 text-white/50 hover:text-white rounded-full border border-white/50 w-10 h-10 p-0 curser-pointer z-10'
+                        onClick={handleToggleMute}
+                    >
+                        {isMuted ? <VolumeX className='w-5 h-5' /> : <Volume2 className='w-5 h-5' />}
                     </Button>
 
                     <div className='absolute bottom-0 left-0 right-0 p-6 md:p-8'>
                         <h1 className='text-white font-black text-2xl md:text-3xl lg:text-4xl mb-4 leading-tight'>
                             {film.title.toUpperCase()}
                         </h1>
-                        <div className='flex items-center justify-between mb-4'>
-                            <div className='flex items-center gap-3'>
-                                <Button
-                                    size='lg'
-                                    className='bg-white text-black hover:bg-gray-200 font-semibold px-10! py-3! rounded-xs flex items-center gap-2 cursor-pointer'
-                                >
-                                    <Play className='w-5 h-5 fill-current' />
-                                    Play
-                                </Button>
 
-                                <Button
-                                    size='sm'
-                                    variant='ghost'
-                                    className='bg-zinc-600/70 hover:bg-zinc-600 text-white hover:text-white border border-gray-600 rounded-full w-10 h-10 p-0 cursor-pointer'
-                                >
-                                    <Plus className='w-5 h-5' />
-                                </Button>
-
-                                <Button
-                                    size='sm'
-                                    variant='ghost'
-                                    className='bg-zinc-600/70 hover:bg-zinc-600 text-white hover:text-white border border-gray-600 rounded-full w-10 h-10 p-0 cursor-pointer '
-                                >
-                                    <ThumbsUp className='w-5 h-5' />
-                                </Button>
-                            </div>
+                        <div className='flex items-center gap-3 mb-4'>
                             <Button
-                                variant='ghost'
-                                size='sm'
-                                className=' bg-zinc-800/80 hover:bg-zinc-700 text-white/50 hover:text-white rounded-full border border-white/50 w-10 h-10 p-0 curser-pointer z-10 cursor-pointer'
-                                onClick={handleToggleMute}
+                                size='lg'
+                                className='bg-white text-black hover:bg-gray-200 font-semibold px-10! py-3! rounded-xs flex items-center gap-2 cursor-pointer'
                             >
-                                {isMuted ? <VolumeX className='w-5 h-5' /> : <Volume2 className='w-5 h-5' />}
+                                <Play className='w-5 h-5 fill-current' />
+                                Play
+                            </Button>
+
+                            <Button
+                                size='sm'
+                                variant='ghost'
+                                className='bg-zinc-600/70 hover:bg-zinc-600 text-white hover:text-white border border-gray-600 rounded-full w-10 h-10 p-0 cursor-pointer'
+                            >
+                                <Plus className='w-5 h-5' />
+                            </Button>
+
+                            <Button
+                                size='sm'
+                                variant='ghost'
+                                className='bg-zinc-600/70 hover:bg-zinc-600 text-white hover:text-white border border-gray-600 rounded-full w-10 h-10 p-0 cursor-pointer '
+                            >
+                                <ThumbsUp className='w-5 h-5' />
                             </Button>
                         </div>
                     </div>

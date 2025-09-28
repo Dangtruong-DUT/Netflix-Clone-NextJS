@@ -62,10 +62,10 @@ export default function RankedMovieCard({ movie, className }: RankedMovieCardPro
                         className='absolute bottom-0 left-1/2 -translate-x-1/2 
                             whitespace-nowrap w-max 
                             bg-red-600 text-white 
-                            text-[5px] sm:text-[9px] md:text-[10px] lg:text-[12px] 
-                            px-1 sm:px-2 md:px-3 lg:px-4 
+                            text-[5px] sm:text-[9px]  
+                            px-1 sm:px-2
                             hidden md:block
-                            py-[1px] sm:py-[2px] md:py-[3px] lg:py-[4px] 
+                            py-[1px] sm:py-[2px]
                             rounded-t-xs font-medium backdrop-blur-sm'
                     >
                         Recently Added

@@ -191,13 +191,13 @@ export function MovieCard({ movie, className, size = 'md', showProgress = false 
                 {isInTop10 && (
                     <div
                         className='absolute z-10 right-0 top-0 
-      bg-red-600 text-white font-bold 
-      flex items-center flex-col justify-center 
-      [clip-path:polygon(0_0,100%_0,100%_100%,0_80%)] 
-      overflow-hidden
-      text-[10px] sm:text-[12px] md:text-[13px] lg:text-[15px]
-      p-[2px] sm:p-[3px] md:p-[4px] lg:p-[6px] 
-      pb-[5px] sm:pb-[6px] md:pb-[7px] lg:pb-[8px]'
+                        bg-red-600 text-white font-bold 
+                        flex items-center flex-col justify-center 
+                        [clip-path:polygon(0_0,100%_0,100%_100%,0_80%)] 
+                        overflow-hidden
+                        text-[10px] 
+                        p-[2px] sm:p-[3px]  
+                        pb-[5px] sm:pb-[6px]  '
                     >
                         <span>TOP</span>
                         <span>10</span>
@@ -214,12 +214,12 @@ export function MovieCard({ movie, className, size = 'md', showProgress = false 
                 {isRecentlyAdded && (
                     <div
                         className='absolute bottom-0 left-1/2 -translate-x-1/2 
-      whitespace-nowrap w-max 
-      bg-red-600 text-white 
-      text-[8px] sm:text-[9px] md:text-[10px] lg:text-[12px] 
-      px-1 sm:px-2 md:px-3 lg:px-4 
-      py-[1px] sm:py-[2px] md:py-[3px] lg:py-[4px] 
-      rounded-t-xs font-medium backdrop-blur-sm'
+                    whitespace-nowrap w-max 
+                    bg-red-600 text-white 
+                    text-[8px] sm:text-[9px] 
+                    px-1 sm:px-2
+                    py-[1px] sm:py-[2px] 
+                    rounded-t-xs font-medium backdrop-blur-sm'
                     >
                         Recently Added
                     </div>
