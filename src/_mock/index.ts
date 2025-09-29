@@ -50,7 +50,8 @@ export const filmDetail: FilmDetailType = {
         }
     ],
     like_count: 578,
-    share_count: 13
+    share_count: 13,
+    isVip: true
 }
 
 const now = new Date()
@@ -64,7 +65,8 @@ export const getMockFilms = (number: number): FilmDetailType[] => {
             ...item,
             id: (index + 1).toString() + 'filmDetail',
             release_date: index % 2 === 0 ? now.toISOString() : twoMonthAgo.toISOString(),
-            rank: Math.max(0, Math.floor(Math.random() * 20))
+            rank: Math.max(0, Math.floor(Math.random() * 20)),
+            isVip: Math.random() < 0.5
         }))
 }
 
@@ -75,6 +77,7 @@ export const getMockFilmsWithRank = (number: number): FilmDetailType[] => {
             ...item,
             id: (index + 1).toString() + 'filmDetail',
             rank: index + 1,
-            release_date: index % 2 === 0 ? now.toISOString() : twoMonthAgo.toISOString()
+            release_date: index % 2 === 0 ? now.toISOString() : twoMonthAgo.toISOString(),
+            isVip: Math.random() < 0.5
         }))
 }

@@ -39,7 +39,7 @@ export default function MovieSocialButton({ informationFilm }: Props) {
                             className={`w-6 h-6 xs:w-7 xs:h-7 transition-all duration-200 ${
                                 isFavorite
                                     ? 'fill-brand stroke-brand'
-                                    : 'fill-transparent stroke-black dark:stroke-white group-hover:stroke-brand!'
+                                    : 'fill-transparent stroke-white group-hover:stroke-brand!'
                             }`}
                         />
                         {movie.like_count > 0 ? (
@@ -54,7 +54,7 @@ export default function MovieSocialButton({ informationFilm }: Props) {
                     </div>
                     <div className='flex flex-col items-center gap-1 xs:gap-2 cursor-pointer group flex-1'>
                         <CommentIcon
-                            className='w-6 h-6 xs:w-7 xs:h-7 fill-black dark:fill-white group-hover:fill-brand! transition-colors'
+                            className='w-6 h-6 xs:w-7 xs:h-7 fill-white group-hover:fill-brand! transition-colors'
                             onClick={handleClickComment}
                         />
                         {movie.comments_count > 0 ? (
@@ -75,7 +75,7 @@ export default function MovieSocialButton({ informationFilm }: Props) {
                         }
                     >
                         <div className='flex flex-col items-center gap-1 xs:gap-2 cursor-pointer group flex-1'>
-                            <ShareIcon className='w-6 h-6 xs:w-7 xs:h-7 fill-black dark:fill-white group-hover:fill-brand! transition-colors' />
+                            <ShareIcon className='w-6 h-6 xs:w-7 xs:h-7 fill-white group-hover:fill-brand! transition-colors' />
                             {movie.share_count > 0 ? (
                                 <strong className='px-1 xs:px-2 py-0.5 xs:py-1 text-xs group-hover:text-brand! text-center'>
                                     {movie.share_count}

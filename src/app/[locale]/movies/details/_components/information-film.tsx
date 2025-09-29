@@ -16,7 +16,7 @@ export default function DetailFilm({ informationFilm }: Props) {
     if (!movie) return null
 
     return (
-        <div className='mx-auto w-full px-6 md:px-8 lg:px-37'>
+        <div className='mx-auto w-full px-6 md:px-8 lg:px-14'>
             <div className='flex flex-col lg:flex-row gap-4 xs:gap-5 sm:gap-6'>
                 <div className='flex-1 lg:flex-[3_0_70%] min-w-0 -px-0.5'>
                     <h1 className='text-base xs:text-lg sm:text-xl md:text-2xl  font-semibold mb-1 xs:mb-2 sm:mb-3 break-words'>
@@ -54,20 +54,20 @@ export default function DetailFilm({ informationFilm }: Props) {
                 <div className='lg:w-1/4 flex-shrink-0'>
                     <MovieSocialButton informationFilm={movie} />
                     <div className='text-sm gap-2 '>
-                        <div className='items-baseline'>
-                            <span className='dark:text-[#b3b3b3] text-gray-700 pr-0.5'>{t('actors')}:</span>
+                        <div className='items-baseline py-1.5'>
+                            <span className='text-[#b3b3b3]  pr-0.5'>{t('actors')}:</span>
                             <span className='mt-1 font-medium break-words cursor-pointer'>
                                 {movie.actors.join(', ')}
                             </span>
                         </div>
-                        <div className='items-baseline gap-1'>
-                            <span className='dark:text-[#b3b3b3] text-gray-700 pr-0.5'>{t('director')}:</span>
+                        <div className='items-baseline gap-1  py-1.5'>
+                            <span className='text-[#b3b3b3] pr-0.5'>{t('director')}:</span>
                             <span className='mt-1 font-medium break-words cursor-pointer'>
                                 {movie.directors.join(', ')}
                             </span>
                         </div>
-                        <div className='items-baseline gap-1'>
-                            <span className='dark:text-[#b3b3b3] text-gray-700 pr-0.5'>{t('genre')}:</span>
+                        <div className='items-baseline gap-1  py-1.5'>
+                            <span className='text-[#b3b3b3] pr-0.5'>{t('genre')}:</span>
                             <span className='mt-1 font-medium break-words cursor-pointer'>
                                 {movie.genres.join(', ')}
                             </span>

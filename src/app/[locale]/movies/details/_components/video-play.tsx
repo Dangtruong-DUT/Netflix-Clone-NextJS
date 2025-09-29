@@ -22,7 +22,7 @@ export default function VideoPlay() {
                 playsInline
                 title='Video Demo'
                 poster='/images/home/inception-vertical.jpg'
-                className='w-full h-full bg-black rounded-2xl shadow-lg overflow-hidden relative'
+                className='w-full max-h-screen bg-black rounded-2xl shadow-lg overflow-hidden relative'
             >
                 <MediaProvider className='w-full h-full'>
                     <Poster className='vds-poster object-contain w-full h-full' />
@@ -42,6 +42,12 @@ export default function VideoPlay() {
                     height: 100%;
                     object-fit: contain;
                     display: block;
+                }
+                media-player .vds-captions {
+                    padding-bottom: 1rem;
+                }
+                media-player .vds-control-bar {
+                    padding-top: 0.5rem;
                 }
             `}</style>
         </div>

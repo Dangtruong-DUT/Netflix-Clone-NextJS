@@ -30,6 +30,8 @@ export type FilmDetailType = {
     comments?: Comment[]
     like_count: number
     share_count: number
+
+    isVip?: boolean
 }
 
 export type Comment = {

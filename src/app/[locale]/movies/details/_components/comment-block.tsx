@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import { FilmDetailType } from '@/types/film.type'
 import { useTranslations } from 'next-intl'
-
+import { timeAgo } from '@/utils/formatting/formatTime'
 import RatingForm from '@/app/[locale]/movies/details/_components/rating-form'
 import StarRating from '@/components/star-rating'
+import { useLocale } from 'next-intl'
 
 type Props = {
     informationFilm: FilmDetailType
@@ -12,9 +13,10 @@ type Props = {
 export default function CommentBlock({ informationFilm }: Props) {
     const movie = informationFilm
     const t = useTranslations('InformationForm')
+    const locale = useLocale()
 
     return (
-        <div className='mx-auto w-full px-6 md:px-8 lg:px-37'>
+        <div className='mx-auto w-full px-6 md:px-8 lg:px-14'>
             <h2 className='text-lg font-semibold mb-3'>
                 {t('rate')} ({movie.comments_count})
             </h2>
@@ -27,10 +29,12 @@ export default function CommentBlock({ informationFilm }: Props) {
                                 <div className='flex items-center gap-2'>
                                     <p className='font-medium text-base'>{comment.user}</p>
                                     <StarRating rating={comment.rating} className='pointer-events-none' readOnly />
-                                    <span className='text-xs text-gray-500'>{comment.rated_at}</span>
+                                    <span className='text-xs text-gray-500 pt-[6px]'>
+                                        {timeAgo({ locale, date: comment.rated_at })}
+                                    </span>
                                 </div>
                             </div>
-                            <p className='text-gray-700 dark:text-gray-300'>{comment.content}</p>
+                            <p className='text-gray-300'>{comment.content}</p>
                         </div>
                     ))}
                 </div>
@@ -43,7 +47,7 @@ export default function CommentBlock({ informationFilm }: Props) {
                         height={250}
                         className='opacity-70 mb-4'
                     />
-                    <p className='text-gray-500 dark:text-gray-400 text-sm text-center'>{t('noCommentsMessage')}</p>
+                    <p className='text-gray-400 text-sm text-center'>{t('noCommentsMessage')}</p>
                 </div>
             )}
         </div>
