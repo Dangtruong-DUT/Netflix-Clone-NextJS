@@ -17,9 +17,7 @@ export default function SuggestForYou() {
             <FilmCarousel>
                 {mockMovies.map((item) => (
                     <CarouselItem key={item.id} className='max-w-fit! p-0!'>
-                        <MovieCardHoverInfoProvider movie={item}>
-                            <MovieCardSimple movie={item} />
-                        </MovieCardHoverInfoProvider>
+                        <MovieCardSimple movie={item} />
                     </CarouselItem>
                 ))}
             </FilmCarousel>

@@ -1,7 +1,7 @@
 'use client'
 
 import { Dialog, DialogContent, DialogHeader, DialogTrigger } from '@/components/ui/dialog'
-import { Card, CardContent } from '@/components/ui/card'
+import { CardContent } from '@/components/ui/card'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { toast } from 'sonner'
 import { createShareItems } from '@/components/share-items'
@@ -32,36 +32,62 @@ export function ShareMenuDialog({ url, children }: ShareMenuDialogProps) {
             <DialogTrigger asChild>{children}</DialogTrigger>
             <DialogContent
                 showCloseButton={false}
-                className='w-fit min-w-[40%] max-w-[50vw] sm:min-w-0 sm:max-w-xs md:max-w-md max-h-[70vh] p-0.5 sm:p-2 md:p-4'
+                className='
+          sm:w-fit min-w-lg!
+          p-3
+          min-h-[100px] 
+          sm:min-h-[150px]
+          md:min-h-[180px] 
+          lg:min-h-[180px] 
+          max-h-[70vh]        /* 📏 giới hạn chiều cao tối đa */
+          overflow-y-auto     /* 📜 cho phép scroll nếu icon quá nhiều */
+          transition-all
+              w-[80%]            /* 📱 Mobile: chiếm 90% màn hình */
+            max-w-[100px] 
+        '
             >
                 <DialogHeader className='hidden'>
                     <DialogTitle>Share this content</DialogTitle>
                 </DialogHeader>
+
                 <Carousel
                     opts={{
-                        align: 'start'
+                        align: 'center'
                     }}
-                    className='w-full max-w-[50vw] sm:max-w-xs mx-auto relative'
+                    className='w-fit max-w-sm mx-auto'
                 >
                     <CarouselContent>
                         {shareItems.map((item, index) => (
-                            <CarouselItem key={index} className='basis-1/2 sm:basis-1/3 md:basis-1/3 lg:basis-1/3'>
-                                <div className='p-0.5'>
+                            <CarouselItem
+                                key={index}
+                                className='
+                  max-[350px]:basis-full
+                  basis-1/4     /* 📱 Mobile: chỉ 2 icon/slide để không quá cao */
+                  sm:basis-1/3   /* 📏 Tablet: 3 icon */
+                  md:basis-1/3
+                  lg:basis-1/3   /* 🖥️ Desktop: có thể 4 icon */
+                '
+                            >
+                                <div className='p-1'>
                                     <CardContent
-                                        className='flex flex-col aspect-[1/0.7] items-center justify-center p-0.5 gap-0.5 cursor-pointer transition-colors text-[36px] sm:text-[36px] md:text-[48px] lg:text-[64px] h-fit hover:bg-accent/90 rounded-md'
+                                        className='
+                      flex flex-col aspect-[3/4] items-center justify-center 
+                      p-2 gap-2 cursor-pointer 
+                      transition-colors text-[48px] sm:text-[56px] md:text-[64px] 
+                      hover:bg-accent/90 rounded-md
+                    '
                                         onClick={item.onClick}
                                     >
                                         {item.icon}
-                                        <span className='text-[10px] sm:text-xs font-medium truncate'>{item.name}</span>
+                                        <span className='text-xs font-medium text-center'>{item.name}</span>
                                     </CardContent>
                                 </div>
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <div className='flex justify-between mt-2'>
-                        <CarouselPrevious className='text-[18px] sm:text-[24px]' />
-                        <CarouselNext className='text-[18px] sm:text-[24px]' />
-                    </div>
+
+                    <CarouselPrevious />
+                    <CarouselNext />
                 </Carousel>
             </DialogContent>
         </Dialog>
