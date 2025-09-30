@@ -33,7 +33,7 @@ export default function StickyHeaderWrapper({ buttonClassName }) {
 
     return (
         <Header
-            className={`transition-transform bg-[#111111FC] border-b-2 border-[1px]  duration-300 fixed top-0 left-0 w-full z-50 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
+            className={`transition-transform bg-[#111111FC] border-b-[0.3px] border-white/10 duration-300 fixed top-0 left-0 w-full z-50 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
             buttonClassName={buttonClassName}
         />
     );

@@ -20,11 +20,11 @@ export default function MovieDetailPage() {
                 <section className='w-full py-2'>
                     <SuggestForYou />
                 </section>
-                <section id='comment-block' className='w-full pb-6 pt-4'>
+                <section id='comment-block' className='w-full pb-10 pt-4'>
                     <CommentBlock informationFilm={filmDetail} />
                 </section>
             </main>
-            <Footer className='px-6 md:px-8 lg:px-15 border-t-2 border-[1px]' />
+            <Footer className='px-6 md:px-8 lg:px-15 border-t-[0.3px] border-white/10' />
         </div>
     )
 }
