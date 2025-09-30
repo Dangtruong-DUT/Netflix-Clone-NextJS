@@ -32,34 +32,36 @@ export function ShareMenuDialog({ url, children }: ShareMenuDialogProps) {
             <DialogTrigger asChild>{children}</DialogTrigger>
             <DialogContent
                 showCloseButton={false}
-                className='w-fit min-w-[70%] sm:min-w-0 max-w-[70vw] sm:max-w-xs md:max-w-md max-h-[70vh] p-1 sm:p-2 md:p-4'
+                className='w-fit min-w-[40%] max-w-[50vw] sm:min-w-0 sm:max-w-xs md:max-w-md max-h-[70vh] p-0.5 sm:p-2 md:p-4'
             >
                 <DialogHeader className='hidden'>
                     <DialogTitle>Share this content</DialogTitle>
                 </DialogHeader>
                 <Carousel
                     opts={{
-                        align: 'center'
+                        align: 'start'
                     }}
-                    className='w-full max-w-[70vw] sm:max-w-xs mx-auto'
+                    className='w-full max-w-[50vw] sm:max-w-xs mx-auto relative'
                 >
                     <CarouselContent>
                         {shareItems.map((item, index) => (
-                            <CarouselItem key={index} className='basis-1/3 sm:basis-1/4 md:basis-1/4 lg:basis-1/2'>
+                            <CarouselItem key={index} className='basis-1/2 sm:basis-1/3 md:basis-1/3 lg:basis-1/3'>
                                 <div className='p-0.5'>
                                     <CardContent
-                                        className='flex flex-col aspect-[1/1.2] items-center justify-center p-1 gap-0.5 cursor-pointer transition-colors text-[32px] sm:text-[36px] md:text-[48px] lg:text-[64px] h-fit hover:bg-accent/90 rounded-md'
+                                        className='flex flex-col aspect-[1/0.7] items-center justify-center p-0.5 gap-0.5 cursor-pointer transition-colors text-[36px] sm:text-[36px] md:text-[48px] lg:text-[64px] h-fit hover:bg-accent/90 rounded-md'
                                         onClick={item.onClick}
                                     >
                                         {item.icon}
-                                        <span className='text-xs font-medium'>{item.name}</span>
+                                        <span className='text-[10px] sm:text-xs font-medium truncate'>{item.name}</span>
                                     </CardContent>
                                 </div>
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    <div className='flex justify-between mt-2'>
+                        <CarouselPrevious className='text-[18px] sm:text-[24px]' />
+                        <CarouselNext className='text-[18px] sm:text-[24px]' />
+                    </div>
                 </Carousel>
             </DialogContent>
         </Dialog>

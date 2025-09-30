@@ -1,24 +1,28 @@
-'use client'
+'use client';
 
 import { useState, useEffect } from 'react';
 import Header from '@/components/header';
 
 export default function StickyHeaderWrapper({ buttonClassName }) {
-    const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+    const [isHeaderVisible, setIsHeaderVisible] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const scrollThreshold = 100; 
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
 
-            if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
+            if (currentScrollPos < scrollThreshold) {
                 setIsHeaderVisible(false);
-            } else {
+            } 
+            else if (currentScrollPos > prevScrollPos || currentScrollPos >= scrollThreshold) {
                 setIsHeaderVisible(true);
             }
 
             setPrevScrollPos(currentScrollPos);
         };
+
+        handleScroll();
 
         window.addEventListener('scroll', handleScroll);
 
@@ -29,7 +33,7 @@ export default function StickyHeaderWrapper({ buttonClassName }) {
 
     return (
         <Header
-            className={`transition-transform duration-300 fixed top-0 left-0 w-full z-50 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
+            className={`transition-transform bg-[#111111FC] border-b-2 border-[1px]  duration-300 fixed top-0 left-0 w-full z-50 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
             buttonClassName={buttonClassName}
         />
     );

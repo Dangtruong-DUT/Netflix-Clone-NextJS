@@ -3,10 +3,10 @@ import { FilmDetailType } from '@/types/film.type'
 export const filmDetail: FilmDetailType = {
     id: '1',
     title: 'Tiêu Minh Minh',
-    title_other: 'Xiao Ming Ming',
+    title_other: 'Crime Scene Zero - 2018',
     release_date: '2025-01-01',
     description:
-        'Say mê võ hiệp, Tiêu Minh Minh (Thành Nghị) hóa thân thành Tiêu Thu Thủy, từ kiếm khách trẻ tuổi đến đại hiệp nghĩa khí, bảo vệ đất nước.',
+        'Quý Cô Ẩn Danh là một bộ phim Hình Sự Hàn Quốc được sản xuất vào năm 2025. Quý Cô Ẩn Danh (Ms. Incognito) xoay quanh Kim Young Ran, nữ vệ sĩ có xuất thân nghèo khó của chủ tập đoàn Gasung. Khi chủ tịch sắp qua đời vì bệnh, ông đề nghị ký hợp đồng hôn nhân giả với Young Ran nhằm bảo vệ tài sản của mình. Để chạy trốn những kẻ rắp tâm chiếm đoạt khoản thừa kế khổng lồ của chủ tịch, Young Ran phải thay đổi danh tính và đến làm giáo viên mẫu giáo ở một ngôi làng nhỏ. Cô nhanh chóng chinh phục được cảm tình của người dân trong làng. Người duy nhất nghi ngờ vỏ bọc hoàn hảo của Young Ran là Jeon Dong Min, một ông bố đơn thân có con trai đang học ở lớp của cô.',
     vertical_poster: '/images/home/inception-vertical.jpg',
     horizontal_poster: '/images/hero_video_poster.png',
     genres: ['Phim cổ trang', 'Hành động'],
@@ -29,7 +29,7 @@ export const filmDetail: FilmDetailType = {
     ],
     directors: ['Nhậm Hải Đào', 'Lâm Phong'],
     category: 'Phim cổ trang',
-    comments_count: 464,
+    comments_count: 285,
     duration_minutes: 120,
     watch_duration_minutes: 10,
     rank: 1,
@@ -37,20 +37,28 @@ export const filmDetail: FilmDetailType = {
     updated_at: '2024-01-01T00:00:00Z',
     comments: [
         {
-            user: 'user1',
-            content: 'Phim rất hấp dẫn, Thành Nghị diễn xuất tuyệt vời!',
+            user: 'Van Anh',
+            content:
+                'Bộ phim Crime Scene Zero cực kỳ nhẹ nhàng, với hầu hết manh mối đều rõ ràng và nằm rải rác khắp nơi. Các thí sinh không cần phải đào sâu tìm kiếm bất kỳ manh mối nào, vì vậy nó làm giảm đi tính bí ẩn của tình huống. Mặt khác, mặc dù có những khoảnh khắc riêng, nhưng những tình huống đôi khi quá thoải mái của thí sinh nhìn chung có thể giảm hấp dẫn với người xem khó tính.',
             rated_at: '2024-01-02T10:00:00Z',
             rating: 5
         },
         {
-            user: 'user2',
+            user: 'Pham Huy',
             content: 'Cốt truyện lôi cuốn, nhưng phần kết hơi vội.',
             rated_at: '2024-01-03T12:00:00Z',
             rating: 4
+        },
+        {
+            user: 'Ha Le Tran',
+            content:
+                'Đây không phải là một bộ phim kinh dị mà là một series hài khá độc đáo. Nó kết hợp nhiều thể loại và mang đến những cuộc trò chuyện ngớ ngẩn khiến bạn đôi lúc phải bật cười. Bối cảnh được thiết kế hoàn hảo, mặc dù đôi khi hơi trẻ con, nhưng chúng lại cực kỳ thú vị.',
+            rated_at: '2024-01-03T12:00:00Z',
+            rating: 5
         }
     ],
-    like_count: 578,
-    share_count: 13,
+    like_count: 100000,
+    share_count: 480000,
     isVip: true
 }
 

@@ -239,7 +239,6 @@
     },
     "InformationForm": {
         "views": "lượt xem",
-        "description": "Mô tả",
         "still_has": "Còn",
         "favorite": "Yêu thích",
         "rate": "Đánh giá",
@@ -247,7 +246,9 @@
         "actors": "Diễn viên",
         "director": "Đạo diễn",
         "genre": "Thể loại",
-        "noCommentsMessage": "Chưa có bình luận nào, hãy là người đầu tiên!"
+        "noCommentsMessage": "Chưa có bình luận nào, hãy là người đầu tiên!",
+        "seeMore": "Xem thêm",
+        "seeLess": "Rút gọn"
     },
     "FilmsPage": {
         "sections": {

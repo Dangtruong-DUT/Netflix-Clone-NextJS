@@ -12,7 +12,7 @@ export default function MovieCardSimple({ movie, className }: MovieCardSimplePro
     return (
         <div
             className={cn(
-                'relative group bg-[#1a1a1a] overflow-hidden transition-transform hover:scale-[1.03] shadow-md',
+                'relative group bg-[#1a1a1a] overflow-hidden transition-transform shadow-md',
                 'w-[140px] sm:w-[150px] md:w-[165px] lg:w-[250px]',
                 className
             )}
@@ -22,20 +22,20 @@ export default function MovieCardSimple({ movie, className }: MovieCardSimplePro
                     src={movie.horizontal_poster}
                     alt={movie.title}
                     fill
-                    className='object-cover transition-transform group-hover:scale-[1.02]'
+                    className='object-cover transition-transform hover:scale-[1.02]'
                 />
 
                 {movie.isVip && (
                     <div
                         className='
-            absolute top-0 left-0 
-            bg-gradient-to-r from-[#FFD700] to-[#FFC107] 
-            text-black text-[11px] sm:text-xs font-extrabold 
-            px-2 py-[2px] sm:py-[3px] 
-            tracking-wider uppercase 
-            rounded-br-md
-            z-20
-        '
+                            absolute top-0 left-0 
+                            bg-gradient-to-r from-[#FFD700] to-[#FFC107] 
+                            text-black text-[11px] sm:text-xs font-extrabold 
+                            px-2 py-[2px] sm:py-[3px] 
+                            tracking-wider uppercase 
+                            rounded-br-md
+                            z-20
+                        '
                     >
                         VIP
                     </div>

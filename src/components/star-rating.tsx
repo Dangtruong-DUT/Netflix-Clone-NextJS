@@ -5,6 +5,7 @@ interface StarRatingProps {
     rating: number
     max?: number
     className?: string
+    size?: number
     onChange?: (value: number) => void
     onStarHover?: (value: number) => void
     readOnly?: boolean
@@ -14,6 +15,7 @@ export default function StarRating({
     rating,
     max = 5,
     className,
+    size = 5,
     onChange,
     onStarHover,
     readOnly = false
@@ -44,11 +46,11 @@ export default function StarRating({
                         })}
                     >
                         {rating >= starValue ? (
-                            <FaStar className='text-yellow-500 w-5 h-5' />
+                            <FaStar className='text-yellow-500' size={size} />
                         ) : rating >= starValue - 0.5 ? (
-                            <FaStarHalfAlt className='text-yellow-500 w-5 h-5' />
+                            <FaStarHalfAlt className='text-yellow-500' size={size} />
                         ) : (
-                            <FaRegStar className='text-yellow-500 w-5 h-5' />
+                            <FaRegStar className='text-yellow-500' size={size} />
                         )}
                     </div>
                 )
