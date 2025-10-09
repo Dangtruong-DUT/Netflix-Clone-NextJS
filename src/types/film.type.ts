@@ -21,6 +21,7 @@ export type FilmDetailType = {
     comments_count: number
     film_url?: string
     watch_duration_minutes: number
+    watched_at: string
     rank: number
     tags?: string[]
 

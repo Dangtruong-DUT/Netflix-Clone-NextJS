@@ -32,6 +32,7 @@ export const filmDetail: FilmDetailType = {
     comments_count: 285,
     duration_minutes: 120,
     watch_duration_minutes: 10,
+    watched_at: '2024-01-01T00:00:00Z',
     rank: 1,
     created_at: '2024-01-01T00:00:00Z',
     updated_at: '2024-01-01T00:00:00Z',
@@ -67,6 +68,20 @@ const twoMonthAgo = new Date()
 twoMonthAgo.setMonth(now.getMonth() - 2)
 
 export const getMockFilms = (number: number): FilmDetailType[] => {
+    const toStartOfDay = (date: Date) => {
+        return new Date(date.getFullYear(), date.getMonth(), date.getDate())
+    }
+
+    const randomWatchedAt = () => {
+        const options = [
+            toStartOfDay(now),
+            toStartOfDay(new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000)),
+            toStartOfDay(new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000)),
+            toStartOfDay(new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000))
+        ]
+        const randomDate = options[Math.floor(Math.random() * options.length)]
+        return randomDate.toISOString()
+    }
     return Array(number)
         .fill(filmDetail)
         .map((item, index) => ({
@@ -74,7 +89,9 @@ export const getMockFilms = (number: number): FilmDetailType[] => {
             id: (index + 1).toString() + 'filmDetail',
             release_date: index % 2 === 0 ? now.toISOString() : twoMonthAgo.toISOString(),
             rank: Math.max(0, Math.floor(Math.random() * 20)),
-            isVip: Math.random() < 0.5
+            isVip: Math.random() < 0.5,
+            watched_at: randomWatchedAt(),
+            watch_duration_minutes: Math.floor(Math.random() * item.duration_minutes)
         }))
 }
 

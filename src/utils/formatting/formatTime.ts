@@ -5,7 +5,7 @@ import vi from 'javascript-time-ago/locale/vi'
 
 TimeAgo.addLocale(en)
 TimeAgo.addDefaultLocale(vi)
-TimeAgo.setDefaultLocale('en')
+TimeAgo.setDefaultLocale('vi')
 
 export function timeAgo({ locale, date }: { locale: localesType; date: string }) {
     try {
@@ -14,6 +14,39 @@ export function timeAgo({ locale, date }: { locale: localesType; date: string })
         return timeAgo.format(parsedDate, 'twitter-minute-now')
     } catch (error) {
         console.error('Error in timeAgo function:', error)
+        return ''
+    }
+}
+export function formatDayMonth({ locale, date }: { locale: localesType; date: string }): string {
+    try {
+        const parsedDate = new Date(date)
+        if (isNaN(parsedDate.getTime())) throw new Error('Invalid date')
+
+        const today = new Date()
+        const yesterday = new Date(today)
+        yesterday.setDate(today.getDate() - 1)
+
+        if (parsedDate.toDateString() === today.toDateString()) {
+            return locale === 'en' ? 'Today' : 'Hôm nay'
+        }
+
+        if (parsedDate.toDateString() === yesterday.toDateString()) {
+            return locale === 'en' ? 'Yesterday' : 'Hôm qua'
+        }
+
+        const day = parsedDate.getDate()
+        const month = parsedDate.getMonth() + 1
+
+        if (locale === 'vi') {
+            return `${day} tháng ${month}`
+        } else {
+            return parsedDate.toLocaleDateString(locale, {
+                day: 'numeric',
+                month: 'long'
+            })
+        }
+    } catch (error) {
+        console.error('Error in formatDayMonth:', error)
         return ''
     }
 }

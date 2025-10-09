@@ -293,5 +293,28 @@
         "submitRating": "Submit",
         "characters": "characters",
         "cancel": "Cancel"
+    },
+    "HistoryPage": {
+        "title": "History",
+        "noHistory": "No history",
+        "loadHistory": "Loading history",
+        "pauseHistory": "Pause history",
+        "continueHistory": "Continue history",
+        "deleteallHistory": "Delete all history",
+        "searchHistory": "Search in history",
+        "messages": {
+            "deleteSuccess": "All watch history deleted!",
+            "pauseSuccess": "Watch history paused!",
+            "continueSuccess": "Watch history continued!",
+            "confirmDelete": "Are you sure you want to delete all watch history?",
+            "confirmPause": "Are you sure you want to pause watch history?",
+            "confirmResume": "Are you sure you want to continue watch history?",
+            "confirm": "OK",
+            "cancel": "Cancel"
+        },
+        "tooltip": {
+            "play": "Play",
+            "addToList": "Add to favorite"
+        }
     }
 }
