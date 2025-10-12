@@ -321,5 +321,22 @@
             "addToList": "Thêm vào yêu thích"
         }
 
+    },
+    "FavoritePage": {
+        "title": "Danh sách phim yêu thích của tôi",
+        "noFavorites": "Không có phim yêu thích",
+        "editFavorites": "Chỉnh sửa danh sách yêu thích",
+        "searchFavorites": "Tìm kiếm trong danh sách yêu thích",
+        "messages": {
+            "deleteSuccess": "Đã xóa phim danh sách yêu thích!",
+            "noSelected": "Không có phim nào được chọn!",
+            "confirmDelete": "Bạn có chắc muốn xóa toàn bộ danh sách yêu thích không?",
+            "confirm": "Xác nhận",
+            "cancel": "Hủy"
+        },
+        "tooltip": {
+            "play": "Phát",
+            "removeFromList": "Xóa khỏi danh sách yêu thích"
+        }
     }
 }

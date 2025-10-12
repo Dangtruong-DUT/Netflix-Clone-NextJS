@@ -8,12 +8,10 @@ import { formatDayMonth } from '@/utils/formatting/formatTime'
 import FilmCarousel from '@/components/film-carousel'
 import { CarouselItem } from '@/components/ui/carousel'
 import WatchHistoryCard from './movie-watched-card'
+import { getMockFilms } from '@/_mock'
 
-interface HistoryBlockProps {
-    movies?: FilmDetailType[]
-}
-
-export default function HistoryBlock({ movies }: HistoryBlockProps) {
+export default function HistoryBlock() {
+    const movies = useMemo(() => getMockFilms(50), [])
     const t = useTranslations('HistoryPage')
     const locale = useLocale()
     const containerRef = useRef<HTMLDivElement>(null)

@@ -316,5 +316,23 @@
             "play": "Play",
             "addToList": "Add to favorite"
         }
+    },
+    "FavoritePage": {
+        "title": "List of favorite movies",
+        "noFavorites": "No favorite movies",
+        "loadFavorites": "Loading favorites",
+        "editFavorites": "Edit favorite list",
+        "searchFavorites": "Search in favorites",
+        "messages": {
+            "deleteSuccess": "All favorite movies deleted!",
+            "noSelected": "No movies selected!",
+            "confirmDelete": "Are you sure you want to delete all favorite movies?",
+            "confirm": "OK",
+            "cancel": "Cancel"
+        },
+        "tooltip": {
+            "play": "Play",             
+            "removeFromList": "Remove from favorite"
+        }
     }
 }

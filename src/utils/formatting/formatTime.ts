@@ -20,7 +20,6 @@ export function timeAgo({ locale, date }: { locale: localesType; date: string })
 export function formatDayMonth({ locale, date }: { locale: localesType; date: string }): string {
     try {
         const parsedDate = new Date(date)
-        if (isNaN(parsedDate.getTime())) throw new Error('Invalid date')
 
         const today = new Date()
         const yesterday = new Date(today)
@@ -49,4 +48,10 @@ export function formatDayMonth({ locale, date }: { locale: localesType; date: st
         console.error('Error in formatDayMonth:', error)
         return ''
     }
+}
+
+export const formatDuration = (minutes: number) => {
+    const h = Math.floor(minutes / 60)
+    const m = minutes % 60
+    return `${h > 0 ? `${h}h ` : ''}${m}m`
 }
